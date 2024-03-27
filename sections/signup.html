@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactate con nosotros</title>
+    <title>Registrate</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -22,22 +22,22 @@
                     <a href="/index.html">Home</a>
                 </li>
                 <li>
-                    <a href="./about.html">Quienes somos</a>
+                    <a href="#">Quienes somos</a>
                 </li>
                 <li>
-                    <a href="./login.html">Iniciar sesión</a>
+                    <a href="#" class="active">Regitrarse</a>
                 </li>
                 <li>
-                    <a href="./categories.html">Categorias</a>    <!-- Aca iria un menu desplegable con las dif categorias de ropa -->
+                    <a href="#">Categorias</a>    <!-- Aca iria un menu desplegable con las dif categorias de ropa -->
                 </li>
                 <li>
-                    <a href="#" class="active">Contacto</a>
+                    <a href="#">Contacto</a>
                 </li>
                 <li>
-                    <a href="./login.html">Carrito</a>
+                    <a href="./shoppingCart.html">Carrito</a>
                 </li>
                 <li>
-                    <a href="./locals.html">Locales</a>
+                    <a href="#">Locales</a>
                 </li>
             </ul>
         </nav>
@@ -48,58 +48,91 @@
         </label>
     </header>
 
-    <main>
-        <section></section>
+    <main class="main-container-form">
+        <section class="form-main">
+            <div class="form-content">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+                <div class="box">
+                    <h3>Crear una cuenta</h3>
+                    <form action="">
+                        <div class="input-box">
+                            <input type="text" name="name" id="name" class="input-control" placeholder="Nombre">
+                        </div>
+                        <div class="input-box">
+                            <input type="text" name="lastname" id="lastname" class="input-control" placeholder="Apellido">
+                        </div>
+                        <div class="input-box">
+                            <input type="email" name="email" id="email" class="input-control" placeholder="Email">
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="password" id="password" class="input-control" placeholder="Contraseña">
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="confirmpassword" id="confirmpassword" class="input-control" placeholder="Confirme Contraseña">
+                        </div>
+                        <div class="input-link">
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            <label for="terminos"><a href="./termsandconditions.html" class="gradient-text">términos y condiciones</a>.</label>
+                        </div>
+                        
+                            <button type="submit" class="btn-form">Iniciar Sesión</button>
+                    </form>
+                    <p>Ya tienes una cuenta?<a href="./login.html" class="gradient-text">Iniciar Sesión</a></p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <div class="container-footer">
         <footer>
             <div class="container">
                 <div class="sec aboutus">
-                    <h2>Sobre nosotros</h2>
+                    <h2>About Us</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nostrum excepturi quisquam.</p>
                     <ul class="sci">
                         <li>
-                            <a href="https://twitte.com" target="_blank">
+                            <a href="">
                                 <i class='bx bxl-twitter'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://instagram.com" target="_blank">
+                            <a href="">
                                 <i class='bx bxl-instagram'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://facebook.com" target="_blank">
+                            <a href="">
                                 <i class='bx bxl-facebook'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://youtube.com" target="_blank">
+                            <a href="">
                                 <i class='bx bxl-youtube'></i>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div class="sec quicklinks">
-                    <h2>Soporte</h2>
+                    <h2>Support</h2>
                     <ul>
                         <li>
-                            <a href="#">Preguntas frecuentes</a>
+                            <a href="">FAQ</a>
                         </li>
                         <li>
-                            <a href="./termsandconditions.html">Privacy Policy</a>
+                            <a href="">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="#">Ayuda</a>
+                            <a href="">Help</a>
                         </li>
                         <li>
-                            <a href="./contact.html">Contacto</a>
+                            <a href="">Contact</a>
                         </li>
                     </ul>
                 </div>
                 <div class="sec quicklinks">
-                    <h2>Comprar</h2>
+                    <h2>Shop</h2>
                     <ul>
                         <li>
                             <a href="">Men</a>
@@ -116,7 +149,7 @@
                     </ul>
                 </div>
                 <div class="sec contact">
-                   <h2>Contacta con nosotros</h2>
+                   <h2>Contact Us</h2>
                    <ul class="info">
                     <li> 
                         <span>

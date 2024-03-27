@@ -4,31 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Locales</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="/static/img/logo.png" alt="logo de la tienda">
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
         <nav>
-            <a href="../index.html">Incio</a>
-            <a href="about.html">Quienes somos</a>
-            <a href="register.html">Registrate</a>
-            <a href="">Categorias</a> <!-- Aca iria un menu desplegable con las dif categorias de ropa -->
-            <a href="contact.html">Contacto</a>
-            <a href="shoppingCart.html">Carrito</a>
-            <a href="locals.html">Locales</a>
+            <div class="logo">
+                <img src="/static/img/logo.png" alt="">
+            </div>
+            <ul>
+                <li>
+                    <a href="/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./about.html">Quienes somos</a>
+                </li>
+                <li>
+                    <a href="./login.html">Iniciar sesión</a>
+                </li>
+                <li>
+                    <a href="./categories.html">Categorias</a>    <!-- Aca iria un menu desplegable con las dif categorias de ropa -->
+                </li>
+                <li>
+                    <a href="./contact.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="./login.html">Carrito</a>
+                </li>
+                <li>
+                    <a href="#" class="active">Locales</a>
+                </li>
+            </ul>
         </nav>
-        <h1>Tienda de ropa</h1>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
     </header>
 
     <main>
         <section></section>
     </main>
 
-    <footer>
-        <a href="" target="_blank">Icono redes</a>
-        <a href="" target="_blank">Icono redes</a>
-        <a href="" target="_blank">Icono redes</a>
-        <a href="" target="_blank">Icono redes</a>
-        <p><b>&copy; 2024 - Todos los derechos reservados</b></p>
-    </footer>
+    <div class="container-footer">
+        <footer>
+            <div class="container">
+                <div class="sec aboutus">
+                    <h2>Sobre nosotros</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nostrum excepturi quisquam.</p>
+                    <ul class="sci">
+                        <li>
+                            <a href="https://twitte.com" target="_blank">
+                                <i class='bx bxl-twitter'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" target="_blank">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com" target="_blank">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com" target="_blank">
+                                <i class='bx bxl-youtube'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sec quicklinks">
+                    <h2>Soporte</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Preguntas frecuentes</a>
+                        </li>
+                        <li>
+                            <a href="./termsandconditions.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Ayuda</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sec quicklinks">
+                    <h2>Comprar</h2>
+                    <ul>
+                        <li>
+                            <a href="">Hombre</a>
+                        </li>
+                        <li>
+                            <a href="">Mujer</a>
+                        </li>
+                        <li>
+                            <a href="">Niños</a>
+                        </li>
+                        <li>
+                            <a href="">Calzado</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sec contact">
+                   <h2>Contacta con nosotros</h2>
+                   <ul class="info">
+                    <li> 
+                        <span>
+                            <i class='bx bxs-phone-call' ></i>
+                        </span> 
+                        <p>
+                            <a href="tel_+5492612458 967 ">0 261 2458 967</a>
+                        </p>
+                    </li>
+                    <li> 
+                        <span>
+                            <i class='bx bxl-gmail' ></i>
+                        </span> 
+                        <p>
+                            <a href="mailto:tienda.lllll@gmail.com">tienda.lllll@gmail.com</a>
+                        </p>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright-text">
+            <p>&copy; 2024 - Todos los derechos reservados.</p>
+        </div>
+    </div>
 </body>
 </html>

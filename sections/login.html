@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactate con nosotros</title>
+    <title>Bienvenidos</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -22,22 +22,22 @@
                     <a href="/index.html">Home</a>
                 </li>
                 <li>
-                    <a href="./about.html">Quienes somos</a>
+                    <a href="#">Quienes somos</a>
                 </li>
                 <li>
-                    <a href="./login.html">Iniciar sesión</a>
+                    <a href="#" class="active">Iniciar Sesión</a>
                 </li>
                 <li>
-                    <a href="./categories.html">Categorias</a>    <!-- Aca iria un menu desplegable con las dif categorias de ropa -->
+                    <a href="#">Categorias</a>    <!-- Aca iria un menu desplegable con las dif categorias de ropa -->
                 </li>
                 <li>
-                    <a href="#" class="active">Contacto</a>
+                    <a href="#">Contacto</a>
                 </li>
                 <li>
-                    <a href="./login.html">Carrito</a>
+                    <a href="./shoppingCart.html">Carrito</a>
                 </li>
                 <li>
-                    <a href="./locals.html">Locales</a>
+                    <a href="#">Locales</a>
                 </li>
             </ul>
         </nav>
@@ -48,10 +48,37 @@
         </label>
     </header>
 
-    <main>
-        <section></section>
+    <main class="main-container-form">
+        <section class="form-main">
+            <div class="form-content">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+                <div class="box">
+                    <h3>Bienvenido</h3>
+                    <form action="">
+                        <div class="input-box">
+                            <input type="email" name="email" id="email" class="input-control" placeholder="Email">
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="password" id="password" class="input-control" placeholder="Contraseña">
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="confirmpassword" id="confirmpassword" class="input-control" placeholder="Confirme Contraseña">
+                            <div class="input-link">
+                                <a href="./recoverpassword.html" class="gradient-text">Has olvidado tu contraseña</a>
+                            </div>
+                        </div>
+                        
+                        
+                            <button type="submit" class="btn-form">Iniciar sesión</button>
+                    </form>
+                    <p>No tienes una cuenta? <a href="./signup.html" class="gradient-text">Crear cuenta</a></p>
+                </div>
+            </div>
+        </section>
     </main>
-
+    
     <div class="container-footer">
         <footer>
             <div class="container">
@@ -65,17 +92,17 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://instagram.com" target="_blank">
+                            <a href="https://twitte.com" target="_blank">
                                 <i class='bx bxl-instagram'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://facebook.com" target="_blank">
+                            <a href="https://twitte.com" target="_blank">
                                 <i class='bx bxl-facebook'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://youtube.com" target="_blank">
+                            <a href="https://twitte.com" target="_blank">
                                 <i class='bx bxl-youtube'></i>
                             </a>
                         </li>
@@ -102,16 +129,16 @@
                     <h2>Comprar</h2>
                     <ul>
                         <li>
-                            <a href="">Men</a>
+                            <a href="">Hombre</a>
                         </li>
                         <li>
-                            <a href="">Woman</a>
+                            <a href="">Mujer</a>
                         </li>
                         <li>
-                            <a href="">Kids</a>
+                            <a href="">Niños</a>
                         </li>
                         <li>
-                            <a href="">Shoes</a>
+                            <a href="">Calzados</a>
                         </li>
                     </ul>
                 </div>

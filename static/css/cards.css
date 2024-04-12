@@ -1,0 +1,77 @@
+.top {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    grid-template-rows: auto;
+    padding: 10px;
+}
+.top-text{
+    grid-column: 1;
+    align-self: end;
+}
+
+.top-filter {
+   grid-column: 4; 
+   justify-self: end;
+   align-self: end;
+   /*margin-top: 25px;
+   margin-left: 20px;
+   width: 20px;*/
+}
+#filt{
+    border-radius: 5px;
+}
+.form-select{
+    border: 1px solid
+}
+.conteiner-cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3, 1fr)  ;
+    justify-content: center;
+    gap: 15px;
+    padding: 5px 15px 15px 15px;
+    /* background-color: aquamarine; */
+
+}
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-content {
+    padding: 5px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.card-content span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+@media screen and (max-width: 768px) {
+    .top {
+          grid-template-columns: auto auto; 
+       }
+    .top-filter {
+          grid-column: 2; /* Colocar el filtro en la segunda columna */
+          margin-top: 0; /* Ajustar el margen superior */
+          margin-left: 0; /* Ajustar el margen izquierdo */
+        }
+     .conteiner-cards {
+         grid-template-columns: auto auto; /* Cambiar a dos columnas en pantallas más pequeñas */
+        }
+    }

@@ -1,12 +1,5 @@
 /* Footer */
-.container-footer {
-    display: grid;
-    justify-content: center;
-    align-content: end;
-    min-height: 60vh;
-    padding: 50px;
-    
-} 
+@import "style.css";
 
 footer {
     position: relative;
@@ -98,7 +91,7 @@ footer .container .contact .info li a {
 .copyright-text {
     width: 100%;
     background: #fff;
-    padding: 30px 100px 0;
+    padding: 20px 100px 20px;
     text-align: center;
     color: #555;
     border-top: 1px solid rgba(0, 0, 0, 0.15); 
@@ -119,7 +112,7 @@ footer .container .contact .info li a {
         grid-gap: 20px;
     }
     .copyright-text {
-        padding: 20px 40px 30px;
+        padding: 20px 40px 50px;
     }
 }
 
@@ -130,4 +123,9 @@ footer .container .contact .info li a {
         grid-template-columns: repeat(1,1fr);
         grid-gap: 20px;
     }
+    .copyright-text {
+        padding: 20px 40px 100px;
+    }
 }
+
+

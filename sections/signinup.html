@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!--- favicon -->
+     <link rel="shortcut icon" href="/static/img/tendedero.png" type="image/x-icon">
+
+     <!-- Estilos CSS -->
+     <link rel="stylesheet" href="/static/css/style.css">
+ 
+     <!-- Box icons -->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+      <!-- Header -->
+    <div include-html="/template/header.html"></div>
+
+    <!-- Contenido principal -->
+    <main class="main-form">
+        <div class="container" id="container">
+            <div class="form-container sign-up">
+              <form>
+                <h1>Crear una cuenta</h1>
+                <div class="social-icons">
+                  <a href="#" class="icons">
+                    <i class='bx bxl-google-plus' ></i>
+                  </a>
+                  <a href="#" class="icons">
+                    <i class='bx bxl-facebook-square'></i>
+                  </a>
+                  <a href="#" class="icons">
+                    <i class='bx bxl-instagram-alt'></i>
+                  </a>
+                  <a href="#" class="icons">
+                    <i class='bx bxl-gmail'></i>
+                  </a>
+                </div>
+                <span>o utiliza tu correo electrónico para registrarte</span>
+                <input type="text" name="fullName" id="fullName" placeholder="Nombre completo" required>
+                <input type="number" name="dni" id="dni" placeholder="Documento de identidad" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <div class="input-link">
+                  <input type="checkbox" id="terminos" name="terminos" required class="checkbox-custom">
+                  <label for="terminos" class="checkbox-label">
+                      <span class="checkbox-custom"></span>
+                      <a href="/sections/termsandconditions.html">Términos y condiciones</a>
+                  </label>
+              </div>
+                <button>Crear cuenta</button>
+              </form>
+            </div>
+            <div class="form-container sign-in">
+              <form>
+                <h1>Iniciar sesión</h1>
+                <div class="social-icons">
+                  <a href="#" class="icons">
+                    <i class='bx bxl-google-plus' ></i>
+                  </a>
+                  <a href="#" class="icons">
+                    <i class='bx bxl-facebook-square'></i>
+                  </a>
+                  <a href="#" class="icons">
+                    <i class='bx bxl-instagram-alt'></i>
+                  </a>
+                  <a href="#" class="icons">
+                    <i class='bx bxl-gmail'></i>
+                  </a>
+                </div>
+                <span>o usa tu correo electrónico/contraseña</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Contraseña">
+                <a href="/sections/recoverpassword.html">¿Olvidaste tu contraseña?</a>
+                  <button type="button" id="redirectLogin">Iniciar sesión</button>
+              </form>
+            </div>
+
+            <div class="toggle-container">
+              <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                  <h1>¡Bienvenido de nuevo!</h1>
+                  <p>Ingrese sus datos personales para utilizar todas las funciones del sitio</p>
+                  <button class="hidden" id="login">Inicia sesión</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                  <h1>Hola amigo/a!</h1>
+                  <p>Regístrese con sus datos personales para utilizar todas las funciones del sitio</p>
+                  <button class="hidden" id="register">Crear cuenta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+
+    <!-- Footer -->
+    <div include-html="/template/footer.html"></div>
+
+    <!-- Script de carga dinamica de elementos html -->
+    <script src="/static/js/loadTemplate.js"></script>
+
+</body>
+</html>

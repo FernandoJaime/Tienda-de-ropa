@@ -1,9 +1,11 @@
-@import "formularios.css";
+@import "signinup.css";
 @import "footer.css";
 @import "header.css";
 @import "terms.css";
 @import "about-locals.css";
 @import "mens.css";
+@import "cards.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /*-----------------------------------*\
   #PROPIEDAD PERSONALIZADA
@@ -66,7 +68,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 main::after,
@@ -119,3 +121,9 @@ span { display: inline-block; }
 
 
 
+/* Agregar animaciones a los iconos */
+@keyframes iconAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}

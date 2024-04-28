@@ -9,8 +9,16 @@
     <link rel="stylesheet" href="/static/css/style.css">
 
     <link rel="shortcut icon" href="/static/img/tendedero.png" type="image/x-icon">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+
+    <!-- Header -->
+    <div include-html="/template/header.html"></div>
+
+    <!-- Contenido principal -->
     <main class="main-terms">
         <section id="introduction">
             <h1>Términos y Condiciones</h1>
@@ -58,11 +66,14 @@
             <p>Es importante que leas detenidamente los Términos y Condiciones antes de usar la Plataforma. Si tienes cualquier duda, no dudes en contactarte con la Empresa.</p>
         </section>
         <div class="acept-terms">
-            <a href="./signup.html" class="accept-btn">Acepto</a>
+            <a href="/sections/signinup.html" class="accept-btn">Acepto</a>
         </div>
     </main>
     
-       
+       <!-- Footer -->
+       <div include-html="/template/footer.html"></div>
    
+       <!-- Script de carga dinamica de elementos html -->
+       <script src="/static/js/loadTemplate.js"></script>
 </body>
 </html>

@@ -1,0 +1,107 @@
+main-cart {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+#cart-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#carrito-vacio {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #888;
+}
+
+.tarjeta-producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.tarjeta-producto img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 120px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.tarjeta-producto h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.tarjeta-producto span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  padding: 0 15px;
+}
+
+.tarjeta-producto div {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.tarjeta-producto div > button {
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  padding: 10px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.tarjeta-producto div > button:first-child {
+  margin-right: auto;
+}
+
+.tarjeta-producto div > button:last-child {
+  margin-left: auto;
+}
+
+.tarjeta-producto button:hover {
+  background-color: #d00;
+}
+
+#totales {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+#totales p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+#totales button {
+  background-color: #008cba;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#totales button:hover {
+  background-color: #006080;
+}

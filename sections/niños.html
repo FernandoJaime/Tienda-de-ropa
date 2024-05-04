@@ -1,140 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <!--- favicon -->
-    <link rel="shortcut icon" href="/static/img/tendedero.png" type="image/x-icon">
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="/static/img/tendedero.png"
+      type="image/x-icon"
+    />
 
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="/static/css/style.css">
-
+    <link rel="stylesheet" href="/static/css/style.css" />
 
     <!-- Box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Link para los iconos -->
-    <script src="https://kit.fontawesome.com/425fc27882.js" crossorigin="anonymous"></script>
-
-</head>
-<body>
-
+    <script
+      src="https://kit.fontawesome.com/425fc27882.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <!-- Header -->
-    <div include-html="/template/header.html"></div> 
+    <div include-html="/template/header.html"></div>
 
     <!-- Contenido principal -->
     <main>
-        <section>
-            <div class="top">
-                <div class="top-text">
-                    <h2>Niños</h2>
-                    <h5>¡Encuentra la categoría de pantalones perfecta para cualquier ocasión en nuestra tienda online!</h5>
-                </div>
-                <div class="top-filter">
-                    <select name="filt" id="filt" class="form-select">
-                        <option value="flitro">Flitro</option>
-                        <option value="precio-bajo">Precio: Menor a Mayor</option>
-                        <option value="precio-alto">Precio: Mayor a Menor</option>
-                    </select>
-                </div>
+      <section>
+        <div class="top">
+          <h2>Niños</h2>
+          <div class="top-text">
+            <h5>
+              ¡Encuentra la categoría de pantalones perfecta para cualquier
+              ocasión en nuestra tienda online!
+            </h5>
+          </div>
+          <div class="top-filter">
+            <select name="filt" id="filt" class="form-select">
+              <option value="flitro">Filtro</option>
+              <option value="precio-bajo">Precio: Menor a Mayor</option>
+              <option value="precio-alto">Precio: Mayor a Menor</option>
+            </select>
+          </div>
+        </div>
+        <div class="conteiner-cards">
+          <!-- card 1 -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="../static/img/niños-1.webp" alt="" />
+              </div>
+              <div class="card-back">
+                <h3>Conjunto de Camiseta</h3>
+                <p>
+                  Descripción: Conjunto de camiseta con textura y shorts para
+                  niños de 3 a 12 años.
+                </p>
+                <span>$$$$</span>
+                <button class="btn-buy">Comprar</button>
+              </div>
             </div>
-            <div class="conteiner-cards">
-                <div class="card">
-                    <img src="../static/img/niños-1.webp" alt="">
-                    <div class="card-content">
-                        <span>
-                            TEXTURED T-SHIRDT AND SHORTS SET (3-12 YEARS)</span> <br>
-                        <span>$$$$</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../static/img/niños-2.webp" alt="">
-                    <div class="card-content">
-                        <span>SHORTS AND POLO SET WITH ZIP COLLAR (3-12 YEARS)</span> <br>
-                        <span>$$$$</span>
-                    </div>
-                </div>
-                <div class=card>
-                    <img src="../static/img/niños-3.webp" alt="">
-                    <div class="card-content">
-                        <span>KHAKI GREEN - UTILITYY SHORT SLEEVE T-SHIRT AND SWEATPANTS SET (3-12 YEARS)</span> <br>
-                        <span>$$$$</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../static/img/niños-4.webp" alt="">
-                    <div class="card-content">
-                        <span>COLOR BLOCK T-SHIRT AND SHORTS SET (3-12 YEARS)</span> <br>
-                        <span>$$$$</span>
-                    </div>
-                </div>
-                 <div class="card">
-                    <img src="../static/img/niños-5.webp" alt="">
-                    <div class="card-content">
-                        <span> CREAM/BLACK VARSITY BASEBALL JERSEY AND SHORTS SET (3-12 YEARS)</span> <br>
-                        <span>$$$$</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../static/img/niños-6.webp" alt="">
-                    <div class="card-content">
-                        <span>COLOURBLOCK T-SHIRT AND SHORTS SET (3-16 YEARS)</span> <br>
-                        <span>$$$$</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../static/img/niños-7.webp" alt="">
-                    <div class="card-content">
-                        <span>ANTHRACITE GRAY - 2 PIECE SET: T-SHIRT AND SHORTS (3 to 12 YEARS)</span> <br>
-                        <span>$$$$</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../static/img/niños-8.webp" alt="">
-                    <div class="card-content">                       
-                        <span>TEXTURED SWEATER AND SHORTS SET (3-12 YEARS)</span> <br>
-                        <span>0000</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../static/img/niños-9.webp" alt="">
-                    <div class="card-content">
-                        <span>GAP LOGO CREW NECK SWEATSHIRT</span> <br>
-                        <span>$$$$</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../static/img/niños-10.webp" alt="">
-                    <div class="card-content">
-                        <span>SCHOOL SWEATER WITH ROUND NEK (3 - 12 YEARS)</span> <br>
-                        <span>$$$$</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../static/img/niños-11.webp" alt="">
-                    <div class="card-content">
-                        <span> REISS BRYANT COTTON CREW NECK SWEATSHIRT (3 - 12 YEARS)</span> <br>
-                        <span>$$$$</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../static/img/niños-12.webp" alt="">
-                    <div class="card-content">
-                        <span>Gap Logo Crewneck Sweatshirt (3 - 12 YEARS) </span> <br>
-                        <span>$$$$</span>
-                    </div>
-                </div>
-            </div> 
-            <hr>
-        </section>
+          </div>
+
+          <!-- card 2 -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="../static/img/niños-2.webp" alt="" />
+              </div>
+              <div class="card-back">
+                <h3>
+                  Conjunto de Shorts
+                </h3>
+                <p>
+                  Descripción: Conjunto de shorts y polo con cuello de
+                  cremallera para niños de 3 a 12 años.
+                </p>
+                <span>$$$$</span>
+                <button class="btn-buy">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="../static/img/niños-3.webp" alt="" />
+              </div>
+              <div class="card-back">
+                <h3>
+                  Conjunto de Camiseta
+                </h3>
+                <p>
+                  Descripción: Conjunto de camiseta de manga corta y pantalones
+                  deportivos en verde caqui para niños de 3 a 12 años.
+                </p>
+                <span>$$$$</span>
+                <button class="btn-buy">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 4 -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="../static/img/niños-4.webp" alt="" />
+              </div>
+              <div class="card-back">
+                <h3>
+                  Conjunto de Camiseta
+                </h3>
+                <p>
+                  Descripción: Conjunto de camiseta de bloques de color y shorts
+                  para niños de 3 a 12 años.
+                </p>
+                <span>$$$$</span>
+                <button class="btn-buy">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 5 -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="../static/img/niños-5.webp" alt="" />
+              </div>
+              <div class="card-back">
+                <h3>Conjunto de Camiseta</h3>
+                <p>
+                  Descripción: Conjunto de camiseta de béisbol en crema/negro y
+                  shorts para niños de 3 a 12 años.
+                </p>
+                <span>$$$$</span>
+                <button class="btn-buy">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 6 -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="../static/img/niños-6.webp" alt="" />
+              </div>
+              <div class="card-back">
+                <h3>
+                  Conjunto de Camiseta y Shorts
+                </h3>
+                <p>
+                  Descripción: Conjunto de camiseta y shorts con bloques de
+                  color para niños de 3 a 16 años.
+                </p>
+                <span>$$$$</span>
+                <button class="btn-buy">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 7 -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="../static/img/niños-7.webp" alt="" />
+              </div>
+              <div class="card-back">
+                <h3>
+                  Conjunto de 2 Piezas
+                </h3>
+                <p>
+                  Descripción: Conjunto de camiseta y shorts en gris antracita
+                  para niños de 3 a 12 años.
+                </p>
+                <span>$$$$</span>
+                <button class="btn-buy">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 8 -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="../static/img/niños-8.webp" alt="" />
+              </div>
+              <div class="card-back">
+                <h3>Conjunto de Suéter</h3>
+                <p>
+                  Descripción: Conjunto de suéter texturizado y shorts para
+                  niños de 3 a 12 años.
+                </p>
+                <span>0000</span>
+                <button class="btn-buy">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 9 -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="../static/img/niños-9.webp" alt="" />
+              </div>
+              <div class="card-back">
+                <h3>Suéter</h3>
+                <p>
+                  Descripción: Suéter con cuello redondo y logo de GAP para
+                  niños.
+                </p>
+                <span>$$$$</span>
+                <button class="btn-buy">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 10 -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="../static/img/niños-10.webp" alt="" />
+              </div>
+              <div class="card-back">
+                <h3>Suéter Escolar</h3>
+                <p>
+                  Descripción: Suéter escolar con cuello redondo para niños de 3
+                  a 12 años.
+                </p>
+                <span>$$$$</span>
+                <button class="btn-buy">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 11 -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="../static/img/niños-11.webp" alt="" />
+              </div>
+              <div class="card-back">
+                <h3>
+                  Suéter de Algodón
+                </h3>
+                <p>
+                  Descripción: Suéter de algodón con cuello redondo REISS BRYANT
+                  para niños de 3 a 12 años.
+                </p>
+                <span>$$$$</span>
+                <button class="btn-buy">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 12 -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="../static/img/niños-12.webp" alt="" />
+              </div>
+              <div class="card-back">
+                <h3>Suéter con Cuello Redondo</h3>
+                <p>
+                  Descripción: Suéter con cuello redondo y logo de GAP para
+                  niños de 3 a 12 años.
+                </p>
+                <span>cara</span>
+                <button class="btn-buy">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <div include-html="/template/footer.html"></div>
 
-    <!-- Script de carga dinamica de elementos html -->
+    <!-- Script de carga dinámica de elementos html -->
     <script src="/static/js/loadTemplate.js"></script>
-</body>
+  </body>
 </html>

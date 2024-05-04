@@ -15,20 +15,31 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <!-- Header -->
+   <div include-html="/template/header.html"></div>
 
-    <!--- Header-->
-    <div include-html="/template/header.html"></div>
-
-     <!-- CONTENIDO PRINCIPAL -->
-    <main>
-        <section>CARRITO DE COMPRAS</section>
+    <!-- Contenido Principal -->
+    <main class="main-cart">
+    
+        <p id="carrito-vacio">Ups! El carrito está vacío, <a href="./index.html">elige algunos productos</a></p>
+        <section id="cart-container">
+            <!-- Aquí se mostrarán las tarjetas de productos en el carrito -->
+            <div id="contenedor-tarjetas"></div>
+        </section>
+        <section id="totales">
+            <p>Total unidades: <span id="cantidad">0</span></p>
+            <p>Total precio: $<span id="precio">0</span></p>
+            <button disabled>Comprar</button>
+            <button id="reiniciar">Reiniciar</button>
+        </section>
     </main>
-
 
     <!-- Footer -->
     <div include-html="/template/footer.html"></div>
 
     <!-- Script de carga dinamica de elementos html -->
     <script src="/static/js/loadTemplate.js"></script>
+
+    <script src="/static/js/cartShop.js" defer></script>
 </body>
 </html>

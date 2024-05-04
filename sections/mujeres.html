@@ -23,108 +23,191 @@
    <div include-html="/template/header.html"></div>
 
    <!-- Contenido Principal -->
-   <main>
+   <main class="main.card">
     <section>
         <div class="top">
+            <h2>Mujeres</h2>
             <div class="top-text">
-                <h2>Mujeres</h2>
                 <h5>¡Encuentra la categoría de pantalones perfecta para cualquier ocasión en nuestra tienda online!</h5>
             </div>
             <div class="top-filter">
                 <select name="filt" id="filt" class="form-select">
-                    <option value="flitro">Flitro</option>
+                    <option value="filtro">Filtro</option>
                     <option value="precio-bajo">Precio: Menor a Mayor</option>
                     <option value="precio-alto">Precio: Mayor a Menor</option>
                 </select>
             </div>
         </div>
         <div class="conteiner-cards">
-            <div class="card">
-                <img src="../static/img/remera-5.png" alt="">
-                <div class="card-content">
-                    <span>MUSCULOSA STAY BEACHY</span> <br>
-                    <span>$$$$</span>
+            <!-- Tarjeta 1 -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/remera-5.png" alt="">
+                    </div>
+                    <div class="card-back">
+                        <h3>Musculosa estacia playa</h3>
+                        <p>Descripción: Una hermosa musculosa perfecta para la playa.</p>
+                        <span>Precio: 20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="../static/img/remera-6.png" alt="">
-                <div class="card-content">
-                    <span>REMERA BEVERLY HILLS</span> <br>
-                    <span>$$$$</span>
+            <!-- Tarjeta 2 -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/remera-6.png" alt="">
+                    </div>
+                    <div class="card-back">
+                        <h3>Remera Beberli Hills</h3>
+                        <p>Descripción: Una elegante remera con diseño de Beberli Hills.</p>
+                        <span>Precio: 20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
-            <div class=card>
-                <img src="../static/img/remera-7.png" alt="">
-                <div class="card-content">
-                    <span>REMERA XLAVIDA</span> <br>
-                    <span>$$$$</span>
+            <!-- Tarjeta 3 -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/remera-7.png" alt="">
+                    </div>
+                    <div class="card-back">
+                        <h3>Remeras xl</h3>
+                        <p>Descripción: Remeras de talla extra grande para mayor comodidad.</p>
+                        <span>Precio: 20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="../static/img/remera-8.png" alt="">
-                <div class="card-content">
-                    <span>REMERA SHINE FOR YOU</span> <br>
-                    <span>$$$$</span>
+            <!-- Tarjeta 4 -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/remera-8.png" alt="">
+                    </div>
+                    <div class="card-back">
+                        <h3>Remeras xxl</h3>
+                        <p>Descripción: Remeras de talla extra, perfectas para un ajuste cómodo.</p>
+                        <span>Precio: 20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
-             <div class="card">
-                <img src="../static/img/pantalon-5.png" alt="">
-                <div class="card-content">
-                    <span>CALZA WILD TWIST</span> <br>
-                    <span>$$$$</span>
+            <!-- Tarjeta 5 -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/pantalon-5.png" alt="">
+                    </div>
+                    <div class="card-back">
+                        <h3>Calza negra</h3>
+                        <p>Descripción: Una calza negra perfecta para cualquier ocasión.</p>
+                        <span>Precio: 20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="../static/img/pantalon-6.png" alt="">
-                <div class="card-content">
-                    <span>PANTALON SIMON</span> <br>
-                    <span>$$$$</span>
+            <!-- Tarjeta 6 -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/pantalon-6.png" alt="">
+                    </div>
+                    <div class="card-back">
+                        <h3>Pantalon Simon</h3>
+                        <p>Descripción: Pantalones cómodos y elegantes para cualquier ocasión.</p>
+                        <span>Precio: 20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="../static/img/pantalon-7.png" alt="">
-                <div class="card-content">
-                    <span>PANTALON MANHATTAN WHITE</span> <br>
-                    <span>$$$$</span>
+            <!-- Tarjeta 7 -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/pantalon-7.png" alt="">
+                    </div>
+                    <div class="card-back">
+                        <h3>Pantallon Manhattan</h3>
+                        <p>Descripción: Pantalones de estilo urbano para un look moderno.</p>
+                        <span>Precio: 20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="../static/img/pantalon-8.png" alt="">
-                <div class="card-content">                       
-                    <span>JEGGING DOVER BLACK</span> <br>
-                    <span>0000</span>
+            <!-- Tarjeta 8 -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/pantalon-8.png" alt="">
+                    </div>
+                    <div class="card-back">
+                        <h3>Jegging dover negra</h3>
+                        <p>Descripción: Pantalones ajustados para un look moderno y cómodo.</p>
+                        <span>Precio: 20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="../static/img/abrigo5.png" alt="">
-                <div class="card-content">
-                    <span>BUZO BASE LINE CREW</span> <br>
-                    <span>$$$$</span>
+            <!-- Tarjeta 9 -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/abrigo5.png" alt="">
+                    </div>
+                    <div class="card-back">
+                        <h3>Buzo crew</h3>
+                        <p>Descripción: Buzo de estilo casual para un look relajado.</p>
+                        <span>Precio: 20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="../static/img/abrigo-6.png" alt="">
-                <div class="card-content">
-                    <span>BUZO DAILY OVER HOOD</span> <br>
-                    <span>$$$$</span>
+            <!-- Tarjeta 10 -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/abrigo-6.png" alt="">
+                    </div>
+                    <div class="card-back">
+                        <h3>Buzo con capucha</h3>
+                        <p>Descripción: Buzo con capucha para mantenerte abrigado y cómodo.</p>
+                        <span>Precio: 20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="../static/img/abrigo-7.png" alt="">
-                <div class="card-content">
-                    <span>SHINE FOR YOU ZIP HOOD</span> <br>
-                    <span>$$$$</span>
+            <!-- Tarjeta 11 -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/abrigo-7.png" alt="">
+                    </div>
+                    <div class="card-back">
+                        <h3>Campera con capucha</h3>
+                        <p>Descripción: Campera con capucha para un estilo urbano y cómodo.</p>
+                        <span>Precio: 20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="../static/img/abrigo-8.png" alt="">
-                <div class="card-content">
-                    <span>BUZO OF THE SUN CREW</span> <br>
-                    <span>$$$$</span>
+            <!-- Tarjeta 12 -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/abrigo-8.png" alt="">
+                    </div>
+                    <div class="card-back">
+                        <h3>Buzo sin capucha</h3>
+                        <p>Descripción: Buzo sin capucha para un look más formal.</p>
+                        <span>Precio: 20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
         </div> 
-        <hr>
     </section>
 </main>
 

@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <!-- Favicon -->
-     <link rel="shortcut icon" href="/static/img/tendedero.png" type="image/x-icon">
+    <title>Calzados</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/static/img/tendedero.png" type="image/x-icon">
 
-     <!-- Estilos CSS -->
-     <link rel="stylesheet" href="/static/css/style.css">
- 
-     <!-- Box Icons -->
-     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
- 
-     <!-- Link para los iconos -->
-     <script src="https://kit.fontawesome.com/425fc27882.js" crossorigin="anonymous"></script>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Link para los iconos -->
+    <script src="https://kit.fontawesome.com/425fc27882.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -25,105 +25,196 @@
     <main>
         <section>
             <div class="top">
+                <h2>Calzados</h2>
                 <div class="top-text">
-                    <h2>Calzados</h2>
-                    <h5>¡Encuentra la categoría de pantalones perfecta para cualquier ocasión en nuestra tienda online!</h5>
+                    <h5>¡Encuentra la categoría de calzados perfecta para cualquier ocasión en nuestra tienda online!</h5>
                 </div>
                 <div class="top-filter">
                     <select name="filt" id="filt" class="form-select">
-                        <option value="flitro">Flitro</option>
+                        <option value="flitro">Filtro</option>
                         <option value="precio-bajo">Precio: Menor a Mayor</option>
                         <option value="precio-alto">Precio: Mayor a Menor</option>
                     </select>
                 </div>
             </div>
             <div class="conteiner-cards">
-                <div class="card">
+                <!-- Tarjeta 1 -->
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
                     <img src="../static/img/zapatilla-1.jpg" alt="">
-                    <div class="card-content">
-                        <span>ZAPATILLAS ULTRARANGE NEO VR3 BLACK</span> <br>
-                        <span>$$$$</span>
+                </div>
+                    <div class="card-back">
+                        <h3>Zapatillas UltraRange Neo VR3 Black</h3>
+                        <p>Descripción: Zapatillas negras UltraRange Neo VR3 para un estilo moderno y cómodo.</p>
+                        <span>20.000$</span>
+                        <button class="btn-buy">Comprar</button>
                     </div>
                 </div>
-                <div class="card">
+                </div>
+                 <!-- Tarjeta 2 -->
+                 <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
                     <img src="../static/img/zapatilla-2.jpg" alt="">
-                    <div class="card-content">
-                        <span>ZAPATILLAS ULTRARANGE NEO VR3 WHITE</span> <br>
-                        <span>$$$$</span>
+                    </div>
+                    <div class="card-back">
+                        <h3>Zapatillas UltraRange Neo VR3 White</h3>
+                        <p>Descripción: Zapatillas blancas UltraRange Neo VR3 para un look fresco y versátil.</p>
+                        <span>20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                     </div>
                 </div>
-                <div class=card>
+                <!-- Tarjeta 3 -->
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
                     <img src="../static/img/zapatilla-3.jpg" alt="">
-                    <div class="card-content">
-                        <span>ZAPATILLAS ULTRARANGE NEO VR3 EXO</span> <br>
-                        <span>$$$$</span>
+                    </div>
+                    <div class="card-back">
+                        <h3>Zapatillas UltraRange Neo VR3 EXO</h3>
+                        <p>Descripción: Zapatillas UltraRange Neo VR3 EXO para una experiencia de uso óptima.</p>
+                        <span>20.000$</span>
+                        <button class="btn-buy">Comprar</button>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="../static/img/zapatilla-4.jpg" alt="">
-                    <div class="card-content">
-                        <span>ZAPATILLAS SKATE ROWLEY</span> <br>
-                        <span>$$$$</span>
+                </div>
+               <!-- Tarjeta 4 -->
+               <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../static/img/zapatilla-4.jpg" alt="">
+                   </div>
+                        <div class="card-back">
+                        <h3>Zapatillas Skate Rowley</h3>
+                        <p>Descripción: Zapatillas Rowley para los amantes del skateboarding.</p>
+                        <span>20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                     </div>
                 </div>
-                 <div class="card">
+
+                <!-- Tarjeta 5 -->
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
                     <img src="../static/img/zapatilla-5.jpg" alt="">
-                    <div class="card-content">
-                        <span>ZAPATILLAS SKATE ROWLEY</span> <br>
-                        <span>$$$$</span>
+                    </div>
+                    <div class="card-back">
+                        <h3>Zapatillas Skate Rowley</h3>
+                        <p>Descripción: Zapatillas Rowley para los amantes del skateboarding.</p>
+                        <span>20.000$</span>
+                        <button class="btn-buy">Comprar</button>
                     </div>
                 </div>
-                <div class="card">
+                </div>
+
+                <!-- Tarjeta 6 -->
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
                     <img src="../static/img/zapatilla-6.jpg" alt="">
-                    <div class="card-content">
-                        <span>ZAPATILLAS LOWLANDD CC</span> <br>
-                        <span>$$$$</span>
+                    </div>
+                    <div class="card-back">
+                        <h3>Zapatillas Lowlandd CC</h3>
+                        <p>Descripción: Zapatillas Lowlandd CC para una comodidad superior en cada paso.</p>
+                        <span>20.000$</span>
+                        <button class="btn-buy">Comprar</button>
                     </div>
                 </div>
-                <div class="card">
+                </div>
+
+                <!-- Tarjeta 7 -->
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
                     <img src="../static/img/zapatilla-7.jpg" alt="">
-                    <div class="card-content">
-                        <span>ZAPATILLAS SPORT LOW BLACK</span> <br>
-                        <span>$$$$</span>
+                    </div>
+                    <div class="card-back">
+                        <h3>Zapatillas Sport Low Black</h3>
+                        <p>Descripción: Zapatillas deportivas en negro para un estilo casual y versátil.</p>
+                        <span>20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                     </div>
                 </div>
-                <div class="card">
+
+                <!-- Tarjeta 8 -->
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
                     <img src="../static/img/zapatilla-8.jpg" alt="">
-                    <div class="card-content">                       
-                        <span>ZAPATILLAS SPORT LOW RED</span> <br>
-                        <span>0000</span>
+                    </div>
+                    <div class="card-back">
+                        <h3>Zapatillas Sport Low Red</h3>
+                        <p>Descripción: Zapatillas deportivas en rojo para destacar en cualquier ocasión.</p>
+                        <span>20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                     </div>
                 </div>
-                <div class="card">
+
+                <!-- Tarjeta 9 -->
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
                     <img src="../static/img/zapatilla-9.jpg" alt="">
-                    <div class="card-content">
-                        <span>ZAPATILLAS SPORT LOW BLACK/WHITE</span> <br>
-                        <span>$$$$</span>
+                    </div>
+                    <div class="card-back">
+                        <h3>Zapatillas Sport Low Black/White</h3>
+                        <p>Descripción: Zapatillas deportivas en blanco y negro para un estilo clásico y moderno.</p>
+                        <span>20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                     </div>
                 </div>
-                <div class="card">
+
+                <!-- Tarjeta 10 -->
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
                     <img src="../static/img/zapatilla-10.jpg" alt="">
-                    <div class="card-content">
-                        <span>ZAPATILLAS SKATE SK8-HI GREEN</span> <br>
-                        <span>$$$$</span>
+                    </div>
+                    <div class="card-back">
+                        <h3>Zapatillas Skate SK8-HI Green</h3>
+                        <p>Descripción: Zapatillas de skate en verde para un look llamativo y original.</p>
+                        <span>20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                     </div>
                 </div>
-                <div class="card">
+
+                <!-- Tarjeta 11 -->
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
                     <img src="../static/img/zapatilla-11.jpg" alt="">
-                    <div class="card-content">
-                        <span>ZAPATILLAS SKATE SK8-HI BLACK</span> <br>
-                        <span>$$$$</span>
+                    </div>
+                    <div class="card-back">
+                        <h3>Zapatillas Skate SK8-HI Black</h3>
+                        <p>Descripción: Zapatillas de skate en negro para un estilo urbano y atrevido.</p>
+                        <span>20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                     </div>
                 </div>
-                <div class="card">
+
+                <!-- Tarjeta 12 -->
+                <div class="card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
                     <img src="../static/img/zapatilla-12.jpg" alt="">
-                    <div class="card-content">
-                        <span>ZAPATILLAS SKATE GROSSO MID</span> <br>
-                        <span>$$$$</span>
+                    </div>
+                    <div class="card-back">
+                        <h3>Zapatillas Skate Grosso Mid</h3>
+                        <p>Descripción: Zapatillas de skate Grosso Mid para un rendimiento excepcional en la tabla.</p>
+                        <span>20.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
                     </div>
                 </div>
             </div> 
-            <hr>
         </section>
     </main>
 

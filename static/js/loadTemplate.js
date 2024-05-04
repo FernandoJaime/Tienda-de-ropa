@@ -57,6 +57,9 @@ function cargarScripts() {
         .then(function() {
             return cargarScript("/static/js/signinup.js");
         })
+        .then(function() {
+            return cargarScript("/static/js/cartShop.js"); // Cargar cartShop.js después de header.js y signinup.js
+        })
         .catch(function(error) {
             console.error("Error al cargar los scripts:", error);
         });

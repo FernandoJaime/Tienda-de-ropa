@@ -1,0 +1,22 @@
+[33mcfbecf7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: checkout: moving from LugarDeTrabajo to master
+[33md0b98d1[m[33m ([m[1;31morigin/LugarDeTrabajo[m[33m, [m[1;32mLugarDeTrabajo[m[33m)[m HEAD@{1}: commit: se reaiza modificacion de categorias y el la pagina de todos los productos, se crea el shopping cart, falta terminar las funcionalidades
+[33m1032196[m HEAD@{2}: commit: se reaiza modificacion de categorias y el la pagina de todos los productos, se crea el shopping cart, falta terminar las funcionalidades
+[33md05c935[m HEAD@{3}: commit: se reorganiza el html header y footer se crea carga dinamica con js de funiconalidades js y de los archivos html header y footer, se modifca main de formulario de login y crear cuenta y recupero de contraseña
+[33m27de888[m HEAD@{4}: commit (merge): Resuelve conflictos de fusión
+[33m36f184d[m HEAD@{5}: commit: Cambios en header se agregan funcionalidades se arrgla el css de ditintos archivos html
+[33mf512d2b[m HEAD@{6}: commit: modificacion sobre la version 0.1
+[33m98cfceb[m HEAD@{7}: commit (merge): v 0.1
+[33mcfbecf7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{8}: reset: moving to cfbecf732b5cb0ed9b4d0b8b37910e16b6e9832f
+[33mcfbecf7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{9}: reset: moving to cfbecf732b5cb0ed9b4d0b8b37910e16b6e9832f
+[33m0c22043[m HEAD@{10}: reset: moving to origin/LugarDeTrabajo
+[33mcfbecf7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{11}: reset: moving to cfbecf732b5cb0ed9b4d0b8b37910e16b6e9832f
+[33m0c22043[m HEAD@{12}: checkout: moving from cfbecf732b5cb0ed9b4d0b8b37910e16b6e9832f to LugarDeTrabajo
+[33mcfbecf7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{13}: reset: moving to cfbecf732b5cb0ed9b4d0b8b37910e16b6e9832f
+[33m0c22043[m HEAD@{14}: checkout: moving from LugarDeTrabajo to 0c220434a3888bad6231239d5c8aaecf6e2cd7ae
+[33m0c22043[m HEAD@{15}: checkout: moving from LugarDeTrabajo to LugarDeTrabajo
+[33m0c22043[m HEAD@{16}: checkout: moving from master to LugarDeTrabajo
+[33mcfbecf7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{17}: reset: moving to cfbecf732b5cb0ed9b4d0b8b37910e16b6e9832f
+[33mcfbecf7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{18}: checkout: moving from LugarDeTrabajo to master
+[33m0c22043[m HEAD@{19}: checkout: moving from master to LugarDeTrabajo
+[33mcfbecf7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{20}: commit: Se realizan la version 0.1 de los footer, header, formularios de inicio de sesion, registro y recuperacion de contraseña
+[33me8836a0[m HEAD@{21}: clone: from https://github.com/FernandoJaime/Tienda-de-ropa.git

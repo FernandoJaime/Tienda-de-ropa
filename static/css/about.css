@@ -1,0 +1,98 @@
+/* Importando estilos generales desde style.css */
+@import "./style.css";
+
+/* Estilos de la sección principal */
+.main-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para el título principal */
+.main-about .title-about {
+  padding-top: 2%;
+  margin-bottom: 55px;
+}
+
+/* Estilos para el texto oculto */
+.hidden-text {
+  overflow: hidden;
+  text-transform: uppercase;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* Mostrar texto oculto al pasar el mouse sobre la sección principal */
+.main-about:hover .hidden-text {
+  max-height: 300px;
+  transition: max-height 0.5s ease;
+}
+
+/* Estilos para la sección sobre */
+.section-about {
+  max-width: 75%;
+  text-align: center;
+}
+
+/* Estilos para el contenedor de la información */
+.cart-about {
+  position: relative;
+  box-shadow: var(--border-shadow); /* Sombra */
+  transition: box-shadow 0.8s ease, top 0.3s ease, transform 0.8s ease;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  background-color: var(--spanish-gray);
+  border-radius: var(--border-radius-sm);
+  padding: 20px;
+}
+
+/* Efecto de aumento de sombra al pasar el mouse */
+.cart-about:hover {
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(0, 0, 0, 0.4),
+    0 0 80px rgba(0, 0, 0, 0.3),
+    0 0 100px rgba(0, 0, 0, 0.3);
+  top: -20;
+  transform: scale(1.03);
+  transform-origin: center;
+  transform-style: preserve-3d;
+}
+
+/* Estilos para el título dentro del contenedor */
+.cart-about h3 {
+  margin-bottom: 20px;
+}
+
+/* Estilos para la línea divisora dentro del contenedor */
+.cart-about hr {
+  border-color: var(--bittersweet);
+}
+
+/* Estilos para el contenido dentro del contenedor */
+.cart-about .content-about {
+  text-align: left;
+  text-wrap: wrap;
+  padding: 15px;
+}
+
+/* Estilos para las listas dentro del contenido */
+.content-about ul {
+  padding: 30px;
+  font-weight: var(--fs-4);
+}
+
+/* Estilos para los elementos de la lista */
+.content-about li {
+  margin-bottom: 20px;
+  list-style-type: disc;
+}
+
+/* Ajusta el tamaño del marcador disc */
+.content-about li::marker {
+  font-size: 24px; 
+}

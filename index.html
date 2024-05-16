@@ -1,50 +1,375 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de inicio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina de inicio</title>
 
-     <!--- favicon -->
-    <link rel="shortcut icon" href="/static/img/tendedero.png" type="image/x-icon">
+  <!--- favicon -->
+  <link rel="shortcut icon" href="/static/img/tendedero.png" type="image/x-icon">
 
-    <!-- Estilos CSS -->
-    <link rel="stylesheet" href="./static/css/style.css">
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="./static/css/style.css">
 
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-    <!-- Box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Box icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-   
+
   <!-- HEADER -->
   <div include-html="/template/header.html">
     <!-- CARGA DINAMICA DE HEADER -->
   </div>
-  
-    <!-- CONTENIDO PRINCIPAL -->
-    <main>
-        <section>
-            <h1>SECTION HOME</h1>
-        </section>
-    </main>
 
-    <!-- FOOTER -->
-    <div include-html="/template/footer.html">
-        <!-- CARGA DINAMICA DE FOOTER -->
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <div class="container-index">
+      <section>
+        <div class="carousel">
+          <img src="./static/img/index-img2.webp" alt="Imagen" class="slide active">
+          <img src="./static/img/index-img.webp" alt="Imagen" class="slide">
+          <img src="./static/img/index-img3.webp" alt="Imagen" class="slide">
+        </div>
+      </section>
+      <Section class="section-wrapper">
+        <div class="carousel-content">
+          <h2>Productos destacados</h2>
+        </div>
+        <div class="container-cards-home-1">
+          <!-- Tarjeta 1 -->
+          <div class="visible-cards-home-1">
+            <div class="card-home" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/remera-1_1.png" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>remera tyler rlx basic beige 24/1</h3>
+                  <p>Descripción: Remera básica color beige de alta calidad.</p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="card-home" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/remera-2_1.png" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>remera tyler rlx basic natural 24/1</h3>
+                  <p>Descripción: Remera básica color natural de alta calidad.</p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="card-home" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/remera-3.png" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>remera every thing batik green</h3>
+                  <p>
+                    Descripción: Remera con diseño batik color verde de alta
+                    calidad.
+                  </p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="card-home" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/remera-4.png" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>remera divine skull black</h3>
+                  <p>
+                    Descripción: Remera con diseño de calavera color negro de alta
+                    calidad.
+                  </p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden-cards-home-2">
+            <!-- Tarjeta 5 -->
+            <div class="card-home" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="./static/img/pantalon-1.webp" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>pantalon rennes mom cord black</h3>
+                  <p>
+                    Descripción: Pantalón estilo mom corduroy color negro de alta
+                    calidad.
+                  </p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="card-home" onclick="this.classList.toggle('flipped')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="./static/img/abrigo-7.png" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>pantalon rennes mom cord camel</h3>
+                  <p>
+                    Descripción: Pantalón estilo mom corduroy color camel de alta
+                    calidad.
+                  </p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 7 -->
+            <div class="card-home" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/pantalon-3.webp" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>jogger serbia gaba cargo green</h3>
+                  <p>
+                    Descripción: Jogger estilo cargo color verde de alta calidad.
+                  </p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 8 -->
+            <div class="card-home" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/pantalon-4.webp" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>jogger serbia gaba cargo khaki</h3>
+                  <p>
+                    Descripción: Jogger estilo cargo color khaki de alta calidad.
+                  </p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button-img2">
+          <button class="prev2" onclick="handlePrevButtonClick()">❮</button>
+          <button class="next2" onclick="handleNextButtonClick()">❯</button>
+      </div>
+      </Section>
+
+
+
+      <Section class="section-wrapper">
+        <div class="carousel-content">
+          <h2>Productos nuevos</h2>
+        </div>
+        <div class="container-cards-home-2">
+          <div class="visible-cards-home-2">
+            <!-- Tarjeta 1 -->
+            <div class="card-home2" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/remera-1_1.png" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>remera tyler rlx basic beige 24/1</h3>
+                  <p>Descripción: Remera básica color beige de alta calidad.</p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="card-home2" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/remera-2_1.png" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>remera tyler rlx basic natural 24/1</h3>
+                  <p>Descripción: Remera básica color natural de alta calidad.</p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="card-home2" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/remera-3.png" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>remera every thing batik green</h3>
+                  <p>
+                    Descripción: Remera con diseño batik color verde de alta
+                    calidad.
+                  </p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="card-home2" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/remera-4.png" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>remera divine skull black</h3>
+                  <p>
+                    Descripción: Remera con diseño de calavera color negro de alta
+                    calidad.
+                  </p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden-cards-home-2">
+            <!-- Tarjeta 5 -->
+            <div class="card-home2" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/pantalon-1.webp" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>pantalon rennes mom cord black</h3>
+                  <p>
+                    Descripción: Pantalón estilo mom corduroy color negro de alta
+                    calidad.
+                  </p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="card-home2" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/pantalon-2.webp" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>pantalon rennes mom cord camel</h3>
+                  <p>
+                    Descripción: Pantalón estilo mom corduroy color camel de alta
+                    calidad.
+                  </p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 7 -->
+            <div class="card-home2" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/pantalon-3.webp" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>jogger serbia gaba cargo green</h3>
+                  <p>
+                    Descripción: Jogger estilo cargo color verde de alta calidad.
+                  </p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 8 -->
+            <div class="card-home2" onclick="this.classList.toggle('flipped-home')">
+              <div class="card-inner-home">
+                <div class="card-front-home">
+                  <img src="../static/img/pantalon-4.webp" alt="" />
+                </div>
+                <div class="card-back-home">
+                  <h3>jogger serbia gaba cargo khaki</h3>
+                  <p>
+                    Descripción: Jogger estilo cargo color khaki de alta calidad.
+                  </p>
+                  <span>20.000$</span>
+                  <a href="/sections/hombres.html">Categoria</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button-img3">
+          <button class="prev3" onclick="handlePrevButtonClick()">❮</button>
+          <button class="next3" onclick="handleNextButtonClick()">❯</button>
+      </div>
+    </Section>
+
+    <section class="section-info">
+      <div class=" icons-index">
+        <div class="icon1">
+          <i class='bx bxs-truck'></i>
+          <span>¡Envios a todo el pais!</span>
+        </div>
+        <div class="icon2">
+          <i class='bx bx-credit-card'></i>
+          <span>¡Cuotas sin interés!</span>
+        </div>
+        <div class="icon3">
+          <i class='bx bx-refresh'></i>
+          <span>Primer cambio ¡GRATIS! </span>
+        </div>
+      </div>
+    
+      <div class="info-txt">
+        <div class="txt-title">
+          <h2>Vita | On the move.</h2>
+        </div>
+        <div class="txt-content">
+          <span>Somos exploradores por naturaleza. Buscamos siempre cosas nuevas. Experimentamos el mundo a nuestra
+            propia manera. Nos movemos libremente, sin miedo a nada. Nos atrevemos a ir por más. Siempre con actitud,
+            siempre con valentía. Odiamos aburrirnos, amamos sorprendernos. Nos la jugamos día a día. Rompemos con la
+            cotidianeidad. ¿Por qué? Porque para nosotros la mejor forma de vivir la vida, es en movimiento.</span>
+        </div>
+      </div>
+    </section>
     </div>
+    </div>
+  </main>
 
+  <!-- FOOTER -->
+  <div include-html="/template/footer.html">
+    <!-- CARGA DINAMICA DE FOOTER -->
+  </div>
 
-     
-    <div class="overlay" data-overlay></div>
+  <!-- Fondo del modal de suscripcion -->
+  <div class="overlay" data-overlay></div>
 
-    <!---MODAL DE BOLETIN DE SUSCRIPCIÓN-->
+  <!---MODAL DE BOLETIN DE SUSCRIPCIÓN-->
   <div class="modal" data-modal id="modalBoletin">
     <div class="modal-close-overlay" data-modal-overlay></div>
     <div class="modal-content">
@@ -61,7 +386,8 @@
         <form action="#">
           <div class="newsletter-header">
             <h3 class="newsletter-title">Suscríbete al boletín</h3>
-            <p class="newsletter-desc">Suscribete a <b>Tienda</b> para obtener los últimos productos y actualizaciones de descuentos.</p>
+            <p class="newsletter-desc">Suscribete a <b>Tienda</b> para obtener los últimos productos y actualizaciones
+              de descuentos.</p>
           </div>
 
           <input type="email" name="email" class="email-field" placeholder="Email" required>
@@ -73,6 +399,8 @@
 
 
 
-   <script src="/static/js/loadTemplate.js"></script>
+  <script src="/static/js/loadTemplate.js"></script>
+  <script src="/static/js/index.js" defer></script>
 </body>
+
 </html>

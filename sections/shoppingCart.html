@@ -19,18 +19,20 @@
    <div include-html="/template/header.html"></div>
 
     <!-- Contenido Principal -->
-    <main class="main-cart">
+    <main class="main-cart-shopp">
     
-        <p id="carrito-vacio">Ups! El carrito está vacío, <a href="./index.html">elige algunos productos</a></p>
-        <section id="cart-container">
+        <section id="cart-container-shopp">
             <!-- Aquí se mostrarán las tarjetas de productos en el carrito -->
-            <div id="contenedor-tarjetas"></div>
         </section>
-        <section id="totales">
+        <section id="totals" class="container-total">
+            <div class="total-text">
             <p>Total unidades: <span id="cantidad">0</span></p>
             <p>Total precio: $<span id="precio">0</span></p>
+            </div>
+            <div class="btn-totals">
             <button disabled>Comprar</button>
             <button id="reiniciar">Reiniciar</button>
+        </div>
         </section>
     </main>
 
@@ -39,7 +41,6 @@
 
     <!-- Script de carga dinamica de elementos html -->
     <script src="/static/js/loadTemplate.js"></script>
-
     <script src="/static/js/cartShop.js" defer></script>
 </body>
 </html>

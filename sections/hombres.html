@@ -17,11 +17,6 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <!-- Link para los iconos -->
-    <script
-      src="https://kit.fontawesome.com/425fc27882.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <!-- Header -->
@@ -31,9 +26,11 @@
     
     <!-- Contenido Principal -->
     <main>
-      <section>
+      <section class="section-card-categories">
         <div class="top">
-          <h2>Hombres</h2>
+          <div class="top-title">
+            <h2>Hombres</h2>   
+        </div>
           <div class="top-text">
             <h5>
               ¡Encuentra la categoría de pantalones perfecta para cualquier
@@ -48,7 +45,8 @@
             </select>
           </div>
         </div>
-        <div class="conteiner-cards" id="cart-container">
+        <div class="conteiner-cards" id="card-container">
+          
           <!-- Tarjeta 1 -->
           <div class="card" onclick="this.classList.toggle('flipped')">
             <div class="card-inner">
@@ -245,7 +243,9 @@
               </div>
             </div>
           </div>
+        
         </div>
+      
       </section>
     </main>
 

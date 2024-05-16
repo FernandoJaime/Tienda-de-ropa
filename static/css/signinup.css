@@ -1,17 +1,16 @@
+/* Importación de archivos CSS externos */
 @import "style.css";
 
-
-
-.main-form{
+/* Estilos del formulario principal */
+.main-form {
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
     flex-direction: column;
-   
+}
 
-
-.container{
+.main-form .container {
     background-color: var(--white);
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -22,25 +21,25 @@
     min-height: 480px;
 }
 
-.container p{
+.main-form .container p {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
-.container span{
+.main-form .container span {
     font-size: 12px;
 }
 
-.container a{
-    color: #333;
+.main-form .container a {
+    color: var(--onyx);
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-.container button{
+.main-form .container button {
     background-color: var(--violet);
     color: var(--white);
     font-size: 12px;
@@ -55,31 +54,28 @@
     cursor: pointer;
 }
 
-.container button.hidden{
+.main-form .container button.hidden {
     background-color: transparent;
     border-color: var(--white);
 }
 
-
-
-/**** terminos y condiciones ****/
-
-.input-link {
+/* Estilos de los términos y condiciones */
+.main-form .input-link {
     display: flex;
     align-items: center;
 }
 
-.checkbox-label {
+.main-form .checkbox-label {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.checkbox-custom {
-    display: none; 
+.main-form .checkbox-custom {
+    display: none;
 }
 
-.checkbox-custom + .checkbox-label::before {
+.main-form .checkbox-custom + .checkbox-label::before {
     content: "";
     display: inline-block;
     width: 20px;
@@ -90,22 +86,19 @@
     margin-right: 10px;
 }
 
-.checkbox-custom:checked + .checkbox-label::before {
+.main-form .checkbox-custom:checked + .checkbox-label::before {
     background-color: var(--violet);
 }
 
-
-.checkbox-label a {
-    text-decoration: none; 
-    color: #333; 
-    font-size: 16px; 
-    font-weight: bold; 
+.main-form .checkbox-label a {
+    text-decoration: none;
+    color: var(--onyx);
+    font-size: 16px;
+    font-weight: bold;
 }
 
-/* ************ */
-
-/**** Form ****/
-.container form{
+/* Estilos del formulario */
+.main-form .container form {
     background-color: var(--white);
     display: flex;
     align-items: center;
@@ -115,7 +108,7 @@
     height: 100%;
 }
 
-.container input{
+.main-form .container input {
     background-color: var(--cultured);
     border: none;
     margin: 8px 0;
@@ -126,58 +119,60 @@
     outline: none;
 }
 
-.form-container{
+/* Estilos de la animación de cambio de panel */
+.main-form .form-container {
     position: absolute;
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
 }
 
-.sign-in{
+.main-form .sign-in {
     left: 0;
     width: 50%;
     z-index: 2;
 }
 
-.container.active .sign-in{
+.main-form .container.active .sign-in {
     transform: translateX(100%);
 }
 
-.sign-up{
+.main-form .sign-up {
     left: 0;
     width: 50%;
     opacity: 0;
     z-index: 1;
 }
 
-.container.active .sign-up{
+.main-form .container.active .sign-up {
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
     animation: move 0.6s;
 }
 
-@keyframes move{
-    0%, 49.99%{
+/* Animación de cambio de panel */
+@keyframes move {
+    0%, 49.99% {
         opacity: 0;
         z-index: 1;
     }
-    50%, 100%{
+    50%, 100% {
         opacity: 1;
         z-index: 5;
     }
 }
 
-.social-icons{
+/* Estilos de los íconos sociales */
+.main-form .social-icons {
     margin: 20px 0;
 }
 
-.social-icons i {
+.main-form .social-icons i {
     font-size: 30px;
 }
 
-
-.social-icons a{
+.main-form .social-icons a {
     border: 1px solid var(--spanish-gray);
     border-radius: 20%;
     display: inline-flex;
@@ -188,7 +183,8 @@
     height: 40px;
 }
 
-.toggle-container{
+/* Estilos del interruptor para el cambio de panel */
+.main-form .toggle-container {
     position: absolute;
     top: 0;
     left: 50%;
@@ -200,16 +196,16 @@
     z-index: 5;
 }
 
-.container.active .toggle-container{
+.main-form .container.active .toggle-container {
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
 
-.toggle{
+.main-form .toggle {
     background-color: var(--violet);
     height: 100%;
     background: linear-gradient(to right, #5c6bc0, #512da8);
-    color: #fff;
+    color: var(--white);
     position: relative;
     left: -100%;
     height: 100%;
@@ -218,11 +214,11 @@
     transition: all 0.6s ease-in-out;
 }
 
-.container.active .toggle{
+.main-form .container.active .toggle {
     transform: translateX(50%);
 }
 
-.toggle-panel{
+.main-form .toggle-panel {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -237,28 +233,30 @@
     transition: all 0.6s ease-in-out;
 }
 
-.toggle-left{
+.main-form .toggle-left {
     transform: translateX(-200%);
 }
 
-.container.active .toggle-left{
+.main-form .container.active .toggle-left {
     transform: translateX(0);
 }
 
-.toggle-right{
+.main-form .toggle-right {
     right: 0;
     transform: translateX(0);
 }
 
-.container.active .toggle-right{
+.main-form .container.active .toggle-right {
     transform: translateX(200%);
 }
-}
 
-
-@media  (max-width: 769px) {
-
-    .main-form{
-        margin: 35px 0px;
-        }
+/* Estilos responsivos */
+@media (max-width: 769px) {
+    .main-form {
+        margin-top: 50px;
+        margin-bottom: 450px;
+    }
+    .container {
+        height: 630px;
+    }
 }

@@ -1,0 +1,79 @@
+/* Importar estilos adicionales */
+@import "style.css";
+
+/* Estilos para la sección principal de locales */
+.main-locals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+}
+
+/* Estilos para el título de la sección de locales */
+.main-locals .title-locals {
+    text-decoration: underline;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* Estilos para el contenedor de los locales */
+.container-locals {
+    width: 75%;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Estilos para el contenedor de cada local */
+.container-locals .cart-locals {
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-md);
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    background-color: var(--cultured);
+}
+
+/* Estilos para las imágenes de los locales */
+.cart-locals img {
+    width: 100%;
+    border-radius: var(--border-radius-md);
+}
+
+/* Estilos para los títulos de los locales */
+.cart-locals h3 {
+    padding: 30px;
+}
+
+/* Estilos para las líneas divisoras */
+.cart-locals hr {
+    border-color: var(--bittersweet);
+}
+
+/* Estilos para los párrafos de los locales */
+.cart-locals p {
+    margin-top: 15px;
+    margin-bottom: 5;
+}
+
+/* Estilos para los iconos y enlaces dentro de los párrafos */
+.cart-locals p>i,
+.cart-locals a>i {
+    font-size: var(--fs-1);
+    color: var(--eerie-black);
+}
+
+/* Estilos para los enlaces dentro de los párrafos */
+.cart-locals p>a {
+    color: var(--eerie-black);
+    list-style: none;
+}
+
+/* Estilos para los iconos y enlaces al pasar el mouse */
+p:hover .fa-whatsapp,
+p:hover .fa-location-dot,
+p:hover a {
+    color: var(--violet);
+}

@@ -1,44 +1,51 @@
+/* Importacion de archivo style.css */
 @import "style.css";
 
+/* titulo de sección */
 
-/* titilo de seccion */
+.section-card-categories {
+    width: 80%;
+    margin: 0 auto;
+}
 
-.top {
+.section-card-categories .top {
     display: grid;
-    grid-template-columns: auto auto auto auto; 
+    grid-template-columns: repeat(4 1fr);
     grid-template-rows: auto;
     padding: 10px;
+    justify-content: center;
 }
 
 /* Estilos para el título h2 */
-.top h2 {
-    grid-column: 2 / span 2; /* Ocupar dos columnas a partir de la segunda */
-    text-align: center; /* Centrar el texto horizontalmente */
-    font-weight: bold; /* Hacer el texto en h2 en negrita */
-    margin-top: 50px; /* Añadir margen superior */
-    margin-bottom: 20px; /* Añadir margen inferior */
+.top .top-title {
+    grid-column: 2 / span 2;
+    text-align: start;
 }
 
-.top-text {
-    align-self: end;
-    margin-bottom: 20px; /* Añadir margen inferior */
+.top-title h2 {
+    margin-top: auto;
+    color: var(--eerie-black);
+    text-decoration: underline;
+    margin-top: 50px;
 }
 
 /* Estilos para el texto h5 */
 .top-text {
-    grid-column: 2 / span 2; /* Ocupar dos columnas a partir de la segunda */
-    text-align: center; /* Centrar el texto horizontalmente */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Agregar sombra */
-    padding: 15px; /* Agregar relleno */
-    border-radius: 10px; /* Agregar borde redondeado */
+    grid-column: 1 / span 4;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0px 5px 8px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para el filtro */
 .top-filter {
-    position: absolute; /* Establecer posición absoluta para el filtro */
-    top: 14rem; /* Colocar en la parte superior */
-    right: 20px; /* Colocar en el borde derecho */
-    margin: 20px; /* Agregar margen */
+    position: absolute;
+    top: 13.5rem;
+    right: 20px;
+    margin: 20px;
     outline: none;
 }
 
@@ -53,25 +60,18 @@
 
 
 
-/* Estilos adicionales para el contenedor */
-.top {
-    justify-content: center; /* Centrar el contenido horizontalmente */
-}
-
-
-
 /* Contenedor de las tarjetas */
-.conteiner-cards {
+.section-card-categories .conteiner-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Tarjetas responsivas en filas */
-    grid-template-rows: repeat(3, auto); /* Mantener 3 filas */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, auto);
     justify-content: center;
     gap: 15px;
-    padding: 5px 15px 15px 15px;
+    padding: 30px;
 }
 
-.conteiner-cards > .card {
-    height: 300px; /* Altura fija para cada tarjeta */
+.conteiner-cards>.card {
+    height: 300px;
 }
 
 /* Estilo de Tarjetas */
@@ -83,29 +83,32 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     position: relative;
-    width: 100%; /* Modificado para que se ajuste al tamaño del contenedor */
-    height: auto; /* Modificado para que se ajuste al contenido */
-    perspective: 1000px; /* Define la perspectiva para la animación 3D */
+    width: 90%;
+    height: auto;
+    perspective: 1000px;
     transition: transform 0.5s;
+    backface-visibility: hidden;
 }
 
 .card-inner {
     position: absolute;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d; /* Mantiene la relación de transformación 3D */
+    transform-style: preserve-3d;
     transition: transform 0.5s;
 }
 
+/* Animacion de giro de cartas*/
 .card.flipped .card-inner {
-    transform: rotateY(180deg); /* Gira la tarjeta hacia atrás */
+    transform: rotateY(180deg);
 }
 
+/* Estilos parte trasera de cartas*/
 .card-front,
 .card-back {
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Oculta la parte posterior de la tarjeta mientras gira */
+    backface-visibility: hidden;
     position: absolute;
 }
 
@@ -116,39 +119,43 @@
 /* Estilo del contenido trasero de la tarjeta */
 .card-back {
     background-color: #e0e0e0;
-    transform: rotateY(180deg); /* Inicialmente oculto, girado 180 grados */
-    padding: 15px; /* Añadir relleno para separar el contenido del borde */
-    display: flex; /* Usar flexbox para alinear el contenido */
-    flex-direction: column; /* Alinear el contenido en una columna */
-    justify-content: space-between; /* Espaciar uniformemente el contenido */
+    transform: rotateY(180deg);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-back h3 {
-    font-weight: bold; /* Hacer el título en negrita */
-    margin-bottom: 10px; /* Agregar espacio debajo del título */
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .card-back p {
-    margin-bottom: 10px; /* Agregar espacio entre los párrafos */
+    margin-bottom: 10px;
+}
+
+.card-back span {
+    text-align: center;
 }
 
 .card-back .btn-buy {
-    align-self: flex-end; /* Colocar el botón al final de la tarjeta */
+    align-self: flex-end;
 }
 
 .card-back .btn-buy {
-    align-self: center; /* Centrar el botón en la tarjeta */
-    background-color: #333; /* Color de fondo del botón */
-    color: white; /* Color de texto del botón */
-    border: none; /* Quitar borde */
-    border-radius: 5px; /* Radio de borde */
-    cursor: pointer; /* Cambiar cursor a pointer al pasar el mouse sobre el botón */
-    padding: 10px 20px; /* Ajustar el relleno del botón */
-    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    align-self: center;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
 }
 
 .card-back .btn-buy:hover {
-    background-color: #555; /* Cambiar color de fondo al pasar el mouse sobre el botón */
+    background-color: #0056b3;
 }
 
 .card img {
@@ -160,152 +167,15 @@
     border-top-right-radius: 5px;
 }
 
-.card-content {
-    padding: 5px;
-}
 
-.card-content p {
-    width: 100%;
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
 
-.card-content span {
-    background-color: aqua;
-}
-
+/* Efecto scale en card */
 .card:hover {
-    transform: scale(1.05) translateZ(10px); /* Escala la tarjeta un poco y la desplaza hacia adelante */
+    transform: scale(1.05) translateZ(10px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Establece una altura mínima del 100% del viewport height */
 .main-card {
     min-height: 100vh;
-}
-
-
-
-/* Media query (tablets y dispositivos móviles en modo horizontal) */
-@media only screen and (max-width: 768px) {
-    /* Estilos para el título h2 */
-    .top h2 {
-        margin-top: 30px; /* Reducir el margen superior */
-        margin-bottom: 10px; /* Reducir el margen inferior */
-    }
-
-    /* Estilos para el texto h5 */
-    .top-text {
-        margin-bottom: 10px; /* Reducir el margen inferior */
-        padding: 10px; /* Reducir el relleno */
-    }
-
-    /* Estilos para el filtro */
-    .top-filter {
-        position: static; /* Restablecer la posición */
-        margin: 10px auto; /* Alinear al centro */
-    }
-
-    /* Contenedor de las tarjetas */
-    .conteiner-cards {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Reducir el tamaño de las tarjetas */
-    }
-}
-
-/* Media query para (teléfonos móviles) */
-@media only screen and (max-width: 480px) {
-    /* Estilos para el título h2 */
-    .top h2 {
-        margin-top: 20px; /* Reducir aún más el margen superior */
-        margin-bottom: 5px; /* Reducir aún más el margen inferior */
-        font-size: 22px; /* Reducir el tamaño del texto */
-    }
-
-    /* Estilos para el texto h5 */
-    .top-text {
-        margin-bottom: 5px; /* Reducir aún más el margen inferior */
-        padding: 8px; /* Reducir el relleno */
-    }
-
-    /* Estilos para el filtro */
-    .top-filter {
-        margin: 5px auto; /* Alinear al centro y reducir el margen */
-    }
-
-    /* Contenedor de las tarjetas */
-    .conteiner-cards {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Reducir aún más el tamaño de las tarjetas */
-    }
-
-    /* Estilos para las tarjetas */
-    .card {
-        min-height: 180px; /* Reducir la altura mínima de las tarjetas */
-    }
-
-    .card img {
-        object-fit: cover; /* Ajustar la imagen a la tarjeta */
-    }
-
-    .card-back {
-        padding: 10px; /* Reducir el relleno */
-    }
-
-    .card-back .btn-buy {
-        padding: 8px 15px; /* Reducir el tamaño del botón */
-    }
-}
-
-
-/* Media query para dispositivos con un ancho máximo de 830px (tablets y dispositivos móviles en modo horizontal) */
-@media only screen and (max-width: 930px) {
-    /* Contenedor de las tarjetas */
-    .conteiner-cards {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Permitir dos tarjetas por fila */
-        gap: 20px; /* Ajustar el espacio entre las tarjetas */
-        padding: 15px; /* Añadir relleno adicional */
-    }
-
-    /* Estilos para las tarjetas */
-    .card {
-        min-height: 280px; /* Mantener la altura mínima de las tarjetas */
-    }
-
-    .card img {
-        object-fit: cover; /* Ajustar la imagen a la tarjeta */
-    }
-
-    .card-back {
-        padding: 10px; /* Reducir el relleno */
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    /* Contenedor de las tarjetas */
-    .conteiner-cards {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Permitir tres tarjetas por fila */
-        gap: 20px; /* Ajustar el espacio entre las tarjetas */
-        padding: 15px; /* Añadir relleno adicional */
-    }
-
-    .top-text{
-        display: none;
-    }
-    
-    /* Estilos para las tarjetas */
-    .card {
-        min-height: 280px;
-    }
-
-    .card {
-        min-height: 180px; /* Reducir la altura mínima de las tarjetas */
-    }
-
-    .card img {
-        object-fit: cover; /* Ajustar la imagen a la tarjeta */
-    }
-
-    .card-back {
-        padding: 10px; /* Reducir el relleno */
-    }
 }

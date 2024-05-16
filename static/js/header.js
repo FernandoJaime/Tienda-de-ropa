@@ -51,7 +51,24 @@ mobileMenuButtons.forEach(button => {
 });
 
 
+//**** Funcion de actualiazion de contador de producto del carro de compras ****/
+function updateCartCount() {
+  var productsInCart = JSON.parse(localStorage.getItem("productsInCart")) || [];
+  var countElements = document.querySelectorAll(".count");
+  var totalCount = productsInCart.reduce((total, product) => total + product.cantidad, 0);
 
+  countElements.forEach(function(element) {
+    element.textContent = totalCount;
+  });
+}
+
+// Llamar a la función para actualizar el contador del carrito al cargar la página
+updateCartCount();
+
+
+
+// Llamar a la función para actualizar el contador del carrito al cargar la página
+updateCartCount();
 
 
 

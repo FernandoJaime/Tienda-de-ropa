@@ -15,7 +15,7 @@ function includeHTML() {
                         elemento.innerHTML = this.responseText;
                         console.log("HTML cargado correctamente");
                         if (!scriptsCargados) {
-                            cargarScripts(); // Llama a cargarScripts después de establecer el HTML
+                            cargarScripts(); 
                             scriptsCargados = true;
                         }
                     }
@@ -58,7 +58,10 @@ function cargarScripts() {
             return cargarScript("/static/js/signinup.js");
         })
         .then(function() {
-            return cargarScript("/static/js/cartShop.js"); // Cargar cartShop.js después de header.js y signinup.js
+            return cargarScript("/static/js/cartShop.js"); 
+        })
+        .then(function(){
+            return cargarScript("/static/js/index.js");
         })
         .catch(function(error) {
             console.error("Error al cargar los scripts:", error);

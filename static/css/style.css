@@ -1,24 +1,24 @@
+/* Importación de archivos CSS externos */
+@import "index.css";
 @import "signinup.css";
 @import "footer.css";
 @import "header.css";
 @import "terms.css";
-@import "about-locals.css";
+@import "about.css";
 @import "cards.css";
-@import "categories.css";
 @import "shoppingcart.css";
 @import "contact.css";
+@import "locals.css";
+
+/* Importación de fuente desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-/*-----------------------------------*\
-  #PROPIEDAD PERSONALIZADA
-\*-----------------------------------*/
+/*-----------------------------------*/
+/* Propiedades Personalizadas */
+/*-----------------------------------*/
 
 :root {
-
-    /*
-     * COLORES
-     */
-  
+    /* Definición de colores */
     --spanish-gray: rgb(153, 153, 153);
     --sonic-silver: rgb(120, 120, 120);
     --bittersweet: rgb(255, 102, 102);
@@ -28,11 +28,11 @@
     --cultured: rgb(237, 237, 237);
     --white: rgb(255, 255, 255);
     --onyx: rgb(69, 69, 69);
-  
-    /*
-     * tipografía
-     */
-  
+    --color-btn: rgb(13, 155, 202);
+    --color-btn-hover: rgb(1, 91, 121);
+    --bg-color-img: rgba(103, 92, 255, 0.6);
+
+    /* Definición de tamaños de fuente */
     --fs-1: 1.563rem;
     --fs-2: 1.375rem;
     --fs-3: 1.25rem;
@@ -44,27 +44,26 @@
     --fs-9: 0.75rem;
     --fs-10: 0.688rem;
     --fs-11: 0.625rem;
-  
+
+    /* Definición de pesos de fuente */
     --weight-300: 300;
     --weight-400: 400;
     --weight-500: 500;
     --weight-600: 600;
     --weight-700: 700;
-  
-    /*
-     * border-radius
-     */
-  
+
+    /* Definición de radios de borde */
     --border-radius-md: 10px;
     --border-radius-sm: 5px;
-  
-    /*
-     * transition 
-     */
-  
+
+    /* Definición de tiempo de transición */
     --transition-timing: 0.2s ease;
-  
-  }
+
+    --box-shadow: 0 5 15px rgba(0, 0, 0, 0.5);
+}
+
+
+/**** Estilos Generales ****/
 
 * {
     margin: 0;
@@ -73,70 +72,80 @@
     font-family: "Montserrat", sans-serif;
 }
 
+/* Ajuste para evitar desbordamiento horizontal */
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/*** Estilos de la Sección Principal ****/
+
+main {
+    width: 100vw;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+
+/* Pseudo-elementos para efecto de fondo */
 main::after,
-main::before{
+main::before {
     content: '';
-    position: fixed; 
-    height: 400px;
-    width: 400px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     z-index: -1;
-    filter: blur(150px);
-    opacity: 0.5;
+    filter: blur(100px);
+    opacity: 0.2;
+    top: -10%;
+    left: -10%;
+    background: linear-gradient(to right, rgba(52, 114, 239, 0.8) 50%, rgba(87, 7, 157, 0.8) 50%);
+    /* Gradiente que mezcla los colores a la mitad */
+    transform: translateX(10%);
 }
 
-main::before{
-    background-color: hsl(220, 85%, 57%);
-    left: 0;
-    bottom: 0;
-    transform: translate(-50%);
+/**** Estilos Generales ****/
+
+
+/* Estilos para enlaces */
+a {
+    text-decoration: none;
 }
 
-main::after {
-    background-color: hsl(272, 92%, 32%);
-    right: 0;
-    top: 0;
-    transform: translate(50%);
+/* Estilos para listas */
+li {
+    list-style: none;
 }
 
-
-
-
-a { text-decoration: none; } 
-  
-li { list-style: none; }
-
+/* Estilos para botones */
 button {
-  background: none;
-  font: inherit;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
+    background: none;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-img, bx, button, a { 
-  display: block; 
+/* Estilos para cajas, botones y enlaces */
+bx,
+button,
+a {
+    display: block;
 }
 
-span { display: inline-block; }
-
-
-
-
-/* Agregar animaciones a los iconos */
+/* Animación de iconos */
 @keyframes iconAnimation {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.5); }
-  100% { transform: scale(1); }
-}
+    0% {
+        transform: scale(1);
+    }
 
-#cuenta-carrito{
-  position: absolute;
-  background-color: var(--violet);
-  border-radius: 100%;
-  display: inline-block;
-  height: 25px;
-  line-height: 25px;
-  aspect-ratio: 1;
-  text-align: center;
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

@@ -23,9 +23,11 @@
 
     <!-- Contenido principal -->
     <main>
-        <section>
+        <section class="section-card-categories">
             <div class="top">
-                <h2>Calzados</h2>
+                <div class="top-title">
+                    <h2>Calzados</h2>                  
+                </div>
                 <div class="top-text">
                     <h5>¡Encuentra la categoría de calzados perfecta para cualquier ocasión en nuestra tienda online!</h5>
                 </div>
@@ -37,7 +39,7 @@
                     </select>
                 </div>
             </div>
-            <div class="conteiner-cards">
+            <div class="conteiner-cards" id="card-container">
                 <!-- Tarjeta 1 -->
                 <div class="card" onclick="this.classList.toggle('flipped')">
                 <div class="card-inner">
@@ -168,6 +170,7 @@
                         <button class="btn-buy">Comprar</button>
                     </div>
                     </div>
+
                 </div>
 
                 <!-- Tarjeta 10 -->
@@ -223,5 +226,6 @@
 
     <!-- Script de carga dinamica de elementos html -->
     <script src="/static/js/loadTemplate.js"></script>
+    <script src="/static/js/cartShop.js"></script>
 </body>
 </html>

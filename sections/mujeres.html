@@ -23,10 +23,12 @@
    <div include-html="/template/header.html"></div>
 
    <!-- Contenido Principal -->
-   <main class="main.card">
-    <section>
+   <main>
+    <section class="section-card-categories">
         <div class="top">
-            <h2>Mujeres</h2>
+            <div class="top-title">
+                <h2>Mujeres</h2>
+            </div>
             <div class="top-text">
                 <h5>¡Encuentra la categoría de pantalones perfecta para cualquier ocasión en nuestra tienda online!</h5>
             </div>
@@ -38,7 +40,7 @@
                 </select>
             </div>
         </div>
-        <div class="conteiner-cards">
+        <div class="conteiner-cards" id="card-container">
             <!-- Tarjeta 1 -->
             <div class="card" onclick="this.classList.toggle('flipped')">
                 <div class="card-inner">
@@ -216,5 +218,7 @@
 
    <!-- Script de carga dinamica de elementos html -->
    <script src="/static/js/loadTemplate.js"></script>
+   <script src="/static/js/cartShop.js"></script>
+
 </body>
 </html>

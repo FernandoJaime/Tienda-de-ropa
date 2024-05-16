@@ -21,11 +21,6 @@
       rel="stylesheet"
     />
 
-    <!-- Link para los iconos -->
-    <script
-      src="https://kit.fontawesome.com/425fc27882.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <!-- Header -->
@@ -33,9 +28,11 @@
 
     <!-- Contenido principal -->
     <main>
-      <section>
+      <section class="section-card-categories">
         <div class="top">
-          <h2>Niños</h2>
+          <div class="top-title">
+            <h2>Niños</h2>
+          </div>         
           <div class="top-text">
             <h5>
               ¡Encuentra la categoría de pantalones perfecta para cualquier
@@ -44,30 +41,31 @@
           </div>
           <div class="top-filter">
             <select name="filt" id="filt" class="form-select">
-              <option value="flitro">Filtro</option>
+              <option value="filtro">Filtro</option>
               <option value="precio-bajo">Precio: Menor a Mayor</option>
               <option value="precio-alto">Precio: Mayor a Menor</option>
             </select>
           </div>
         </div>
-        <div class="conteiner-cards">
-          <!-- card 1 -->
+        <div class="conteiner-cards" id="card-container">
+          <!-- tarjeta 1 -->
           <div class="card" onclick="this.classList.toggle('flipped')">
             <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/niños-1.webp" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>Conjunto de Camiseta</h3>
-                <p>
-                  Descripción: Conjunto de camiseta con textura y shorts para
-                  niños de 3 a 12 años.
-                </p>
-                <span>$$$$</span>
-                <button class="btn-buy">Comprar</button>
-              </div>
+                    <div class="card-front">
+                        <img src="../static/img/niños-1.webp" alt="" />
+                    </div>
+                    <div class="card-back">
+                        <h3>Conjunto de Camiseta</h3>
+                        <p>
+                            Descripción: Conjunto de camiseta con textura y shorts para
+                            niños de 3 a 12 años.
+                        </p>
+                        <span>30.000$</span>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    </div>
             </div>
-          </div>
+
 
           <!-- card 2 -->
           <div class="card" onclick="this.classList.toggle('flipped')">
@@ -83,7 +81,7 @@
                   Descripción: Conjunto de shorts y polo con cuello de
                   cremallera para niños de 3 a 12 años.
                 </p>
-                <span>$$$$</span>
+                <span>15.000$</span>
                 <button class="btn-buy">Comprar</button>
               </div>
             </div>
@@ -103,7 +101,7 @@
                   Descripción: Conjunto de camiseta de manga corta y pantalones
                   deportivos en verde caqui para niños de 3 a 12 años.
                 </p>
-                <span>$$$$</span>
+                <span>10.000$</span>
                 <button class="btn-buy">Comprar</button>
               </div>
             </div>
@@ -123,7 +121,7 @@
                   Descripción: Conjunto de camiseta de bloques de color y shorts
                   para niños de 3 a 12 años.
                 </p>
-                <span>$$$$</span>
+                <span>12.000$</span>
                 <button class="btn-buy">Comprar</button>
               </div>
             </div>
@@ -141,7 +139,7 @@
                   Descripción: Conjunto de camiseta de béisbol en crema/negro y
                   shorts para niños de 3 a 12 años.
                 </p>
-                <span>$$$$</span>
+                <span>13.000$</span>
                 <button class="btn-buy">Comprar</button>
               </div>
             </div>
@@ -161,7 +159,7 @@
                   Descripción: Conjunto de camiseta y shorts con bloques de
                   color para niños de 3 a 16 años.
                 </p>
-                <span>$$$$</span>
+                <span>20.000$</span>
                 <button class="btn-buy">Comprar</button>
               </div>
             </div>
@@ -181,7 +179,7 @@
                   Descripción: Conjunto de camiseta y shorts en gris antracita
                   para niños de 3 a 12 años.
                 </p>
-                <span>$$$$</span>
+                <span>900$</span>
                 <button class="btn-buy">Comprar</button>
               </div>
             </div>
@@ -199,7 +197,7 @@
                   Descripción: Conjunto de suéter texturizado y shorts para
                   niños de 3 a 12 años.
                 </p>
-                <span>0000</span>
+                <span>15.000$</span>
                 <button class="btn-buy">Comprar</button>
               </div>
             </div>
@@ -217,7 +215,7 @@
                   Descripción: Suéter con cuello redondo y logo de GAP para
                   niños.
                 </p>
-                <span>$$$$</span>
+                <span>25.000$</span>
                 <button class="btn-buy">Comprar</button>
               </div>
             </div>
@@ -235,7 +233,7 @@
                   Descripción: Suéter escolar con cuello redondo para niños de 3
                   a 12 años.
                 </p>
-                <span>$$$$</span>
+                <span>15.000$</span>
                 <button class="btn-buy">Comprar</button>
               </div>
             </div>
@@ -255,7 +253,7 @@
                   Descripción: Suéter de algodón con cuello redondo REISS BRYANT
                   para niños de 3 a 12 años.
                 </p>
-                <span>$$$$</span>
+                <span>10.000$</span>
                 <button class="btn-buy">Comprar</button>
               </div>
             </div>
@@ -273,11 +271,12 @@
                   Descripción: Suéter con cuello redondo y logo de GAP para
                   niños de 3 a 12 años.
                 </p>
-                <span>cara</span>
+                <span>20.000$</span>
                 <button class="btn-buy">Comprar</button>
               </div>
             </div>
           </div>
+
         </div>
       </section>
     </main>
@@ -286,6 +285,8 @@
     <div include-html="/template/footer.html"></div>
 
     <!-- Script de carga dinámica de elementos html -->
+    <script src="/static/js/cartShop.js"></script>
     <script src="/static/js/loadTemplate.js"></script>
+  
   </body>
 </html>

@@ -1,99 +1,163 @@
+/* Importar el archivo style.css */
+@import "style.css";
 
-
-.main-contact {
+/* Estilos para el contenedor principal de contacto */
+.container-contact {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+
     max-width: 1000px;
     width: 100%;
-    padding: 5px;
-    background-color: #fff;
+    padding-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
     text-align: center;
-    margin: 0 auto;
+    margin: 50px auto;
+    background-image: url("/static/img/modal.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
 }
 
-#contact-inicio{
+/* Pseudo-elemento para crear un fondo translúcido */
+.container-contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color-img);
+    border-radius: var(--border-radius-md);
+    z-index: 1;
+}
+
+/*** Seccion de redirect link ****/
+
+#contact-inicio {
     max-width: 95%;
-    
+    z-index: 2;
 }
 
-.main-contact h2 {
-    font-size: 24px;
+/* Estilos para el titulo de redirecciones */
+.container-contact h2 {
+    font-size: var(--fs-1);
+    font-weight: var(--weight-700);
     margin-bottom: 20px;
+    color: var(--white);
+    padding: 20px;
 }
 
 .redirect-contact {
-    display: flex; 
-    justify-content: space-between; 
-    gap: 20px; 
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
     max-width: 100%;
     margin: 0 auto;
+    color: var(--white);
 }
 
 
-
+/* Estilos para los párrafos de redirección */
 .redirect-contact p {
     font-size: 16px;
     margin-bottom: 10px;
     flex: 1;
+
 }
 
-.redirect-contact a {
+/* Estilos para los enlaces de redirección al HTML local */
+.redirect-contact .link-local-html {
     margin-top: 5px;
-    color: #007bff;
+    color: var(--white);
     text-decoration: none;
+    padding: 15px 8px;
+    background: var(--color-btn);
+    border-radius: var(--border-radius-sm);
 }
 
-.redirect-contact a:hover {
-    text-decoration: underline; 
+/* Estilos de los enlaces de redirección */
+.redirect-contact .link-local-html:hover {
+    text-decoration: underline;
+    background: var(--color-btn-hover);
 }
 
+/**** Estilos para el título del formulario de contacto ****/
 
-
-.form-wrapper {
-    margin-top: 20px;
-}
-
-.form-wrapper form {
+/* Estilos para el contenedor del formulario */
+.container-contact .form-wrapper {
+    margin-top: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    color: var(--white);
+    padding: 20px;
+    border-radius: var(--border-radius-sm);
     text-align: left;
+    width: 60%;
 }
 
+.form-wrapper fieldset {
+    border: none;
+    padding: 50px;
+}
+
+/* Estilos para el título del formulario */
+.form-wrapper legend {
+    font-size: var(--fs-2);
+    font-weight: var(--weight-700);
+    text-align: center;
+}
+
+/* Estilos para las etiquetas del formulario */
 .form-wrapper label {
-    font-weight: bold;
+    font-weight: var(--weight-700);
 }
 
+/* Estilos para los campos de entrada del formulario */
 .form-wrapper input,
 .form-wrapper textarea,
 .form-wrapper select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius-sm);
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: var(--fs-5);
+    outline: none;
+    border: none;
+    color: var(--onyx);
 }
 
+
+/* Estilos para el botón de envío del formulario */
 .form-wrapper input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--color-btn);
+    color: var(--white);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
+/* Estilos para el botón de envío del formulario hover*/
 .form-wrapper input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: var(--color-btn-hover);
 }
 
+/* Estilos para el área de texto del formulario */
 .form-wrapper textarea {
-    resize: vertical;
+    margin-top: 20px;
+    resize: none;
+    overflow-y: auto;
 }
 
+/* Estilos para los mensajes de confirmación o error */
 .form-wrapper p {
-    font-size: 14px;
-    color: #999;
+    font-size: var(--fs-7);
+    color: var(--sonic-silver);
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--border-radius-md);
 }

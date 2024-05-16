@@ -8,7 +8,7 @@
     </div>
   </div>
   
-  <!-- Evcabezado principal -->
+  <!-- Encabezado principal -->
   <div class="header-main">
     <div class="container-head">
 
@@ -28,7 +28,7 @@
       <!-- Logo -->
       <div class="header-logo">
         <a href="/index.html">
-          <img src="/static/img/logo.svg" alt="Logo de la tienda" width="120" height="36">
+          <img src="/static/img/logo.svg" alt="Logo de la tienda">
         </a>
       </div>
       
@@ -42,7 +42,7 @@
       
         <button class="action-btn" data-redirect="/sections/login.html">
           <i class='bx bx-heart'></i>
-          <span class="count">0</span>
+          <span class="count-favorite">0</span>
         </button>
         
         <button class="action-btn" data-redirect="/sections/login.html">
@@ -68,11 +68,11 @@
 
         <!-- Categorias -->
         <li class="menu-category">
-          <a href="/sections/categories.html" class="menu-title">Categorias</a>
+          <a href="#" class="menu-title">Categorias</a>
           <div class="dropdown-panel">
-            <ul class="dropdown-panel-list">
 
-              <!-- Categoria niños -->
+            <!-- Categoria niños -->
+            <ul class="dropdown-panel-list">
               <li class="menu-title">
                 <a href="/sections/niños.html">Niños</a>
               </li>
@@ -150,17 +150,19 @@
       <i class='bx bx-menu'></i>
     </button>
     <button class="action-btn" onclick="loginRedirect()">
+      <i class='bx bx-user'></i>
+    </button>
+   
+    <button class="action-btn" onclick="loginRedirect()">
+      <i class='bx bx-heart'></i>
+      <span class="count-favorite">0</span>
+    </button>
+
+    <button class="action-btn" onclick="loginRedirect()">
       <i class='bx bxl-shopify'></i>
       <span class="count">0</span>
     </button>
-    <button class="action-btn" onclick="loginRedirect()">
-      <i class='bx bx-user'></i>
-    </button>
-    <button class="action-btn" onclick="loginRedirect()">
-      <i class='bx bx-heart'></i>
-      <span class="count">0</span>
-    </button>
-
+    
   </div>
 
   <!-- Navegacion movil -->

@@ -1,0 +1,275 @@
+@import "style.css";
+
+/* Contenedor principal */
+.container-index {
+  width: 80vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 50px;
+}
+
+/* Contenedor de sección */
+.section-wrapper {
+  position: relative;
+  min-width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-md);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+}
+
+/* Estilos de título */
+.section-wrapper h2 {
+  text-align: center;
+  color: var(--white);
+}
+
+/* Contenedor del carrusel */
+.carousel {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  animation: colorChange 6s infinite alternate;
+  border-radius: var(--border-radius-md);
+}
+
+/* Animación de cambio de color */
+@keyframes colorChange {
+  0% { box-shadow: 0px 0px 20px rgb(255, 0, 0); } /* Rojo */
+  25% { box-shadow: 0px 0px 20px rgb(0, 255, 0); } /* Verde */
+  50% { box-shadow: 0px 0px 20px rgb(0, 0, 255); } /* Azul */
+  75% { box-shadow: 0px 0px 20px rgb(255, 255, 0); } /* Amarillo */
+  100% { box-shadow: 0px 0px 20px rgb(255, 0, 255); } /* Magenta */
+}
+
+/* Estilos de la imagen del carrusel */
+.slide {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Contenedor de tarjetas */
+.container-cards-home-1,
+.container-cards-home-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 15px 0;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 20px;
+  overflow-x: hidden;
+}
+
+/* Estilos de tarjetas */
+.card-home,
+.card-home2 {
+  display: block;
+  background-color: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: relative;
+  flex-grow: 1;
+  max-width: calc(25% - 20px);
+  height: 300px;
+}
+
+/* Tarjetas visibles */
+.visible-cards-home-1,
+.visible-cards-home-2 {
+  flex: 1 1 auto;
+  display: none;
+}
+
+/* Tarjetas ocultas */
+.hidden-cards-home-1,
+.hidden-cards-home-2 {
+  flex: 1 1 auto;
+  display: none;
+}
+
+/* Mostrar las tarjetas ocultas cuando sea necesario */
+.show-hidden-cards .hidden-cards-home-1,
+.show-visible-cards .visible-cards-home-1
+ {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Botones de control */
+.section-wrapper .button-img2,
+.section-wrapper .button-img3 {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  width: 96%;
+}
+
+.section-wrapper .button-img2 button,
+.section-wrapper .button-img3 button {
+  cursor: pointer;
+  font-size: 30px;
+  color: var(--white); 
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 10px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Estilos de botones al pasar el mouse */
+.section-wrapper .button-img2 button:hover,
+.section-wrapper .button-img3 button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Contenido de tarjetas */
+.card-inner-home {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-home.flipped-home .card-inner-home,
+.card-home2.flipped-home .card-inner-home {
+  transform: rotateY(180deg);
+}
+
+.card-front-home,
+.card-back-home {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.card-front-home {
+  background-color: #f0f0f0;
+}
+
+.card-back-home {
+  background-color: #e0e0e0;
+  transform: rotateY(180deg);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-back-home h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-back-home p {
+  margin-bottom: 10px;
+}
+
+.card-back-home span {
+  text-align: center;
+}
+
+.card-back-home .card-button {
+  align-self: flex-end;
+}
+
+.card-back-home a {
+  align-self: center;
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.card-back-home a:hover {
+  background-color: #555;
+}
+
+.card-home img,
+.card-home2 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Sección de información */
+.section-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Iconos */
+.icons-index {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+.icon1,
+.icon2,
+.icon3 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+  margin-top: 90px;
+}
+
+.icons-index i::after {
+  content: "";
+  height: 40%;
+  bottom: -41%;
+  background-image: inherit;
+  position: absolute;
+  background-position: bottom;
+  width: inherit;
+}
+
+.icon1 i,
+.icon2 i,
+.icon3 i {
+  margin-bottom: 5px;
+  font-size: 400%;
+}
+
+/* Texto de información */
+.info-txt {
+  margin: 30px;
+  width: 90%;
+}
+
+.info-txt h2 {
+  text-align: center;
+}
+
+.txt-title {
+  font-size: 150%;
+  margin-bottom: 20px;
+}

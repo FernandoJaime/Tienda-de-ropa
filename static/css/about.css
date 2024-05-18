@@ -96,3 +96,72 @@
 .content-about li::marker {
   font-size: 24px; 
 }
+
+/* Tablets (Pantallas medianas) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-about {
+    padding: 20px;
+  }
+
+  .section-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .cart-about {
+    width: 45%;
+    margin: 20px;
+  }
+}
+
+/* Móviles (Pantallas pequeñas) */
+@media (max-width: 767px) {
+  .main-about {
+    padding: 10px;
+    position: relative;
+  }
+
+  .section-about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-about {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .main-about .title-about {
+    padding-top: 5%;
+    margin-bottom: 30px;
+  }
+
+  .content-about ul {
+    padding: 15px;
+  }
+
+  .content-about li {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .content-about li::marker {
+    font-size: 18px; 
+  }
+
+  /* Ajustes para el texto oculto */
+  .hidden-text {
+    position: relative;
+    max-height: none;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--spanish-gray);
+    border-radius: var(--border-radius-sm);
+  }
+
+  .main-about:hover .hidden-text {
+    max-height: none;
+  }
+}

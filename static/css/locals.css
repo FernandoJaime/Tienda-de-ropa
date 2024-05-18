@@ -77,3 +77,29 @@ p:hover .fa-location-dot,
 p:hover a {
     color: var(--violet);
 }
+/* Tablets (Pantallas medianas) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container-locals {
+        width: 85%;
+        padding: 30px;
+    }
+    .container-locals .cart-locals {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Móviles (Pantallas pequeñas) */
+@media (max-width: 767px) {
+    .container-locals {
+        width: 95%;
+        padding: 20px;
+    }
+    .container-locals .cart-locals {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .cart-locals h3 {
+        padding: 20px;
+    }
+}

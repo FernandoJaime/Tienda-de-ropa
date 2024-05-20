@@ -8,6 +8,8 @@
     align-content: center;
     justify-content: center;
     flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 150px;
 }
 
 .main-form .container {
@@ -170,6 +172,7 @@
 
 .main-form .social-icons i {
     font-size: 30px;
+    color: var(--onyx);
 }
 
 .main-form .social-icons a {

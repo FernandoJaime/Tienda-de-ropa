@@ -44,11 +44,10 @@
                 }
 
                 a {
-                    width: 50%;
+                    width: 70%;
                     margin: auto;
                     padding: 10px 20px;
                     color: var(--white);
-                    text-align: center;
                     font-size: 1rem;
                     font-weight: 700;
                     border: 2px solid var(--bittersweet);

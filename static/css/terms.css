@@ -9,7 +9,7 @@
     justify-content: center;
     line-height: 1.6;
     background-color: var(--cultured);
-    margin: 50px;
+    margin: 0 50px 150px 50px;
     padding: 40px;
     border-radius: var(--border-radius-md);
     box-shadow: var(--box-shadow);

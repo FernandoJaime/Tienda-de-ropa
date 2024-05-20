@@ -128,7 +128,11 @@ function validoCrear(){
 function mostrar(selector, mensaje) {
     const elemento = document.querySelector(selector);
     elemento.innerHTML = mensaje; 
-    setTimeout(() => {elemento.innerHTML = ''; }, 10000); 
+    elemento.classList.add('error-message');
+    setTimeout(() => {
+      elemento.textContent = '';
+      elemento.classList.remove('error-message'); 
+    }, 10000); 
 }
 
 // Funcion para borrar los div de error cuando se escribe en los inputs

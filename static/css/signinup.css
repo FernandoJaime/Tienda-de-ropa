@@ -253,6 +253,20 @@
     transform: translateX(200%);
 }
 
+
+/* estilos de mensajes de error en las validaciones */
+.error-message {
+    position: fixed;
+    color: red; 
+    background-color: #ffc9c9; 
+    border: 1px solid red; 
+    padding: 5px;  
+    text-align: center;
+    border-radius: var(--border-radius-md);
+    top: 50%;
+  }
+  
+
 /* Estilos responsivos */
 @media (max-width: 769px) {
     .main-form {

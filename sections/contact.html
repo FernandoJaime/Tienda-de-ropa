@@ -47,9 +47,7 @@
                 Envia un email a nuestro equipo de recursos humanos para
                 contactar con ellos:
               </p>
-              <a href="mailto:TiendaRopa@gmail.com" class="link-local-html"
-                >Email</a
-              >
+              <a href="mailto:TiendaRopa@gmail.com" class="link-local-html">Email</a>
             </div>
             <div>
               <p>
@@ -59,8 +57,8 @@
               <a
                 href="https://wa.me/543412982254/?text=Hola%20los%20contacto%20desde%20su%20pagina%20web,%20para%20realizar%20una%20consulta"
                 class="link-local-html"
-                >WhatsApp</a
-              >
+                >WhatsApp
+              </a>
             </div>
           </section>
         </section>
@@ -81,8 +79,8 @@
                   id="name"
                   name="name"
                   placeholder="Ingresar nombre"
-                  required
                 />
+                <div class="error" id="error-name"></div>
                 </div>
                 <div class="form-control">
                 <label for="apellido">Apellido:</label>
@@ -91,9 +89,8 @@
                   id="apellido"
                   name="apellido"
                   placeholder="Ingresar apellido"
-                  required
                 />
-                <div class="error" id="error-firstname"></div>
+                <div class="error" id="error-apellido"></div>
               </div>
               <div class="form-control">
                 <label for="email">Email:</label>
@@ -102,9 +99,8 @@
                   id="email"
                   name="email"
                   placeholder="Ingresar email@email.com"
-                  required
                 />
-                <div class="error" id="error-firstname"></div>
+                <div class="error" id="error-email"></div>
               </div>
               <div class="form-control">
                 <label for="tel">Telefono:</label>
@@ -113,20 +109,17 @@
                   id="tel"
                   name="tel"
                   placeholder="Ingresar número completo"
-                  required
                 />
-                <div class="error" id="error-firstname"></div>
+                <div class="error" id="error-tel"></div>
               </div>
               <div class="form-control">
                 <label id="label-birthdate">Fecha de nacimiento:</label>
                 <input
                   type="date"
-                  required
                   name="birthdate"
                   id="birthdate"
-                  required
                 />
-                <div class="error" id="error-firstname"></div>
+                <div class="error" id="error-date"></div>
               </div>
               <div class="form-control">
                
@@ -159,6 +152,7 @@
                   placeholder="Si quiere nos puede dejar un mensaje aqui..."
                 ></textarea>
               </div>
+              <div class="error" id="error-campos"></div>
               <input id="btnEnviar" type="submit" value="Enviar" />
             </fieldset>
           </form>
@@ -175,5 +169,8 @@
 
     <!-- Script de carga dinamica de elementos html -->
     <script src="/static/js/loadTemplate.js"></script>
+
+    <!-- Script de validacion de formulario -->
+    <script src="/static/js/validContact.js"></script>
   </body>
 </html>

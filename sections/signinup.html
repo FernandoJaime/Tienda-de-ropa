@@ -40,18 +40,24 @@
                   </a>
                 </div>
                 <span>o utiliza tu correo electrónico para registrarte</span>
-                <input type="text" name="fullName" id="fullName" placeholder="Nombre completo" required>
-                <input type="number" name="dni" id="dni" placeholder="Documento de identidad" required>
-                <input type="email" name="email" id="email" placeholder="Email" required>
-                <input type="password" name="password" id="password" placeholder="Password" required>
+                <div class="error" id="F-crear-campos"></div>
+                <input type="text" name="fullName" id="fullName" placeholder="Nombre completo">
+                <div class="error" id="F-NameCrear"></div>
+                <input type="number" name="dni" id="dni" placeholder="Documento de identidad">
+                <div class="error" id="F-dniCrear"></div>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <div class="error" id="F-emailCrear"></div>
+                <input type="password" name="password" id="password" placeholder="Password">
+                <div class="error" id="F-passCrear"></div>
                 <div class="input-link">
-                  <input type="checkbox" id="terminos" name="terminos" required class="checkbox-custom">
+                  <input type="checkbox" id="terminos" name="terminos" class="checkbox-custom">
                   <label for="terminos" class="checkbox-label">
                       <span class="checkbox-custom"></span>
                       <a href="/sections/termsandconditions.html">Términos y condiciones</a>
                   </label>
+                  <div class="error" id="F-Check"></div>
               </div>
-                <button>Crear cuenta</button>
+                <button id="CrearCuenta">Crear cuenta</button>
               </form>
             </div>
             <div class="form-container sign-in">
@@ -71,9 +77,12 @@
                     <i class='bx bxl-gmail'></i>
                   </a>
                 </div>
-                <span>o usa tu correo electrónico/contraseña</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Contraseña">
+                <span>o usa tu correo electrónico y contraseña</span>
+                <div class="error" id="F-init-campos"></div>
+                <input type="email" placeholder="Email" id="init-email">
+                <div class="error" id="F-email"></div>
+                <input type="password" placeholder="Contraseña" id="init-pass">
+                <div class="error" id="F-pass"></div>
                 <a href="/sections/recoverpassword.html">¿Olvidaste tu contraseña?</a>
                   <button type="button" id="redirectLogin">Iniciar sesión</button>
               </form>
@@ -101,6 +110,8 @@
 
     <!-- Script de carga dinamica de elementos html -->
     <script src="/static/js/loadTemplate.js"></script>
-
+    
+    <!-- Script de validacion de campos y redireccionamiento -->
+    <script src="/static/js/signinup.js"></script>
 </body>
 </html>

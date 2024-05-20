@@ -179,3 +179,56 @@
 .main-card {
     min-height: 100vh;
 }
+/* Tablets (Pantallas medianas) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .section-card-categories {
+        width: 85%;
+    }
+    .top {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto; /* Asegura suficiente espacio para el filtro */
+    }
+    .top .top-title {
+        grid-column: 1 / span 2;
+        text-align: center;
+    }
+    .top-text {
+        grid-column: 1 / span 2;
+    }
+    .top-filter {
+        position: relative; /* Cambia a relative para evitar superposición */
+        top: auto;
+        right: auto;
+        margin: 20px auto; /* Centra el filtro */
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Móviles (Pantallas pequeñas) */
+@media (max-width: 767px) {
+    .section-card-categories {
+        width: 95%;
+    }
+    .top {
+        grid-template-columns: 1fr;
+    }
+    .top .top-title {
+        grid-column: 1;
+        text-align: center;
+    }
+    .top-text {
+        grid-column: 1;
+    }
+    .top-filter {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .conteiner-cards {
+        grid-template-columns: 1fr;
+    }
+}

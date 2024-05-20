@@ -161,3 +161,16 @@
     padding: 20px;
     border-radius: var(--border-radius-md);
 }
+/* Tablets (Pantallas medianas) */
+@media (max-width: 1024px) {
+    .container-contact .form-wrapper {
+        width: 80%;
+    }
+}
+
+/* Móviles (Pantallas pequeñas) */
+@media (max-width: 767px) {
+    .container-contact .form-wrapper {
+        width: 95%;
+    }
+}

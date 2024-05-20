@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactate con nosotros</title>
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="/static/img/tendedero.png" type="image/x-icon">
 
@@ -15,22 +16,36 @@
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
     <!-- Header-->
     <div include-html="/template/header.html"></div>
 
     <main>
-        <section id="Contact-inicio">
-            <h2>Contactate con nosotros y consulta lo que quieras</h2>
-            <p>Si tenes una consulta para sucursal en particular, dirigete a la seccion de <a href="/sections/locals.html" rel="noopener noreferrer" id="link-locales-html">Locales</a></p>
-            <section>
-                <p>Envia un email a nuestro equipo de recursos humanos para contactar con ellos: <a href="mailto:TiendaRopa@gmail.com"><b>Email</b></a></p>
-                <p>Envia un WhatsApp a nuestro equipo de recursos humanos para contactar con ellos: <a href="https://wa.me/543412982254/?text=Hola%20los%20contacto%20desde%20su%20pagina%20web,%20para%20realizar%20una%20consulta"><b>WhatsApp</b></a></p>
+        <div class="container-complete">
+            <section class="container-contact-complete" id="Contact-inicio">
+                <h2>Contactate con nosotros y consulta lo que quieras</h2>
+
+                <div class="contact-options">
+                    <div class="box-complete">
+                        <p>Si tenes una consulta para sucursal en particular, dirigete a la seccion de </p>
+                        <a href="/sections/locals.html" rel="noopener noreferrer" id="link-locales-html">Locales</a>
+                    </div>
+                    <div class="box-complete">
+                        <p>Envia un email a nuestro equipo de recursos humanos para contactar con ellos:</p>
+                        <a href="mailto:TiendaRopa@gmail.com"><b>Email</b></a>
+                    </div>
+                    <div class="box-complete">
+                        <p>Envia un WhatsApp a nuestro equipo de recursos humanos para contactar con ellos:</p>
+                        <a
+                            href="https://wa.me/543412982254/?text=Hola%20los%20contacto%20desde%20su%20pagina%20web,%20para%20realizar%20una%20consulta"><b>WhatsApp</b></a>
+                    </div>
+                </div>
             </section>
-        </section><br>
-        <section>
-            <h1>Ya has enviado todos tus datos con exito!</h1>
-        </section>
+            <section class="successful-notification">
+                <h2>Ya has enviado todos tus datos con exito!</h1>
+            </section>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -38,6 +53,7 @@
 
     <!-- Script de carga dinamica de elementos html -->
     <script src="/static/js/loadTemplate.js"></script>
-    <script src="/static/js/contact.js"></script>
+    <script src="/static/js/validContact.js"></script>
 </body>
+
 </html>

@@ -9,6 +9,7 @@
 @import "shoppingcart.css";
 @import "contact.css";
 @import "locals.css";
+@import "contact-complete.css";
 
 /* Importación de fuente desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
@@ -82,9 +83,8 @@ body {
 /*** Estilos de la Sección Principal ****/
 
 main {
-    width: 100vw;
-    margin-top: 50px;
-    margin-bottom: 150px;
+    width: 100%;
+    height: auto;
 }
 
 

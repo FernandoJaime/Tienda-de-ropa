@@ -222,6 +222,61 @@
   margin-bottom: 20px;
 }
 
+/* Celular */
+@media (max-width: 767px) {
+  .section-info {
+      margin-bottom: 1rem; 
+  }
 
+  .info-txt {
+      margin: 20px auto; 
+      padding: 0 10px; 
+      max-width: 90%; 
+  }
 
+  .txt-title {
+      text-align: center; /* Centra el título */
+  }
 
+  .container-payment {
+      margin-top: 20px; 
+  }
+
+  .swiper-slide {
+      max-width: 250px; 
+      margin: 0 auto; 
+      margin-bottom: 20px; 
+      padding: 15px; 
+      box-sizing: border-box;
+  }
+
+  .product-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-txt {
+  text-align: center;
+  }
+
+  .product-img img {
+  max-width: 100%; 
+  height: auto; 
+  }
+}; 
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .section-info {
+    margin-bottom: 3rem; 
+  }
+
+  .info-txt {
+    margin: 20px; 
+  }
+
+  .info-txt span {
+    margin-bottom: 8px; 
+  }
+};

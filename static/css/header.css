@@ -242,7 +242,7 @@
 /**** Logo header ****/
 
 .header-logo {
-  flex: 2 2 50%;
+  flex: 2 2 35%;
   width: 300px;
   height: 50px;
 }
@@ -255,7 +255,7 @@
 /**** Acciones del usuario ****/
 
 .header-user-actions {
-  flex: 1 1 25%;
+  flex: 1 1 2%;
 }
 
 .header-user-actions i:hover {

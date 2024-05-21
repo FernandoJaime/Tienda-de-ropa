@@ -91,7 +91,7 @@
 
 .icons i {
   font-size: var(--fs-2);
-  color: var(--bittersweet);
+  color: var(--violet);
 }
 
 .icons img {
@@ -110,7 +110,7 @@
 
 .product-txt span {
   font-size: 14px;
-  color: var(--bittersweet);
+  color: var(--violet);
   font-weight: bold;
 }
 
@@ -137,7 +137,7 @@
 .btn-1 {
   display: inline-block;
   padding: 13px 55px;
-  border: 1px solid var(--bittersweet);
+  border: 1px solid var(--violet);
   border-radius: 25px;
   color: var(--white);
   text-decoration: none;
@@ -200,10 +200,10 @@
 .icon2:hover,
 .icon3:hover{
   background: transparent;
-  box-shadow: 0 0px 5px rgb(39, 38, 38),
-  0 0px 10px rgb(39, 38, 38),
-  0 0px 15px rgb(39, 38, 38),
-  0 5px 20px rgb(39, 38, 38);
+  box-shadow: 0 0px 5px var(--violet),
+  0 0px 10px var(--violet),
+  0 0px 15px var(--violet),
+  0 5px 20px var(--violet);
   border-radius: var(--border-radius-md);
 }
 

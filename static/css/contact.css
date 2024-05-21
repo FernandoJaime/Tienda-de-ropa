@@ -77,7 +77,7 @@
     text-decoration: none;
     padding: 15px 8px;
     background: var(--color-btn);
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--border-radius-md);
 }
 
 /* Estilos de los enlaces de redirección */

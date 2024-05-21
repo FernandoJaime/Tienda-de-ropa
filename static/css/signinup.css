@@ -256,13 +256,14 @@
 
 /* estilos de mensajes de error en las validaciones */
 .error-message {
-    position: fixed;
+    /*position: fixed;*/
     color: red; 
-    background-color: #ffc9c9; 
+    background-color: #ffc9c9;
     border: 1px solid red; 
-    padding: 5px;  
+    padding: 3px;  
     text-align: center;
-    border-radius: var(--border-radius-md);
+    font-size: 12px;
+    border-radius: var(--border-radius-sm);
     top: 50%;
   }
   

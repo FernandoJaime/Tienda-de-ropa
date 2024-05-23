@@ -517,6 +517,14 @@
     padding: 25px 0;
   }
 
+  
+
+  .header-search-container {
+    font-size: 30px;
+
+  }
+
+
   .mobile-bottom-navigation {
     border-top-left-radius: var(--border-radius-md);
     border-top-right-radius: var(--border-radius-md);
@@ -533,9 +541,14 @@
     align-items: center;
   }
 
+  .container-head{
+    
+  }
+
   .header-logo {
     margin-bottom: 0;
   }
+
 
   .header-top-actions {
     display: flex;
@@ -545,6 +558,7 @@
 
   .header-search-container {
     font-size: 30px;
+
   }
 
   .header-top-actions select {
@@ -603,7 +617,9 @@
   .header-main .container {
     gap: 80px;
   }
-
+  .header-logo{
+  flex: 2 2 100%;
+  }
   .header-search-container {
     flex-grow: 1;
   }

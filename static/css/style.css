@@ -71,7 +71,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+   
 }
+
 
 /* Ajuste para evitar desbordamiento horizontal */
 body {
@@ -102,7 +104,6 @@ main::before {
     top: -10%;
     left: -10%;
     background: linear-gradient(to right, rgba(52, 114, 239, 0.8) 50%, rgba(87, 7, 157, 0.8) 50%);
-    /* Gradiente que mezcla los colores a la mitad */
     transform: translateX(10%);
 }
 

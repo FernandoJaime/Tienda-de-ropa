@@ -179,6 +179,7 @@
   color: white;
   padding: 5px;
   font-size: 1vw;
+  width: 100%;
 }
 
 .marquee-content {
@@ -240,14 +241,16 @@
 }
 
 /**** Logo header ****/
-
 .header-logo {
-  flex: 2 2 35%;
-  width: 300px;
-  height: 50px;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;    /* Centra verticalmente */ 
+  width: 100%;
+  height: 100%;
+  margin-left: -15%;
 }
 
-.header-logo svg {
+.header-logo img {
   width: 100%;
   height: 100%;
 }
@@ -255,7 +258,7 @@
 /**** Acciones del usuario ****/
 
 .header-user-actions {
-  flex: 1 1 2%;
+  flex: 1 1 18%;
 }
 
 .header-user-actions i:hover {
@@ -541,14 +544,9 @@
     align-items: center;
   }
 
-  .container-head{
-    
-  }
-
   .header-logo {
     margin-bottom: 0;
   }
-
 
   .header-top-actions {
     display: flex;
@@ -595,6 +593,7 @@
   .container {
     max-width: 750px;
     margin: auto;
+    margin-right: 10%;
   }
 
   /* MODAL */
@@ -617,9 +616,9 @@
   .header-main .container {
     gap: 80px;
   }
-  .header-logo{
-  flex: 2 2 100%;
-  }
+   /*.header-logo{
+  flex: 1 2 50%;
+  } */
   .header-search-container {
     flex-grow: 1;
   }

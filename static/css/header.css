@@ -645,7 +645,7 @@
   .container-head {
     max-width: 90%; 
     margin: 0 auto; 
-
+  }
   
   .header-user-actions {
     display: flex;
@@ -861,5 +861,4 @@
     gap: 45px;
   }
 
-}
 }

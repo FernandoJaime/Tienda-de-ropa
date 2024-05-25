@@ -1,23 +1,22 @@
-@import "style.css";
+
 
 /* Contenedor principal */
 .container-index {
-  width: 100%;
-  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
-  padding-bottom: 42rem;
+  /* padding-bottom: 42rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 50px;
-  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 
 /* Contenedor del carrusel */
 .carousel {
-  width: 80%;
+  width: 70%;
   margin: auto;
   position: relative;
   overflow: hidden;
@@ -42,7 +41,7 @@
 
 /*** deslizador ***/
 
-/*contenedro*/
+/*contenedor swiper*/
 .container-swiper {
   position: relative;
   width: 80%;
@@ -149,7 +148,9 @@
 
 .container-payment {
   width: 100%;
-  height: 200px;
+  height: auto;
+  text-align: center;
+  padding: 50px;
 }
 
 .container-payment img {
@@ -217,6 +218,7 @@
 
 .info-txt h2 {
   text-align: center;
+  color: var(--white);
 }
 
 .txt-title {
@@ -230,8 +232,16 @@
 
 /* Tablets  */
 @media (max-width: 1024px) {
-  .container-index {
-    padding-bottom: 20rem; 
+  .container-swiper {
+    height: auto;  
+    min-height: 300px;
+    padding-bottom: 60px;
+  }
+
+  .swiper-slide {
+      max-width: 40%;
+      max-height: 400px;
+      padding: 20px;
   }
 
   .section-info {
@@ -245,10 +255,6 @@
 
 /* Móviles */
 @media (max-width: 768px) {
-  .container-index {
-    padding-bottom: 10rem; 
-  }
-
   .carousel {
     width: 100%;
     border-radius: 0;
@@ -259,15 +265,14 @@
     height: auto;
     border-radius: 0;
     flex-shrink: 0; 
-    background-color: transparent;
   }
 
   .swiper-slide {
-    max-width: 90%;
-    max-height: 300px; 
-    padding: 10px;
-    overflow: hidden;
+    max-width: 250px;
+    max-height: 500px;
+    padding: 45px;
   }
+  
 
   .product-content {
     flex-direction: column;
@@ -297,14 +302,57 @@
 /* pantallas pequeñas */
 @media (max-width: 480px) {
   .container-index {
-    padding-bottom: 5rem; 
+    width: 80;
+    height: auto;
+  }  
+
+  .container-swiper {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    flex-shrink: 0; 
   }
 
   .swiper-slide {
-    max-height: 250px; 
+    max-width: 250px;
+    max-height: 500px;
+    padding: 45px;
   }
+  
+  .swiper-slide .btn-1{
+   width: 100%;
+   text-align: center;
+   padding: 20px;
+  }
+
+  .product-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-txt {
+    text-align: center;
+  }
+
+  .product-img img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+
 
   .info-txt {
     font-size: 0.9rem; 
+    margin: 0 auto;
+  }
+
+  .container-payment{
+    width: 80%;
+    margin-right: 45%;
+  }
+
+  .container-payment img{
+    margin: 0 auto;
   }
 }

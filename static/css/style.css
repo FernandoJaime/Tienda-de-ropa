@@ -70,16 +70,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-   
 }
 
-
-/* Ajuste para evitar desbordamiento horizontal */
 body {
     position: relative;
-    overflow-x: hidden;
-}
+    overflow-x: hidden !important;
+    }
+
 
 
 /*** Estilos de la Sección Principal ****/
@@ -90,7 +87,7 @@ main {
 }
 
 
-/* Pseudo-elementos para efecto de fondo */
+/* Pseudo-elementos para efecto de fondo*/
 main::after,
 main::before {
     content: '';

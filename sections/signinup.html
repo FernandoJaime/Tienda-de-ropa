@@ -6,10 +6,10 @@
     <title>Document</title>
 
      <!--- favicon -->
-     <link rel="shortcut icon" href="/static/img/tendedero.png" type="image/x-icon">
+     <link rel="shortcut icon" href="../static/img/tendedero.png" type="image/x-icon">
 
      <!-- Estilos CSS -->
-     <link rel="stylesheet" href="/static/css/style.css">
+     <link rel="stylesheet" href="../static/css/style.css">
  
      <!-- Box icons -->
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -17,7 +17,7 @@
 <body>
 
       <!-- Header -->
-    <div include-html="/template/header.html"></div>
+    <div include-html="../template/header.html"></div>
 
     <!-- Contenido principal -->
     <main class="main-form">
@@ -53,7 +53,7 @@
                   <input type="checkbox" id="terminos" name="terminos" class="checkbox-custom">
                   <label for="terminos" class="checkbox-label">
                       <span class="checkbox-custom"></span>
-                      <a href="/sections/termsandconditions.html">Términos y condiciones</a>
+                      <a href="../sections/termsandconditions.html">Términos y condiciones</a>
                   </label>
                   <div class="error" id="F-Check"></div>
               </div>
@@ -83,7 +83,7 @@
                 <div class="error" id="F-email"></div>
                 <input type="password" placeholder="Contraseña" id="init-pass">
                 <div class="error" id="F-pass"></div>
-                <a href="/sections/recoverpassword.html">¿Olvidaste tu contraseña?</a>
+                <a href="../sections/recoverpassword.html">¿Olvidaste tu contraseña?</a>
                   <button type="button" id="redirectLogin">Iniciar sesión</button>
               </form>
             </div>
@@ -106,12 +106,12 @@
     </main>
 
     <!-- Footer -->
-    <div include-html="/template/footer.html"></div>
+    <div include-html="../template/footer.html"></div>
 
     <!-- Script de carga dinamica de elementos html -->
-    <script src="/static/js/loadTemplate.js"></script>
+    <script src="../static/js/loadTemplate.js"></script>
     
     <!-- Script de validacion de campos y redireccionamiento -->
-    <script src="/static/js/signinup.js"></script>
+    <script src="../static/js/signinup.js"></script>
 </body>
 </html>

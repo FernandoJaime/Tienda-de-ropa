@@ -53,15 +53,15 @@ function cargarScript(src) {
 /* Función para cargar los scripts JavaScript secuencialmente */
 function cargarScripts() {
     console.log("Cargando scripts...");
-    cargarScript("/static/js/header.js")
+    cargarScript("../static/js/header.js")
         .then(function() {
-            return cargarScript("/static/js/signinup.js");
+            return cargarScript("../static/js/signinup.js");
         })
         .then(function() {
-            return cargarScript("/static/js/cartShop.js"); 
+            return cargarScript("../static/js/cartShop.js"); 
         })
         .then(function(){
-            return cargarScript("/static/js/index.js");
+            return cargarScript("../static/js/index.js");
         })
         .catch(function(error) {
             console.error("Error al cargar los scripts:", error);

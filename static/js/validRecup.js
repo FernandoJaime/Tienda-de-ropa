@@ -7,7 +7,7 @@ RecupContra.addEventListener('click', function(event){
     event.preventDefault(); // Comportamiento predeterminado del formulario
     if (validoRecup()){
         console.log("Recuperar clave con exito");
-        window.location.href = '/sections/signinup.html'; // Redirecciono al inicio de sesion despues de recupero exitoso
+        window.location.href = '../sections/signinup.html'; // Redirecciono al inicio de sesion despues de recupero exitoso
     }
 });
 

@@ -649,17 +649,10 @@
 @media (min-width: 1024px) {
 
   .container-head {
-<<<<<<< HEAD
     max-width: 90%;
     margin: 0 auto;
   }
 
-=======
-    max-width: 90%; 
-    margin: 0 auto; 
-  }
-  
->>>>>>> d165a2ebe6ef8b4555d1db233201b175045371b2
   .header-user-actions {
     display: flex;
     align-items: center;

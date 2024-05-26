@@ -1,5 +1,3 @@
-/* Importación de archivos CSS externos */
-/* @import "style.css"; */
 
 /* Estilos del contenedor del pie de página */
 .container-footer {
@@ -158,5 +156,39 @@ footer {
 
     .copyright-text {
         padding: 20px 40px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-footer {
+        padding: 10px;
+    }
+
+    .social-icons-footer {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .social-icons-footer li a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-icons-footer li a i {
+        font-size: 20px;
+    }
+
+    .contact .info li {
+        grid-template-columns: 20px 1fr;
+        margin-bottom: 10px;
+    }
+
+    .contact .info li span {
+        font-size: 16px;
+    }
+
+    .copyright-text {
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }

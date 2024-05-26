@@ -18,7 +18,7 @@ if (container && registerBtn && loginBtn) {
   if (redirectLoginButton) {
     redirectLoginButton.addEventListener('click', function () {
       if (validoIniciar()) {
-        window.location.href = '/sections/shoppingCart.html';
+        window.location.href = '../sections/shoppingCart.html';
       }
     });
   }
@@ -77,7 +77,7 @@ CreateCuen.addEventListener('click', function(event){
     event.preventDefault(); // Comportamiento predeterminado del formulario
     if (validoCrear()){
         console.log("Crear cuenta con exito");
-        window.location.href = '/sections/signinup.html'; 
+        window.location.href = '../sections/signinup.html'; 
     }
 });
 

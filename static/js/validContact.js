@@ -7,7 +7,7 @@ Contact.addEventListener('click', function(event){
     event.preventDefault(); // Comportamiento predeterminado del formulario
     if (validoContact()){
         console.log("Contacto con exito");
-        window.location.href = '/sections/contact-complete.html'; 
+        window.location.href = '../sections/contact-complete.html'; 
     }
 });
 

@@ -1,260 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hombres</title>
-    <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      href="../static/img/tendedero.png"
-      type="image/x-icon"
-    />
-    <!-- Estilos CSS -->
-    <link rel="stylesheet" href="../static/css/style.css" />
-    <!-- Box Icons -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Header -->
-    <div include-html="../template/header.html">
-      <!-- Carga dinamica de header -->
-    </div>
-    
-    <!-- Contenido Principal -->
-    <main>
-      <section class="section-card-categories">
-        <div class="top">
-          <div class="top-title">
-            <h2>Hombres</h2>   
-        </div>
-          <div class="top-text">
-            <h5>
-              ¡Encuentra la categoría de pantalones perfecta para cualquier
-              ocasión en nuestra tienda online!
-            </h5>
-          </div>
-          <div class="top-filter">
-            <select name="filt" id="filt" class="form-select">
-              <option value="filtro">Filtro</option>
-              <option value="precio-bajo">Precio: Menor a Mayor</option>
-              <option value="precio-alto">Precio: Mayor a Menor</option>
-            </select>
-          </div>
-        </div>
-        <div class="conteiner-cards" id="card-container">
-          
-          <!-- Tarjeta 1 -->
-          <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/remera-1_1.png" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>remera tyler rlx basic beige 24/1</h3>
-                <p>Descripción: Remera básica color beige de alta calidad.</p>
-                <span>20.000$</span>
-                <button class="btn-buy">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <!-- Tarjeta 2 -->
-          <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/remera-2_1.png" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>remera tyler rlx basic natural 24/1</h3>
-                <p>Descripción: Remera básica color natural de alta calidad.</p>
-                <span>20.000$</span>
-                <button class="btn-buy">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <!-- Tarjeta 3 -->
-          <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/remera-3.png" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>remera every thing batik green</h3>
-                <p>
-                  Descripción: Remera con diseño batik color verde de alta
-                  calidad.
-                </p>
-                <span>20.000$</span>
-                <button class="btn-buy">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <!-- Tarjeta 4 -->
-          <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/remera-4.png" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>remera divine skull black</h3>
-                <p>
-                  Descripción: Remera con diseño de calavera color negro de alta
-                  calidad.
-                </p>
-                <span>20.000$</span>
-                <button class="btn-buy">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <!-- Tarjeta 5 -->
-          <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/pantalon-1.webp" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>pantalon rennes mom cord black</h3>
-                <p>
-                  Descripción: Pantalón estilo mom corduroy color negro de alta
-                  calidad.
-                </p>
-                <span>20.000$</span>
-                <button class="btn-buy">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <!-- Tarjeta 6 -->
-          <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/pantalon-2.webp" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>pantalon rennes mom cord camel</h3>
-                <p>
-                  Descripción: Pantalón estilo mom corduroy color camel de alta
-                  calidad.
-                </p>
-                <span>20.000$</span>
-                <button class="btn-buy">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <!-- Tarjeta 7 -->
-          <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/pantalon-3.webp" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>jogger serbia gaba cargo green</h3>
-                <p>
-                  Descripción: Jogger estilo cargo color verde de alta calidad.
-                </p>
-                <span>20.000$</span>
-                <button class="btn-buy">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <!-- Tarjeta 8 -->
-          <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/pantalon-4.webp" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>jogger serbia gaba cargo khaki</h3>
-                <p>
-                  Descripción: Jogger estilo cargo color khaki de alta calidad.
-                </p>
-                <span>20.000$</span>
-                <button class="btn-buy">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <!-- Tarjeta 9 -->
-          <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/abrigo-1.webp" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>anorak koda nyl/bear black</h3>
-                <p>
-                  Descripción: Anorak impermeable color negro con detalles en
-                  beige de alta calidad.
-                </p>
-                <span>20.000$</span>
-                <button class="btn-buy">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <!-- Tarjeta 10 -->
-          <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/abrigo-2.webp" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>anorak koda nyl/bear dark grey</h3>
-                <p>
-                  Descripción: Anorak impermeable color gris oscuro con detalles
-                  en beige de alta calidad.
-                </p>
-                <span>20.000$</span>
-                <button class="btn-buy">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <!-- Tarjeta 11 -->
-          <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/abrigo-3.webp" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>canguro every thing rust white</h3>
-                <p>
-                  Descripción: Canguro color blanco con detalles en óxido de
-                  alta calidad.
-                </p>
-                <span>20.000$</span>
-                <button class="btn-buy">Comprar</button>
-              </div>
-            </div>
-          </div>
-          <!-- Tarjeta 12 -->
-          <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-              <div class="card-front">
-                <img src="../static/img/abrigo-4.webp" alt="" />
-              </div>
-              <div class="card-back">
-                <h3>canguro beverly basic arena</h3>
-                <p>
-                  Descripción: Canguro color arena de estilo básico de alta
-                  calidad.
-                </p>
-                <span>20.000$</span>
-                <button id="btn-buy" class="btn-buy">Comprar</button>
-              </div>
-            </div>
-          </div>
-        
-        </div>
-      
-      </section>
-    </main>
 
-    <!-- Footer -->
-    <div include-html="../template/footer.html">
-      <!-- Carga dinamica de footer -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hombres</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../static/img/tendedero.png" type="image/x-icon" />
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="../static/css/style.css" />
+  <!-- Box Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!--- HEADER-->
+  <header>
+    <!--- Apartado de promociones-->
+    <div class="marquee-container" id="marqueeContainer">
+      <div class="marquee-content" id="marqueeContent">
+        <!-- Carga dinamica de promociones -->
+      </div>
     </div>
-    <!-- Script de carga dinamica de elementos html -->
-    <script src="../static/js/cartShop.js"></script>
-    <script src="../static/js/loadTemplate.js"></script>
-  </body>
+
+    <!-- Encabezado principal -->
+    <div class="header-main">
+      <div class="container-head">
+        <!-- Barra de busqueda -->
+        <div class="header-search-container">
+          <button class="action-btn" id="searchButton">
+            <i class="bx bx-search-alt-2"></i>
+          </button>
+          <div class="search-menu" id="searchMenu">
+            <button class="close-btn-search" onclick="closeSearchMenu()">
+              <i class="bx bx-x"></i>
+            </button>
+            <input type="text" class="search-input" placeholder="Buscar..." />
+          </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="header-logo">
+          <a href="../index.html">
+            <img src="../static/img/logo.svg" alt="Logo de la tienda" />
+          </a>
+        </div>
+
+        <!-- Acciones del ususario -->
+        <div class="header-user-actions">
+          <button class="action-btn">
+            <i class="bx bx-user"></i>
+          </button>
+
+          <button class="action-btn">
+            <i class="bx bx-heart"></i>
+            <span class="count-favorite">0</span>
+          </button>
+
+          <button class="action-btn">
+            <i class="bx bxl-shopify"></i>
+            <span class="count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegacion de escritorio -->
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <!-- Elementos del menu escritorio -->
+          <li class="menu-category">
+            <a href="../index.html" class="menu-title">Home</a>
+          </li>
+
+          <!-- Categorias -->
+          <li class="menu-category">
+            <a href="#" class="menu-title">Categorias</a>
+            <div class="dropdown-panel">
+              <!-- Categoria niños -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./niños.html">Niños</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./niños.html">
+                    <img src="../static/img/kids-banner.jpg" alt="colletctions kids" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Categoria Hombres -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="#">Hombres</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./hombres.html">
+                    <img src="../static/img/banner-hombre.jpg" alt="men's fashion" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Categoria mujeres -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./mujeres.html">Mujeres</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./mujeres.html">
+                    <img src="../static/img/banner-mujer.jpg" alt="women's fashion" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Categoria calzados -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./calzados.html">Calzados</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./calzados.html">
+                    <img src="../static/img/calzado-banner.jpg" alt="mouse collection" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Enlace acerca de nosostros -->
+          <li class="menu-category">
+            <a href="./about.html" class="menu-title">Quienes somos</a>
+          </li>
+
+          <!-- Enlace contactos -->
+          <li class="menu-category">
+            <a href="./contact.html" class="menu-title">Contacto</a>
+          </li>
+
+          <!-- Elace locales -->
+          <li class="menu-category">
+            <a href="./locals.html" class="menu-title">Locales</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Menu movil -->
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <i class="bx bx-menu"></i>
+      </button>
+      <button class="action-btn" onclick="loginRedirect()">
+        <i class="bx bx-user"></i>
+      </button>
+
+      <button class="action-btn" onclick="loginRedirect()">
+        <i class="bx bx-heart"></i>
+        <span class="count-favorite">0</span>
+      </button>
+
+      <button class="action-btn" onclick="loginRedirect()">
+        <i class="bx bxl-shopify"></i>
+        <span class="count">0</span>
+      </button>
+    </div>
+
+    <!-- Navegacion movil -->
+    <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <i class="bx bx-x"></i>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+        <!-- Enlace movil home -->
+        <li class="menu-category">
+          <a href="../index.html" class="menu-title">Home</a>
+        </li>
+
+        <!-- Categorias desplegables -->
+        <li class="menu-category">
+          <!-- Categoria hombres -->
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Categorias</p>
+            <div>
+              <i class="bx bxs-sort-alt"></i>
+            </div>
+          </button>
+
+          <!-- Sub categorias movil -->
+          <ul class="submenu-category-list" data-accordion>
+            <li class="submenu-category">
+              <a href="./niños.html" class="submenu-title">Niños</a>
+            </li>
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Hombres</a>
+            </li>
+            <li class="submenu-category">
+              <a href="./mujeres.html" class="submenu-title">Mujeres</a>
+            </li>
+            <li class="submenu-category">
+              <a href="./calzados.html" class="submenu-title">Calzados</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Enlace movil acerca de nosotros -->
+        <li class="menu-category">
+          <a href="./about.html" class="menu-title">Quienes somos</a>
+        </li>
+
+        <!-- Enlace movil contactos -->
+        <li class="menu-category">
+          <a href="./contact.html" class="menu-title">Contacto</a>
+        </li>
+
+        <!-- Enlace movil locales -->
+        <li class="menu-category">
+          <a href="./locals.html" class="menu-title">Locales</a>
+        </li>
+      </ul>
+
+      <!-- Redes sociales -->
+      <div class="menu-bottom">
+        <ul class="menu-social-container">
+          <li>
+            <a href="https://facebook.com" target="_blank" class="social-link facebook">
+              <i class="bx bxl-facebook-circle"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank" class="social-link twitter">
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank" class="social-link instagram">
+              <i class="bx bxl-instagram-alt"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" target="_blank" class="social-link youtube">
+              <i class="bx bxl-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main>
+    <section class="section-card-categories">
+      <div class="top">
+        <div class="top-title">
+          <h2>Hombres</h2>
+        </div>
+        <div class="top-text">
+          <h5>
+            ¡Encuentra la categoría de pantalones perfecta para cualquier
+            ocasión en nuestra tienda online!
+          </h5>
+        </div>
+        <div class="top-filter">
+          <select name="filt" id="filt" class="form-select">
+            <option value="filtro">Filtro</option>
+            <option value="precio-bajo">Precio: Menor a Mayor</option>
+            <option value="precio-alto">Precio: Mayor a Menor</option>
+          </select>
+        </div>
+      </div>
+      <div class="conteiner-cards" id="card-container">
+
+        <!-- Tarjeta 1 -->
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../static/img/remera-1_1.png" alt="" />
+            </div>
+            <div class="card-back">
+              <h3>remera tyler rlx basic beige 24/1</h3>
+              <p>Descripción: Remera básica color beige de alta calidad.</p>
+              <span>20.000$</span>
+              <button class="btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../static/img/remera-2_1.png" alt="" />
+            </div>
+            <div class="card-back">
+              <h3>remera tyler rlx basic natural 24/1</h3>
+              <p>Descripción: Remera básica color natural de alta calidad.</p>
+              <span>20.000$</span>
+              <button class="btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 3 -->
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../static/img/remera-3.png" alt="" />
+            </div>
+            <div class="card-back">
+              <h3>remera every thing batik green</h3>
+              <p>
+                Descripción: Remera con diseño batik color verde de alta
+                calidad.
+              </p>
+              <span>20.000$</span>
+              <button class="btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 4 -->
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../static/img/remera-4.png" alt="" />
+            </div>
+            <div class="card-back">
+              <h3>remera divine skull black</h3>
+              <p>
+                Descripción: Remera con diseño de calavera color negro de alta
+                calidad.
+              </p>
+              <span>20.000$</span>
+              <button class="btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 5 -->
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../static/img/pantalon-1.webp" alt="" />
+            </div>
+            <div class="card-back">
+              <h3>pantalon rennes mom cord black</h3>
+              <p>
+                Descripción: Pantalón estilo mom corduroy color negro de alta
+                calidad.
+              </p>
+              <span>20.000$</span>
+              <button class="btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 6 -->
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../static/img/pantalon-2.webp" alt="" />
+            </div>
+            <div class="card-back">
+              <h3>pantalon rennes mom cord camel</h3>
+              <p>
+                Descripción: Pantalón estilo mom corduroy color camel de alta
+                calidad.
+              </p>
+              <span>20.000$</span>
+              <button class="btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 7 -->
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../static/img/pantalon-3.webp" alt="" />
+            </div>
+            <div class="card-back">
+              <h3>jogger serbia gaba cargo green</h3>
+              <p>
+                Descripción: Jogger estilo cargo color verde de alta calidad.
+              </p>
+              <span>20.000$</span>
+              <button class="btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 8 -->
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../static/img/pantalon-4.webp" alt="" />
+            </div>
+            <div class="card-back">
+              <h3>jogger serbia gaba cargo khaki</h3>
+              <p>
+                Descripción: Jogger estilo cargo color khaki de alta calidad.
+              </p>
+              <span>20.000$</span>
+              <button class="btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 9 -->
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../static/img/abrigo-1.webp" alt="" />
+            </div>
+            <div class="card-back">
+              <h3>anorak koda nyl/bear black</h3>
+              <p>
+                Descripción: Anorak impermeable color negro con detalles en
+                beige de alta calidad.
+              </p>
+              <span>20.000$</span>
+              <button class="btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 10 -->
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../static/img/abrigo-2.webp" alt="" />
+            </div>
+            <div class="card-back">
+              <h3>anorak koda nyl/bear dark grey</h3>
+              <p>
+                Descripción: Anorak impermeable color gris oscuro con detalles
+                en beige de alta calidad.
+              </p>
+              <span>20.000$</span>
+              <button class="btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 11 -->
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../static/img/abrigo-3.webp" alt="" />
+            </div>
+            <div class="card-back">
+              <h3>canguro every thing rust white</h3>
+              <p>
+                Descripción: Canguro color blanco con detalles en óxido de
+                alta calidad.
+              </p>
+              <span>20.000$</span>
+              <button class="btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 12 -->
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../static/img/abrigo-4.webp" alt="" />
+            </div>
+            <div class="card-back">
+              <h3>canguro beverly basic arena</h3>
+              <p>
+                Descripción: Canguro color arena de estilo básico de alta
+                calidad.
+              </p>
+              <span>20.000$</span>
+              <button id="btn-buy" class="btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="section-footer aboutus">
+        <h2>Sobre nosotros</h2>
+        <p>Somos La Tienda, tu destino de moda favorito.</p>
+        <p>
+          Descubre nuestras últimas tendencias y encuentra el look perfecto
+          para cada ocasión.
+        </p>
+        <ul class="social-icons-footer">
+          <li>
+            <a href="https://facebook.com" class="facebook" target="_blank">
+              <i class="bx bxl-facebook-circle"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" class="twitter" target="_blank">
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" class="instagram" target="_blank">
+              <i class="bx bxl-instagram-alt"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" class="youtube" target="_blank">
+              <i class="bx bxl-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="section-footer quicklinks">
+        <h2>Soporte</h2>
+        <ul>
+          <li>
+            <a href="./contact.html">Preguntas frecuentes</a>
+          </li>
+          <li>
+            <a href="./termsandconditions.html">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="./contact.html">Ayuda</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+      <div class="section-footer quicklinks">
+        <h2>Comprar</h2>
+        <ul>
+          <li>
+            <a href="./hombres.html">Hombre</a>
+          </li>
+          <li>
+            <a href="./mujeres.html">Mujer</a>
+          </li>
+          <li>
+            <a href="./niños.html">Niños</a>
+          </li>
+          <li>
+            <a href="./calzados.html">Calzados</a>
+          </li>
+        </ul>
+      </div>
+      <div class="section-footer contact">
+        <h2>Contacta con nosotros</h2>
+        <ul class="info">
+          <li>
+            <span>
+              <i class="bx bxs-phone-call"></i>
+            </span>
+            <p>
+              <a href="tel_+5492612458 967 ">0 261 2458 967</a>
+            </p>
+          </li>
+          <li>
+            <span>
+              <i class="bx bxl-gmail"></i>
+            </span>
+            <p>
+              <a href="mailto:tienda.lllll@gmail.com">tienda.lllll@gmail.com</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright-text">
+      <p>&copy; 2024 - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="../static/js/cartShop.js"></script>
+  <script src="../static/js/header.js"></script>
+</body>
+
 </html>

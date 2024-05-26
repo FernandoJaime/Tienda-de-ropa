@@ -1,28 +1,26 @@
-
-/* Estilos del contenedor del pie de página */
-.container-footer {
-    border-top: 2px solid var(--cultured);
-}
-
 /* Estilos del pie de página */
 footer {
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: var(--white);
-    text-wrap: wrap;
+    border-top: 2px solid var(--cultured);
 }
 
 /* Estilos del contenedor principal */
 .container {
-    width: 100%;
+    min-width: 100%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    padding: 20px;
 }
 
 /* Estilos de las secciones del pie de página */
 .section-footer {
     padding: 20px;
+  
 
     h2 {
         color: var(--eerie-black);

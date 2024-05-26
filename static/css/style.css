@@ -10,6 +10,7 @@
 @import "contact.css";
 @import "locals.css";
 @import "contact-complete.css";
+@import "modal.css";
 
 /* Importación de fuente desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
@@ -72,17 +73,20 @@
     box-sizing: border-box;
 }
 
+/* html{
+    overflow: hidden;
+} */
 body {
     position: relative;
     overflow-x: hidden !important;
-    }
+}
 
 
 
 /*** Estilos de la Sección Principal ****/
 
 main {
-    width: 100%;
+    width: 100vw;
     height: auto;
 }
 

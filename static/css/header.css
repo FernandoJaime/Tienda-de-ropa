@@ -1,163 +1,24 @@
-/**** seccion de Modal de suscripcion *****/
+/**** PROMOCIONES ****/
 
-/* overlay */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+.marquee-container {
   width: 100vw;
-  height: 100vh;
-  background: hsla(0, 0%, 0%, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  z-index: 15;
-  transition: opacity 0.5s ease, pointer-events 0s ease 0.5s;
-}
-
-.overlay.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-/* Modal de suscripcion al boletin informativo */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: hsla(0, 0%, 0%, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  z-index: 10;
-  animation: popup 1s ease-in-out 5s forwards;
-}
-
-@keyframes popup {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  100% {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-  }
-}
-
-.modal.closed {
-  display: none;
-}
-
-.modal-close-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.newsletter-img {
-  display: none;
-}
-
-.modal-content {
-  position: relative;
-  max-width: 350px;
-  margin: 20px;
-  background: var(--white);
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-  z-index: 2;
-  animation: scaleUp 0.5s ease-in-out 5s forwards;
-}
-
-@keyframes scaleUp {
-  0% {
-    transform: scale(0.9);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-.modal-close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: var(--violet);
-  color: var(--white);
-  font-size: 16px;
+  background-color: var(--violet);
+  color: white;
   padding: 5px;
-  border-radius: var(--border-radius-sm);
+  font-size: 1vw;
 }
 
-.modal-close-btn:hover {
-  opacity: 0.9;
-}
-
-.modal-close-btn bx {
-  width: 70px;
-}
-
-.newsletter {
-  padding: 50px 30px;
-  text-align: center;
-}
-
-.newsletter-header {
-  margin-bottom: 20px;
-}
-
-.newsletter-title {
-  color: var(--onyx);
-  font-size: var(--fs-2);
-  font-weight: var(--weight-600);
-  margin-bottom: 10px;
-}
-
-.newsletter-desc {
-  color: var(--sonic-silver);
-  font-size: var(--fs-7);
-  line-height: 1.6;
-}
-
-.email-field {
-  font-size: var(--fs-7);
-  padding: 8px 16px;
-  border-radius: var(--border-radius-sm);
-  border: 1px solid var(--cultured);
-  margin-bottom: 16px;
-}
-
-.btn-newsletter {
-  background: var(--eerie-black);
-  color: var(--white);
-  font-size: var(--fs-7);
-  font-weight: var(--weight-600);
-  text-transform: uppercase;
-  padding: 10px 15px;
-  border-radius: var(--border-radius-sm);
-  margin: auto;
-  transition: var(--transition-timing);
-}
-
-.btn-newsletter:hover {
-  background: var(--violet);
+.marquee-content {
+  white-space: nowrap;
 }
 
 
 /*** Header ****/
 
-.header-top,
+header {
+  background-color: var(--white);
+}
+
 .header-user-actions,
 .desktop-navigation-menu {
   display: none;
@@ -166,22 +27,9 @@
 
 .header-main {
   border-bottom: 1px solid var(--spanish-gray);
-  background-color: var(--white);
-}
-
-/**** PROMOCIONES ****/
-
-.marquee-container {
-  background-color: var(--violet);
-  color: white;
-  padding: 5px;
-  font-size: 1vw;
   width: 100%;
 }
 
-.marquee-content {
-  white-space: nowrap;
-}
 
 /**** Contenedor principal del header ****/
 
@@ -195,7 +43,7 @@
 /**** Estilos para el contenedor de búsqueda  ****/
 
 .header-search-container {
-  flex: 1 1 25%;
+  flex: 1 1 5%;
   margin-left: 20px;
 }
 
@@ -239,14 +87,9 @@
 
 /**** Logo header ****/
 .header-logo {
-  display: flex;
-  justify-content: center;
-  /* Centra horizontalmente */
-  align-items: center;
-  /* Centra verticalmente */
+  flex: 1 3 50%;
   width: 100%;
   height: 100%;
-  margin-left: -15%;
 }
 
 .header-logo img {
@@ -257,7 +100,7 @@
 /**** Acciones del usuario ****/
 
 .header-user-actions {
-  flex: 1 1 18%;
+  flex: 1 1 5%;
 }
 
 .header-user-actions i:hover {
@@ -467,7 +310,7 @@
   transition: color 0.3s ease-in-out;
 }
 
-/* animacion de en iconos de social icons*/
+
 .menu-social-container li a:hover i {
   animation: iconAnimation 0.5s infinite;
 }
@@ -487,6 +330,164 @@
 .youtube:hover i {
   color: rgb(203, 21, 35);
 }
+
+
+
+
+/* overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 15;
+  transition: opacity 0.5s ease, pointer-events 0s ease 0.5s;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/*** Modal de suscripcion al boletin informativo ***/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 10;
+  animation: popup 1s ease-in-out 5s forwards;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+
+.modal.closed {
+  display: none;
+}
+
+.modal-close-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.newsletter-img {
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 350px;
+  margin: 20px;
+  background: var(--white);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  z-index: 2;
+  animation: scaleUp 0.5s ease-in-out 5s forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--violet);
+  color: var(--white);
+  font-size: 16px;
+  padding: 5px;
+  border-radius: var(--border-radius-sm);
+}
+
+.modal-close-btn:hover {
+  opacity: 0.9;
+}
+
+.modal-close-btn bx {
+  width: 70px;
+}
+
+.newsletter {
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.newsletter-header {
+  margin-bottom: 20px;
+}
+
+.newsletter-title {
+  color: var(--onyx);
+  font-size: var(--fs-2);
+  font-weight: var(--weight-600);
+  margin-bottom: 10px;
+}
+
+.newsletter-desc {
+  color: var(--sonic-silver);
+  font-size: var(--fs-7);
+  line-height: 1.6;
+}
+
+.email-field {
+  font-size: var(--fs-7);
+  padding: 8px 16px;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--cultured);
+  margin-bottom: 16px;
+}
+
+.btn-newsletter {
+  background: var(--eerie-black);
+  color: var(--white);
+  font-size: var(--fs-7);
+  font-weight: var(--weight-600);
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: var(--border-radius-sm);
+  margin: auto;
+  transition: var(--transition-timing);
+}
+
+.btn-newsletter:hover {
+  background: var(--violet);
+}
+
 
 @media (min-width: 300px) {
 
@@ -682,18 +683,14 @@
   }
 
 
-  .header-logo {
+  .desktop-navigation-menu {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-right: 100px;
-  }
-
-  .desktop-navigation-menu {
-    display: block;
-    border-bottom: 1px solid var(--cultured);
+    align-content: center;
+    background-color: transparent;
     text-wrap: nowrap;
-    padding-bottom: 5px;
+    width: 100%;
+    margin-left: 13%;
   }
 
   .desktop-menu-category-list {
@@ -741,7 +738,7 @@
   .dropdown-panel {
     position: absolute;
     top: 100%;
-    left: -280%;
+    left: -410%;
     transform: translate(50%);
     background: var(--white);
     width: 90vw;
@@ -843,32 +840,4 @@
   .mobile-bottom-navigation {
     display: none;
   }
-}
-
-
-@media (min-width: 1200px) {
-  .header-main {
-    width: 100vw;
-  }
-
-  .container {
-    max-width: 100vw;
-  }
-
-  /** HEADER */
-  .container-head {
-    max-width: 100%;
-  }
-
-  .header-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20rem;
-  }
-
-  .desktop-menu-category-list {
-    gap: 45px;
-  }
-
 }

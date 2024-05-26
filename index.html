@@ -2,37 +2,268 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pagina de inicio</title>
 
   <!--- favicon -->
-  <link rel="shortcut icon" href="./static/img/tendedero.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./static/img/tendedero.png" type="image/x-icon" />
 
   <!-- Estilos CSS -->
-  <link rel="stylesheet" href="./static/css/style.css">
-
+  <link rel="stylesheet" href="./static/css/style.css" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <!-- Box icons -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
 <body>
+  <!--- HEADER-->
+  <header>
+    <!--- Apartado de promociones-->
+    <div class="marquee-container" id="marqueeContainer">
+      <div class="marquee-content" id="marqueeContent">
+        <!-- Carga dinamica de promociones -->
+      </div>
+    </div>
 
-  <!-- HEADER -->
-  <div include-html="./template/header.html">
-    <!-- CARGA DINAMICA DE HEADER -->
-  </div>
+    <!-- Encabezado principal -->
+    <div class="header-main">
+      <div class="container-head">
+        <!-- Barra de busqueda -->
+        <div class="header-search-container">
+          <button class="action-btn" id="searchButton">
+            <i class="bx bx-search-alt-2"></i>
+          </button>
+          <div class="search-menu" id="searchMenu">
+            <button class="close-btn-search" onclick="closeSearchMenu()">
+              <i class="bx bx-x"></i>
+            </button>
+            <input type="text" class="search-input" placeholder="Buscar..." />
+          </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="header-logo">
+          <a href="../index.html">
+            <img src="static/img/logo.svg" alt="Logo de la tienda" />
+          </a>
+        </div>
+
+        <!-- Acciones del ususario -->
+        <div class="header-user-actions">
+          <button class="action-btn" data-redirect="../sections/login.html">
+            <i class="bx bx-user"></i>
+          </button>
+
+          <button class="action-btn" data-redirect="../sections/login.html">
+            <i class="bx bx-heart"></i>
+            <span class="count-favorite">0</span>
+          </button>
+
+          <button class="action-btn" data-redirect="../sections/login.html">
+            <i class="bx bxl-shopify"></i>
+            <span class="count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegacion de escritorio -->
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <!-- Elementos del menu escritorio -->
+          <li class="menu-category">
+            <a href="/index.html" class="menu-title">Home</a>
+          </li>
+
+          <!-- Categorias -->
+          <li class="menu-category">
+            <a href="#" class="menu-title">Categorias</a>
+            <div class="dropdown-panel">
+              <!-- Categoria niños -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./sections/niños.html">Niños</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./sections/niños.html">
+                    <img src="./static/img/kids-banner.jpg" alt="colletctions kids" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Categoria Hombres -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./sections/hombres.html">Hombres</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./sections/hombres.html">
+                    <img src="./static/img/banner-hombre.jpg" alt="men's fashion" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Categoria mujeres -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./sections/mujeres.html">Mujeres</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./sections/mujeres.html">
+                    <img src="./static/img/banner-mujer.jpg" alt="women's fashion" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Categoria calzados -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./sections/calzados.html">Calzados</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./sections/calzados.html">
+                    <img src="./static/img/calzado-banner.jpg" alt="mouse collection" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Enlace acerca de nosostros -->
+          <li class="menu-category">
+            <a href="./sections/about.html" class="menu-title">Quienes somos</a>
+          </li>
+
+          <!-- Enlace contactos -->
+          <li class="menu-category">
+            <a href="./sections/contact.html" class="menu-title">Contacto</a>
+          </li>
+
+          <!-- Elace locales -->
+          <li class="menu-category">
+            <a href="./sections/locals.html" class="menu-title">Locales</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Menu movil -->
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <i class="bx bx-menu"></i>
+      </button>
+      <button class="action-btn" onclick="loginRedirect()">
+        <i class="bx bx-user"></i>
+      </button>
+
+      <button class="action-btn" onclick="loginRedirect()">
+        <i class="bx bx-heart"></i>
+        <span class="count-favorite">0</span>
+      </button>
+
+      <button class="action-btn" onclick="loginRedirect()">
+        <i class="bx bxl-shopify"></i>
+        <span class="count">0</span>
+      </button>
+    </div>
+
+    <!-- Navegacion movil -->
+    <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <i class="bx bx-x"></i>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+        <!-- Enlace movil home -->
+        <li class="menu-category">
+          <a href="../index.html" class="menu-title">Home</a>
+        </li>
+
+        <!-- Categorias desplegables -->
+        <li class="menu-category">
+          <!-- Categoria hombres -->
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Categorias</p>
+            <div>
+              <i class="bx bxs-sort-alt"></i>
+            </div>
+          </button>
+
+          <!-- Sub categorias movil -->
+          <ul class="submenu-category-list" data-accordion>
+            <li class="submenu-category">
+              <a href="../sections/niños.html" class="submenu-title">Niños</a>
+            </li>
+            <li class="submenu-category">
+              <a href="../sections/hombres.html" class="submenu-title">Hombres</a>
+            </li>
+            <li class="submenu-category">
+              <a href="../sections/mujeres.html" class="submenu-title">Mujeres</a>
+            </li>
+            <li class="submenu-category">
+              <a href="../sections/calzados.html" class="submenu-title">Calzados</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Enlace movil acerca de nosotros -->
+        <li class="menu-category">
+          <a href="../sections/about.html" class="menu-title">Quienes somos</a>
+        </li>
+
+        <!-- Enlace movil contactos -->
+        <li class="menu-category">
+          <a href="../sections/contact.html" class="menu-title">Contacto</a>
+        </li>
+
+        <!-- Enlace movil locales -->
+        <li class="menu-category">
+          <a href="../sections/locals.html" class="menu-title">Locales</a>
+        </li>
+      </ul>
+
+      <!-- Redes sociales -->
+      <div class="menu-bottom">
+        <ul class="menu-social-container">
+          <li>
+            <a href="https://facebook.com" target="_blank" class="social-link facebook">
+              <i class="bx bxl-facebook-circle"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank" class="social-link twitter">
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank" class="social-link instagram">
+              <i class="bx bxl-instagram-alt"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" target="_blank" class="social-link youtube">
+              <i class="bx bxl-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <!-- CONTENIDO PRINCIPAL -->
   <main>
     <div class="container-index">
       <section>
         <div class="carousel">
-          <img src="./static/img/index-img2.webp" alt="Imagen" class="slide active">
-          <img src="./static/img/index-img.webp" alt="Imagen" class="slide">
-          <img src="./static/img/index-img3.webp" alt="Imagen" class="slide">
+          <img src="./static/img/index-img2.webp" alt="Imagen" class="slide active" />
+          <img src="./static/img/index-img.webp" alt="Imagen" class="slide" />
+          <img src="./static/img/index-img3.webp" alt="Imagen" class="slide" />
         </div>
       </section>
 
@@ -42,11 +273,10 @@
         </div>
         <section class="swiper mySwiper">
           <div class="swiper-wrapper">
-
             <div class="swiper-slide">
               <div class="icons">
-                <i class='bx bxs-left-arrow-circle'></i>
-                <img src="./static/img/logo.png" alt="">
+                <i class="bx bxs-left-arrow-circle"></i>
+                <img src="./static/img/logo.png" alt="" />
                 <i class="fa-regular fa-heart"></i>
               </div>
               <div class="product-content">
@@ -54,12 +284,12 @@
                   <span>$15.000</span>
                   <h3>Suéter Cuello Redondo</h3>
                   <p>
-                    Suéter con cuello redondo y logo de GAP para
-                    niños de 3 a 12 años
+                    Suéter con cuello redondo y logo de GAP para niños de 3 a
+                    12 años
                   </p>
                 </div>
                 <div class="product-img">
-                  <img src="./static/img/niños-12.webp" alt="">
+                  <img src="./static/img/niños-12.webp" alt="" />
                 </div>
               </div>
               <a href="./sections/niños.html" class="btn-1">Comprar</a>
@@ -67,8 +297,8 @@
 
             <div class="swiper-slide">
               <div class="icons">
-                <i class='bx bxs-left-arrow-circle'></i>
-                <img src="./static/img/logo.png" alt="">
+                <i class="bx bxs-left-arrow-circle"></i>
+                <img src="./static/img/logo.png" alt="" />
                 <i class="fa-regular fa-heart"></i>
               </div>
               <div class="product-content">
@@ -76,11 +306,12 @@
                   <span>$18.000</span>
                   <h3>Sport Low Red</h3>
                   <p>
-                    Zapatillas deportivas en rojo para destacar en cualquier ocasión.
+                    Zapatillas deportivas en rojo para destacar en cualquier
+                    ocasión.
                   </p>
                 </div>
                 <div class="product-img">
-                  <img src="./static/img/zapatilla-8.jpg" alt="">
+                  <img src="./static/img/zapatilla-8.jpg" alt="" />
                 </div>
               </div>
               <a href="./sections/calzados.html" class="btn-1">Comprar</a>
@@ -88,20 +319,18 @@
 
             <div class="swiper-slide">
               <div class="icons">
-                <i class='bx bxs-left-arrow-circle'></i>
-                <img src="./static/img/logo.png" alt="">
+                <i class="bx bxs-left-arrow-circle"></i>
+                <img src="./static/img/logo.png" alt="" />
                 <i class="fa-regular fa-heart"></i>
               </div>
               <div class="product-content">
                 <div class="product-txt">
                   <span>$15.000</span>
                   <h3>Remeras xl</h3>
-                  <p>
-                    Remeras de talla extra grande para mayor comodidad.
-                  </p>
+                  <p>Remeras de talla extra grande para mayor comodidad.</p>
                 </div>
                 <div class="product-img">
-                  <img src="./static/img/remera-7.png" alt="">
+                  <img src="./static/img/remera-7.png" alt="" />
                 </div>
               </div>
               <a href="./sections/mujeres.html" class="btn-1">Comprar</a>
@@ -109,8 +338,8 @@
 
             <div class="swiper-slide">
               <div class="icons">
-                <i class='bx bxs-left-arrow-circle'></i>
-                <img src="./static/img/logo.png" alt="">
+                <i class="bx bxs-left-arrow-circle"></i>
+                <img src="./static/img/logo.png" alt="" />
                 <i class="fa-regular fa-heart"></i>
               </div>
               <div class="product-content">
@@ -118,12 +347,12 @@
                   <span>$20.000</span>
                   <h3>Anorak koda</h3>
                   <p>
-                    Anorak impermeable color negro con detalles en
-                    beige de alta calidad.
+                    Anorak impermeable color negro con detalles en beige de
+                    alta calidad.
                   </p>
                 </div>
                 <div class="product-img">
-                  <img src="./static/img/abrigo-1.webp" alt="">
+                  <img src="./static/img/abrigo-1.webp" alt="" />
                 </div>
               </div>
               <a href="./sections/hombres.html" class="btn-1">Comprar</a>
@@ -131,20 +360,18 @@
 
             <div class="swiper-slide">
               <div class="icons">
-                <i class='bx bxs-left-arrow-circle'></i>
-                <img src="./static/img/logo.png" alt="">
+                <i class="bx bxs-left-arrow-circle"></i>
+                <img src="./static/img/logo.png" alt="" />
                 <i class="fa-regular fa-heart"></i>
               </div>
               <div class="product-content">
                 <div class="product-txt">
                   <span>$20.000</span>
                   <h3>Pantallon Manhattan</h3>
-                  <p>
-                    Pantalones de estilo urbano para un look moderno.
-                  </p>
+                  <p>Pantalones de estilo urbano para un look moderno.</p>
                 </div>
                 <div class="product-img">
-                  <img src="./static/img/pantalon-7.png" alt="">
+                  <img src="./static/img/pantalon-7.png" alt="" />
                 </div>
               </div>
               <a href="./sections/mujeres.html" class="btn-1">Comprar</a>
@@ -152,8 +379,8 @@
 
             <div class="swiper-slide">
               <div class="icons">
-                <i class='bx bxs-left-arrow-circle'></i>
-                <img src="./static/img/logo.png" alt="">
+                <i class="bx bxs-left-arrow-circle"></i>
+                <img src="./static/img/logo.png" alt="" />
                 <i class="fa-regular fa-heart"></i>
               </div>
               <div class="product-content">
@@ -161,12 +388,12 @@
                   <span>$95</span>
                   <h3>Camiseta y Shorts</h3>
                   <p>
-                    Conjunto de camiseta y shorts con bloques de
-                    color para niños de 3 a 16 años.
+                    Conjunto de camiseta y shorts con bloques de color para
+                    niños de 3 a 16 años.
                   </p>
                 </div>
                 <div class="product-img">
-                  <img src="./static/img/niños-6.webp" alt="">
+                  <img src="./static/img/niños-6.webp" alt="" />
                 </div>
               </div>
               <a href="./sections/niños.html" class="btn-1">Comprar</a>
@@ -174,8 +401,8 @@
 
             <div class="swiper-slide">
               <div class="icons">
-                <i class='bx bxs-left-arrow-circle'></i>
-                <img src="./static/img/logo.png" alt="">
+                <i class="bx bxs-left-arrow-circle"></i>
+                <img src="./static/img/logo.png" alt="" />
                 <i class="fa-regular fa-heart"></i>
               </div>
               <div class="product-content">
@@ -183,11 +410,12 @@
                   <span>$20.000</span>
                   <h3>Zapatillas Lowlan CC</h3>
                   <p>
-                    Zapatillas Lowlandd CC para una comodidad superior en cada paso.
+                    Zapatillas Lowlandd CC para una comodidad superior en cada
+                    paso.
                   </p>
                 </div>
                 <div class="product-img">
-                  <img src="./static/img/zapatilla-6.jpg" alt="">
+                  <img src="./static/img/zapatilla-6.jpg" alt="" />
                 </div>
               </div>
               <a href="./sections/calzados.html" class="btn-1">Comprar</a>
@@ -195,20 +423,18 @@
 
             <div class="swiper-slide">
               <div class="icons">
-                <i class='bx bxs-left-arrow-circle'></i>
-                <img src="./static/img/logo.png" alt="">
+                <i class="bx bxs-left-arrow-circle"></i>
+                <img src="./static/img/logo.png" alt="" />
                 <i class="fa-regular fa-heart"></i>
               </div>
               <div class="product-content">
                 <div class="product-txt">
                   <span>$20.000</span>
                   <h3>Buzo crew</h3>
-                  <p>
-                    Buzo de estilo casual para un look relajado.
-                  </p>
+                  <p>Buzo de estilo casual para un look relajado.</p>
                 </div>
                 <div class="product-img">
-                  <img src="./static/img/abrigo5.png" alt="">
+                  <img src="./static/img/abrigo5.png" alt="" />
                 </div>
               </div>
               <a href="./sections/mujeres.html" class="btn-1">Comprar</a>
@@ -216,8 +442,8 @@
 
             <div class="swiper-slide">
               <div class="icons">
-                <i class='bx bxs-left-arrow-circle'></i>
-                <img src="./static/img/logo.png" alt="">
+                <i class="bx bxs-left-arrow-circle"></i>
+                <img src="./static/img/logo.png" alt="" />
                 <i class="fa-regular fa-heart"></i>
               </div>
               <div class="product-content">
@@ -225,12 +451,12 @@
                   <span>$10.000</span>
                   <h3>Camiseta y Shorts</h3>
                   <p>
-                    Conjunto de camiseta y shorts con bloques de
-                    color para niños de 3 a 16 años.
+                    Conjunto de camiseta y shorts con bloques de color para
+                    niños de 3 a 16 años.
                   </p>
                 </div>
                 <div class="product-img">
-                  <img src="./static/img/niños-6.webp" alt="">
+                  <img src="./static/img/niños-6.webp" alt="" />
                 </div>
               </div>
               <a href="./sections/niños.html" class="btn-1">Comprar</a>
@@ -239,49 +465,137 @@
         </section>
       </div>
 
-        <section class="section-info">
-          <div class=" icons-index">
-            <div class="icon1">
-              <i class='bx bxs-truck'></i>
-              <span>¡Envios a todo el pais!</span>
-            </div>
-            <div class="icon2">
-              <i class='bx bx-credit-card'></i>
-              <span>¡Cuotas sin interés!</span>
-            </div>
-            <div class="icon3">
-              <i class='bx bx-refresh'></i>
-              <span>Primer cambio ¡GRATIS! </span>
-            </div>
+      <section class="section-info">
+        <div class="icons-index">
+          <div class="icon1">
+            <i class="bx bxs-truck"></i>
+            <span>¡Envios a todo el pais!</span>
           </div>
+          <div class="icon2">
+            <i class="bx bx-credit-card"></i>
+            <span>¡Cuotas sin interés!</span>
+          </div>
+          <div class="icon3">
+            <i class="bx bx-refresh"></i>
+            <span>Primer cambio ¡GRATIS! </span>
+          </div>
+        </div>
 
-          <div class="info-txt">
-            <div class="txt-title">
-              <h2>Vida | En Movimiento.</h2>
-            </div>
-            <div class="txt-content">
-              <span>Somos exploradores por naturaleza. Buscamos siempre cosas nuevas. Experimentamos el mundo a nuestra
-                propia manera. Nos movemos libremente, sin miedo a nada. Nos atrevemos a ir por más. Siempre con
-                actitud,
-                siempre con valentía. Odiamos aburrirnos, amamos sorprendernos. Nos la jugamos día a día. Rompemos con
-                la
-                cotidianeidad. ¿Por qué? Porque para nosotros la mejor forma de vivir la vida, es en movimiento.</span>
-            </div>
+        <div class="info-txt">
+          <div class="txt-title">
+            <h2>Vida | En Movimiento.</h2>
           </div>
-          <div class="container-payment">
-
-            <img src="./static/img/payment.png" alt="payment method" class="payment-img">
-    
+          <div class="txt-content">
+            <span>Somos exploradores por naturaleza. Buscamos siempre cosas
+              nuevas. Experimentamos el mundo a nuestra propia manera. Nos
+              movemos libremente, sin miedo a nada. Nos atrevemos a ir por
+              más. Siempre con actitud, siempre con valentía. Odiamos
+              aburrirnos, amamos sorprendernos. Nos la jugamos día a día.
+              Rompemos con la cotidianeidad. ¿Por qué? Porque para nosotros la
+              mejor forma de vivir la vida, es en movimiento.</span>
           </div>
-    
-        </section>
+        </div>
+        <div class="container-payment">
+          <img src="./static/img/payment.png" alt="payment method" class="payment-img" />
+        </div>
+      </section>
     </div>
   </main>
 
   <!-- FOOTER -->
-  <div include-html="./template/footer.html">
-    <!-- CARGA DINAMICA DE FOOTER -->
-  </div>
+  <footer>
+    <div class="container">
+      <div class="section-footer aboutus">
+        <h2>Sobre nosotros</h2>
+        <p>Somos La Tienda, tu destino de moda favorito.</p>
+        <p>
+          Descubre nuestras últimas tendencias y encuentra el look perfecto
+          para cada ocasión.
+        </p>
+        <ul class="social-icons-footer">
+          <li>
+            <a href="https://facebook.com" class="facebook" target="_blank">
+              <i class="bx bxl-facebook-circle"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" class="twitter" target="_blank">
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" class="instagram" target="_blank">
+              <i class="bx bxl-instagram-alt"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" class="youtube" target="_blank">
+              <i class="bx bxl-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="section-footer quicklinks">
+        <h2>Soporte</h2>
+        <ul>
+          <li>
+            <a href="../sections/contact.html">Preguntas frecuentes</a>
+          </li>
+          <li>
+            <a href="../sections/termsandconditions.html">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="../sections/contact.html">Ayuda</a>
+          </li>
+          <li>
+            <a href="../sections/contact.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+      <div class="section-footer quicklinks">
+        <h2>Comprar</h2>
+        <ul>
+          <li>
+            <a href="../sections/hombres.html">Hombre</a>
+          </li>
+          <li>
+            <a href="../sections/mujeres.html">Mujer</a>
+          </li>
+          <li>
+            <a href="../sections/niños.html">Niños</a>
+          </li>
+          <li>
+            <a href="../sections/calzados.html">Calzados</a>
+          </li>
+        </ul>
+      </div>
+      <div class="section-footer contact">
+        <h2>Contacta con nosotros</h2>
+        <ul class="info">
+          <li>
+            <span>
+              <i class="bx bxs-phone-call"></i>
+            </span>
+            <p>
+              <a href="tel_+5492612458 967 ">0 261 2458 967</a>
+            </p>
+          </li>
+          <li>
+            <span>
+              <i class="bx bxl-gmail"></i>
+            </span>
+            <p>
+              <a href="mailto:tienda.lllll@gmail.com">tienda.lllll@gmail.com</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright-text">
+      <p>&copy; 2024 - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
 
   <!-- Fondo del modal de suscripcion -->
   <div class="overlay" data-overlay></div>
@@ -290,34 +604,34 @@
   <div class="modal" data-modal id="modalBoletin">
     <div class="modal-close-overlay" data-modal-overlay></div>
     <div class="modal-content">
-
       <button class="modal-close-btn" data-modal-id="modalBoletin">
-        <i class='bx bx-x'></i>
+        <i class="bx bx-x"></i>
       </button>
 
       <div class="newsletter-img">
-        <img src="./static/img/modal.jpg" alt="subscribe newsletter" width="400" height="400">
+        <img src="../static/img/modal.jpg" alt="subscribe newsletter" width="400" height="400" />
       </div>
 
       <div class="newsletter">
         <form action="#">
           <div class="newsletter-header">
             <h3 class="newsletter-title">Suscríbete al boletín</h3>
-            <p class="newsletter-desc">Suscribete a <b>Tienda</b> para obtener los últimos productos y actualizaciones
-              de descuentos.</p>
+            <p class="newsletter-desc">
+              Suscribete a <b>Tienda</b> para obtener los últimos productos y
+              actualizaciones de descuentos.
+            </p>
           </div>
 
           <div class="error" id="F-emailModal"></div>
-          <input type="email" name="email" class="email-field" placeholder="Email" required> 
+          <input type="email" name="email" class="email-field" placeholder="Email" required />
           <button type="submit" class="btn-newsletter">Suscribete</button>
         </form>
       </div>
     </div>
   </div>
 
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="./static/js/loadTemplate.js"></script>
+  <script src="./static/js/header.js"></script>
   <script src="./static/js/index.js"></script>
 </body>
 

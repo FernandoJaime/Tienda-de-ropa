@@ -255,6 +255,9 @@
 
 /* Móviles */
 @media (max-width: 768px) {
+  boby{
+    overflow: hidden;
+  }
   .carousel {
     width: 100%;
     border-radius: 0;

@@ -36,9 +36,9 @@ closeOverlayButtons.forEach(button => {
 
 const loginRedirect = function () {
   if (window.location.pathname === '/index.html' || window.location.pathname === '/'){
-  window.location.href = 'sections/signinup.html'; 
+  window.location.href = '/sections/signinup.html'; 
   } else {
-    window.location.href = "..sections/signup.html"
+    window.location.href = "./sections/signup.html"
   }
 };
 

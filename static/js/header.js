@@ -34,14 +34,8 @@ closeOverlayButtons.forEach(button => {
 
 //**********/ REDIRECCIONAMIENTO DE BOTONES ICONS /**********//
 
-// Obtener la ruta base del archivo 
-const basePath = window.location.pathname.endsWith('index.html') ? window.location.origin : window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
-
-// Función para redireccionar al archivo de inicio de sesión/registro
 const loginRedirect = function () {
-  // Construir la ruta completa hacia signinup.html
-  const signInUpPage = `${basePath}/signinup.html`;
-  window.location.href = signInUpPage; 
+  window.location.href = '../sections/signinup.html'; 
 };
 
 // Redireccionamiento de menu desktop

@@ -35,7 +35,7 @@ closeOverlayButtons.forEach(button => {
 //**********/ REDIRECCIONAMIENTO DE BOTONES ICONS /**********//
 
 const loginRedirect = function () {
-  window.location.href = 'signinup.html'; 
+  window.location.href = '/Tienda-de-ropa/sections/signiup.html'; 
 };
 
 // Redireccionamiento de menu desktop

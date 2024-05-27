@@ -54,7 +54,8 @@
 .redirect-contact {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    align-items: center;
+    gap: 12px;
     max-width: 100%;
     margin: 0 auto;
     color: var(--white);

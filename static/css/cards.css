@@ -42,9 +42,8 @@
 
 /* Estilos para el filtro */
 .top-filter {
-    position: absolute;
-    top: 13.5rem;
-    right: 20px;
+    position: relative;
+    right: 95%;
     margin: 20px;
     outline: none;
 }
@@ -196,10 +195,10 @@
         grid-column: 1 / span 2;
     }
     .top-filter {
-        position: relative; /* Cambia a relative para evitar superposición */
+        position: relative; 
         top: auto;
         right: auto;
-        margin: 20px auto; /* Centra el filtro */
+        margin: 20px auto;
         width: 100%;
         text-align: center;
     }

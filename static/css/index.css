@@ -239,7 +239,7 @@
   }
 
   .swiper-slide {
-      max-width: 40%;
+      max-width: 50%;
       max-height: 400px;
       padding: 20px;
   }
@@ -272,7 +272,6 @@
     max-height: 500px;
     padding: 45px;
   }
-  
 
   .product-content {
     flex-direction: column;
@@ -284,7 +283,7 @@
   }
 
   .product-img img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     margin-top: 10px;
   }

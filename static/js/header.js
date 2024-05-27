@@ -39,13 +39,13 @@ const loginRedirect = function () {
 };
 
 // Redireccionamiento de menu desktop
-const mainMenuButtons = document.querySelectorAll('.header-user-actions .action-btn, .bx-heart, .bx-shopnfy');
+const mainMenuButtons = document.querySelectorAll('.header-user-actions .action-btn, .bx-heart, .bxl-shopify');
 mainMenuButtons.forEach(button => {
   button.addEventListener('click', loginRedirect);
 });
 
 // Redireccionamiento de menu movil
-const mobileMenuButtons = document.querySelectorAll('bx-user, .bx-heart, .bx-shopnfy');
+const mobileMenuButtons = document.querySelectorAll('bx-user, .bx-heart, .bx-shopify');
 mobileMenuButtons.forEach(button => {
   button.addEventListener('click', loginRedirect);
 });

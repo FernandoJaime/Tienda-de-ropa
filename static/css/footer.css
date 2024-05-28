@@ -1,12 +1,13 @@
 /* Estilos del pie de página */
 footer {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: var(--white);
     border-top: 2px solid var(--cultured);
-}
+    position: relative;
+}   
 
 /* Estilos del contenedor principal */
 .container {
@@ -20,6 +21,7 @@ footer {
 /* Estilos de las secciones del pie de página */
 .section-footer {
     padding: 20px;
+    margin-bottom: 20px;
   
 
     h2 {
@@ -122,10 +124,11 @@ footer {
 .copyright-text {
     width: 100%;
     background: var(--white);
-    padding: 20px 50px 20px;
+    padding: 20px;
     text-align: center;
     color: var(--onyx);
     border-top: 1px solid var(--spanish-gray);
+    margin-top: auto;
 }
 
 /* Media queries */
@@ -139,7 +142,10 @@ footer {
     }
 
     .copyright-text {
+        position: absolute;
+        bottom: 0;
         padding: 5px 40px 30px;
+        margin-top: 20%;
     }
 }
 
@@ -153,8 +159,8 @@ footer {
     }
 
     .copyright-text {
+        bottom: -15%;
         padding: 20px 40px 10px;
-        margin-top: 40%;
     }
 }
 
@@ -187,8 +193,8 @@ footer {
     }
 
     .copyright-text {
-        padding: 10px 20px;
+        width: 60%;
         font-size: 14px;
-        margin-top: 100%;
+        margin: 0 auto;
     }
 }

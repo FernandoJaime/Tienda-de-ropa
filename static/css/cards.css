@@ -231,3 +231,17 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (min-width: 390px) {
+    .section-card-categories {
+        width: 100%;
+    }
+    .card {
+        background: transparent;
+        border: none;
+    }
+    
+    .card-back .btn-buy{
+        margin-bottom: 10px;
+    }
+}

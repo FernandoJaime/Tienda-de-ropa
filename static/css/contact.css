@@ -1,5 +1,3 @@
-
-
 /* Estilos para el contenedor principal de contacto */
 .container-contact {
     position: relative;
@@ -38,7 +36,7 @@
 /*** Seccion de redirect link ****/
 
 #contact-inicio {
-    max-width: 95%;
+    max-width: 96%;
     z-index: 2;
 }
 
@@ -161,6 +159,7 @@
     padding: 20px;
     border-radius: var(--border-radius-md);
 }
+
 /* Tablets (Pantallas medianas) */
 @media (max-width: 1024px) {
     .container-contact .form-wrapper {

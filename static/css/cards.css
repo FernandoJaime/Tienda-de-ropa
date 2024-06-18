@@ -1,11 +1,11 @@
-/* Importacion de archivo style.css */
-@import "style.css";
+
 
 /* titulo de sección */
 
 .section-card-categories {
     width: 80%;
     margin: 0 auto;
+    padding-bottom: 100px;
 }
 
 .section-card-categories .top {
@@ -25,7 +25,7 @@
 .top-title h2 {
     margin-top: auto;
     color: var(--eerie-black);
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin-top: 50px;
 }
 
@@ -42,9 +42,8 @@
 
 /* Estilos para el filtro */
 .top-filter {
-    position: absolute;
-    top: 13.5rem;
-    right: 20px;
+    position: relative;
+    right: 95%;
     margin: 20px;
     outline: none;
 }
@@ -178,4 +177,71 @@
 /* Establece una altura mínima del 100% del viewport height */
 .main-card {
     min-height: 100vh;
+}
+/* Tablets (Pantallas medianas) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .section-card-categories {
+        width: 85%;
+    }
+    .top {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto; /* Asegura suficiente espacio para el filtro */
+    }
+    .top .top-title {
+        grid-column: 1 / span 2;
+        text-align: center;
+    }
+    .top-text {
+        grid-column: 1 / span 2;
+    }
+    .top-filter {
+        position: relative; 
+        top: auto;
+        right: auto;
+        margin: 20px auto;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Móviles (Pantallas pequeñas) */
+@media (max-width: 767px) {
+    .section-card-categories {
+        width: 95%;
+    }
+    .top {
+        grid-template-columns: 1fr;
+    }
+    .top .top-title {
+        grid-column: 1;
+        text-align: center;
+    }
+    .top-text {
+        grid-column: 1;
+    }
+    .top-filter {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .conteiner-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 390px) {
+    .section-card-categories {
+        width: 100%;
+    }
+    .card {
+        background: transparent;
+        border: none;
+    }
+    
+    .card-back .btn-buy{
+        margin-bottom: 10px;
+    }
 }

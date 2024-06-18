@@ -1,45 +1,46 @@
-/* Importación de archivos CSS externos */
-@import "style.css";
-
 /* Estilos del formulario principal */
-.main-form {
+
+.section-form-signup{
+    width: 70%;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
     flex-direction: column;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 150px;
 }
 
-.main-form .container {
+.section-form-signup .container {
     background-color: var(--white);
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 768px;
-    max-width: 100%;
+    width: 70%;
     min-height: 480px;
 }
 
-.main-form .container p {
+.section-form-signup .container p {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
-.main-form .container span {
+.section-form-signup .container span {
     font-size: 12px;
 }
 
-.main-form .container a {
+.section-form-signup .container a {
     color: var(--onyx);
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-.main-form .container button {
+.section-form-signup .container button {
     background-color: var(--violet);
     color: var(--white);
     font-size: 12px;
@@ -54,28 +55,28 @@
     cursor: pointer;
 }
 
-.main-form .container button.hidden {
+.section-form-signup .container button.hidden {
     background-color: transparent;
     border-color: var(--white);
 }
 
 /* Estilos de los términos y condiciones */
-.main-form .input-link {
+.section-form-signup .input-link {
     display: flex;
     align-items: center;
 }
 
-.main-form .checkbox-label {
+.section-form-signup .checkbox-label {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.main-form .checkbox-custom {
+.section-form-signup .checkbox-custom {
     display: none;
 }
 
-.main-form .checkbox-custom + .checkbox-label::before {
+.section-form-signup .checkbox-custom+.checkbox-label::before {
     content: "";
     display: inline-block;
     width: 20px;
@@ -86,11 +87,11 @@
     margin-right: 10px;
 }
 
-.main-form .checkbox-custom:checked + .checkbox-label::before {
+.section-form-signup .checkbox-custom:checked+.checkbox-label::before {
     background-color: var(--violet);
 }
 
-.main-form .checkbox-label a {
+.section-form-signup .checkbox-label a {
     text-decoration: none;
     color: var(--onyx);
     font-size: 16px;
@@ -98,7 +99,7 @@
 }
 
 /* Estilos del formulario */
-.main-form .container form {
+.section-form-signup .container form {
     background-color: var(--white);
     display: flex;
     align-items: center;
@@ -108,7 +109,7 @@
     height: 100%;
 }
 
-.main-form .container input {
+.section-form-signup .container input {
     background-color: var(--cultured);
     border: none;
     margin: 8px 0;
@@ -120,31 +121,31 @@
 }
 
 /* Estilos de la animación de cambio de panel */
-.main-form .form-container {
+.section-form-signup .form-container {
     position: absolute;
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
 }
 
-.main-form .sign-in {
+.section-form-signup .sign-in {
     left: 0;
     width: 50%;
     z-index: 2;
 }
 
-.main-form .container.active .sign-in {
+.section-form-signup .container.active .sign-in {
     transform: translateX(100%);
 }
 
-.main-form .sign-up {
+.section-form-signup .sign-up {
     left: 0;
     width: 50%;
     opacity: 0;
     z-index: 1;
 }
 
-.main-form .container.active .sign-up {
+.section-form-signup .container.active .sign-up {
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -153,26 +154,31 @@
 
 /* Animación de cambio de panel */
 @keyframes move {
-    0%, 49.99% {
+
+    0%,
+    49.99% {
         opacity: 0;
         z-index: 1;
     }
-    50%, 100% {
+
+    50%,
+    100% {
         opacity: 1;
         z-index: 5;
     }
 }
 
 /* Estilos de los íconos sociales */
-.main-form .social-icons {
+.section-form-signup .social-icons {
     margin: 20px 0;
 }
 
-.main-form .social-icons i {
+.section-form-signup .social-icons i {
     font-size: 30px;
+    color: var(--onyx);
 }
 
-.main-form .social-icons a {
+.section-form-signup .social-icons a {
     border: 1px solid var(--spanish-gray);
     border-radius: 20%;
     display: inline-flex;
@@ -184,7 +190,7 @@
 }
 
 /* Estilos del interruptor para el cambio de panel */
-.main-form .toggle-container {
+.section-form-signup .toggle-container {
     position: absolute;
     top: 0;
     left: 50%;
@@ -196,12 +202,12 @@
     z-index: 5;
 }
 
-.main-form .container.active .toggle-container {
+.section-form-signup .container.active .toggle-container {
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
 
-.main-form .toggle {
+.section-form-signup .toggle {
     background-color: var(--violet);
     height: 100%;
     background: linear-gradient(to right, #5c6bc0, #512da8);
@@ -214,11 +220,11 @@
     transition: all 0.6s ease-in-out;
 }
 
-.main-form .container.active .toggle {
+.section-form-signup .container.active .toggle {
     transform: translateX(50%);
 }
 
-.main-form .toggle-panel {
+.section-form-signup .toggle-panel {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -233,29 +239,47 @@
     transition: all 0.6s ease-in-out;
 }
 
-.main-form .toggle-left {
+.section-form-signup .toggle-left {
     transform: translateX(-200%);
 }
 
-.main-form .container.active .toggle-left {
+.section-form-signup .container.active .toggle-left {
     transform: translateX(0);
 }
 
-.main-form .toggle-right {
+.section-form-signup .toggle-right {
     right: 0;
     transform: translateX(0);
 }
 
-.main-form .container.active .toggle-right {
+.section-form-signup .container.active .toggle-right {
     transform: translateX(200%);
 }
 
+
+/* estilos de mensajes de error en las validaciones */
+.error-message {
+    position: fixed;
+    color: red;
+    background-color: #ffc9c9;
+    border: 1px solid red;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: var(--border-radius-sm);
+    top: 50%;
+}
+
+
 /* Estilos responsivos */
 @media (max-width: 769px) {
-    .main-form {
+    .section-form-signup {
         margin-top: 50px;
-        margin-bottom: 450px;
+        margin-bottom: 50px;
+        padding: 0 10px;
+        width: 100%;
     }
+
     .container {
         height: 630px;
     }

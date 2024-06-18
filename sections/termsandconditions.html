@@ -1,147 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <!-- Estilos CSS -->
-    <link rel="stylesheet" href="/static/css/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-    <link
-      rel="shortcut icon"
-      href="/static/img/tendedero.png"
-      type="image/x-icon"
-    />
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="../static/css/style.css" />
 
-    <!-- Box Icons -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Header -->
-    <div include-html="/template/header.html"></div>
+  <link rel="shortcut icon" href="../static/img/tendedero.png" type="image/x-icon" />
 
-    <!-- Contenido principal -->
-    <main>
-      <div class="container-terms">
-        <section id="introduction">
-          <h1>Términos y Condiciones</h1>
-          <span>actualización: 2024-05-12</span>
-        </section>
+  <!-- Box Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
 
-        <section id="contenido">
-          <h2>Introducción:</h2>
-          <p>
-            Estos Términos y Condiciones (en adelante, los "Términos") rigen el
-            uso de la plataforma de comercio electrónico (en adelante, la
-            "Plataforma") de [Nombre de la tienda online de vestimenta y
-            calzado], con domicilio en [Dirección de la tienda online de
-            vestimenta y calzado] (en adelante, la "Empresa").
-          </p>
+<body>
+  <!--- HEADER-->
+  <header>
+    <!--- Apartado de promociones-->
+    <div class="marquee-container" id="marqueeContainer">
+      <div class="marquee-content" id="marqueeContent">
+        <!-- Carga dinamica de promociones -->
+      </div>
+    </div>
 
-          <h2>Aceptación de los Términos:</h2>
-          <p>
-            Al acceder y usar la Plataforma, usted (en adelante, el "Usuario")
-            acepta expresamente los presentes Términos. Si no está de acuerdo
-            con estos Términos, no debe usar la Plataforma.
-          </p>
+    <!-- Encabezado principal -->
+    <div class="header-main">
+      <div class="container-head">
+        <!-- Barra de busqueda -->
+        <div class="header-search-container">
+          <button class="action-btn" id="searchButton">
+            <i class="bx bx-search-alt-2"></i>
+          </button>
+          <div class="search-menu" id="searchMenu">
+            <button class="close-btn-search" onclick="closeSearchMenu()">
+              <i class="bx bx-x"></i>
+            </button>
+            <input type="text" class="search-input" placeholder="Buscar..." />
+          </div>
+        </div>
 
-          <h2>Registro:</h2>
-          <p>
-            Para acceder a ciertas funciones de la Plataforma, como realizar
-            compras, el Usuario deberá registrarse y crear una cuenta. El
-            Usuario es responsable de la veracidad y exactitud de la información
-            proporcionada durante el registro.
-          </p>
+        <!-- Logo -->
+        <div class="header-logo">
+          <a href="../index.html">
+            <img src="../static/img/logo.svg" alt="Logo de la tienda" />
+          </a>
+        </div>
 
-          <h2>Productos y precios:</h2>
-          <p>
-            La Plataforma ofrece una variedad de productos de vestimenta y
-            calzado (en adelante, los "Productos"). Los precios de los Productos
-            están indicados en la Plataforma y son válidos hasta que sean
-            modificados. La Empresa se reserva el derecho de modificar los
-            precios de los Productos en cualquier momento.
-          </p>
+        <!-- Acciones del ususario -->
+        <div class="header-user-actions">
+          <button class="action-btn">
+            <i class="bx bx-user"></i>
+          </button>
 
-          <h2>Compras:</h2>
-          <p>
-            Para realizar una compra, el Usuario deberá seleccionar los
-            Productos que desea adquirir y seguir los pasos indicados en la
-            Plataforma. El Usuario deberá proporcionar información de pago
-            válida para completar la compra.
-          </p>
+          <button class="action-btn">
+            <i class="bx bx-heart"></i>
+            <span class="count-favorite">0</span>
+          </button>
 
-          <h2>Envíos y devoluciones:</h2>
-          <p>
-            La Empresa se encargará del envío de los Productos a la dirección
-            indicada por el Usuario. El Usuario podrá devolver los Productos en
-            un plazo de [Número de días] días desde la recepción del pedido.
-          </p>
-
-          <h2>Política de privacidad:</h2>
-          <p>
-            La Empresa se compromete a proteger la privacidad de los Usuarios.
-            La Política de Privacidad de la Empresa se encuentra disponible en
-            la Plataforma.
-          </p>
-
-          <h2>Propiedad intelectual:</h2>
-          <p>
-            Los contenidos de la Plataforma, incluyendo textos, imágenes, marcas
-            y logotipos, son propiedad intelectual de la Empresa. El Usuario no
-            podrá copiar, reproducir o distribuir dichos contenidos sin la
-            previa autorización de la Empresa.
-          </p>
-
-          <h2>Responsabilidad:</h2>
-          <p>
-            La Empresa no se hace responsable por los daños o perjuicios que
-            puedan derivarse del uso de la Plataforma, incluyendo, pero no
-            limitándose a, errores en los Productos, retrasos en la entrega o
-            interrupciones del servicio.
-          </p>
-
-          <h2>Modificaciones:</h2>
-          <p>
-            La Empresa se reserva el derecho de modificar estos Términos en
-            cualquier momento. Las modificaciones entrarán en vigor al ser
-            publicadas en la Plataforma.
-          </p>
-
-          <h2>Jurisdicción:</h2>
-          <p>
-            Estos Términos se rigen por la legislación de [País de la tienda
-            online de vestimenta y calzado].
-          </p>
-
-          <h2>Contacto:</h2>
-          <p>
-            Si tiene cualquier pregunta o duda sobre estos Términos, puede
-            contactarse con la Empresa a través de la Plataforma o al siguiente
-            correo electrónico: [Correo electrónico de la tienda online de
-            vestimenta y calzado].
-          </p>
-
-          <h2>Recomendación:</h2>
-          <p>
-            Es importante que leas detenidamente los Términos y Condiciones
-            antes de usar la Plataforma. Si tienes cualquier duda, no dudes en
-            contactarte con la Empresa.
-          </p>
-        </section>
-        <div class="acept-terms">
-          <a href="/sections/signinup.html" class="accept-btn">Acepto</a>
+          <button class="action-btn">
+            <i class="bx bxl-shopify"></i>
+            <span class="count">0</span>
+          </button>
         </div>
       </div>
-    </main>
+    </div>
 
-    <!-- Footer -->
-    <div include-html="/template/footer.html"></div>
+    <!-- Navegacion de escritorio -->
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <!-- Elementos del menu escritorio -->
+          <li class="menu-category">
+            <a href="../index.html" class="menu-title">Home</a>
+          </li>
 
-    <!-- Script de carga dinamica de elementos html -->
-    <script src="/static/js/loadTemplate.js"></script>
-  </body>
+          <!-- Categorias -->
+          <li class="menu-category">
+            <a href="#" class="menu-title">Categorias</a>
+            <div class="dropdown-panel">
+              <!-- Categoria niños -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./niños.html">Niños</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./niños.html">
+                    <img src="../static/img/kids-banner.jpg" alt="colletctions kids" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Categoria Hombres -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./hombres.html">Hombres</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./hombres.html">
+                    <img src="../static/img/banner-hombre.jpg" alt="men's fashion" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Categoria mujeres -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./mujeres.html">Mujeres</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./mujeres.html">
+                    <img src="../static/img/banner-mujer.jpg" alt="women's fashion" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Categoria calzados -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./calzados.html">Calzados</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./calzados.html">
+                    <img src="../static/img/calzado-banner.jpg" alt="mouse collection" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Enlace acerca de nosostros -->
+          <li class="menu-category">
+            <a href="./about.html" class="menu-title">Quienes somos</a>
+          </li>
+
+          <!-- Enlace contactos -->
+          <li class="menu-category">
+            <a href="./contact.html" class="menu-title">Contacto</a>
+          </li>
+
+          <!-- Elace locales -->
+          <li class="menu-category">
+            <a href="./locals.html" class="menu-title">Locales</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Menu movil -->
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <i class="bx bx-menu"></i>
+      </button>
+      <button class="action-btn" onclick="loginRedirect()">
+        <i class="bx bx-user"></i>
+      </button>
+
+      <button class="action-btn" onclick="loginRedirect()">
+        <i class="bx bx-heart"></i>
+        <span class="count-favorite">0</span>
+      </button>
+
+      <button class="action-btn" onclick="loginRedirect()">
+        <i class="bx bxl-shopify"></i>
+        <span class="count">0</span>
+      </button>
+    </div>
+
+    <!-- Navegacion movil -->
+    <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <i class="bx bx-x"></i>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+        <!-- Enlace movil home -->
+        <li class="menu-category">
+          <a href="../index.html" class="menu-title">Home</a>
+        </li>
+
+        <!-- Categorias desplegables -->
+        <li class="menu-category">
+          <!-- Categoria hombres -->
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Categorias</p>
+            <div>
+              <i class="bx bxs-sort-alt"></i>
+            </div>
+          </button>
+
+          <!-- Sub categorias movil -->
+          <ul class="submenu-category-list" data-accordion>
+            <li class="submenu-category">
+              <a href="./niños.html" class="submenu-title">Niños</a>
+            </li>
+            <li class="submenu-category">
+              <a href="./hombres.html" class="submenu-title">Hombres</a>
+            </li>
+            <li class="submenu-category">
+              <a href="./mujeres.html" class="submenu-title">Mujeres</a>
+            </li>
+            <li class="submenu-category">
+              <a href="./calzados.html" class="submenu-title">Calzados</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Enlace movil acerca de nosotros -->
+        <li class="menu-category">
+          <a href="./about.html" class="menu-title">Quienes somos</a>
+        </li>
+
+        <!-- Enlace movil contactos -->
+        <li class="menu-category">
+          <a href="./contact.html" class="menu-title">Contacto</a>
+        </li>
+
+        <!-- Enlace movil locales -->
+        <li class="menu-category">
+          <a href="./locals.html" class="menu-title">Locales</a>
+        </li>
+      </ul>
+
+      <!-- Redes sociales -->
+      <div class="menu-bottom">
+        <ul class="menu-social-container">
+          <li>
+            <a href="https://facebook.com" target="_blank" class="social-link facebook">
+              <i class="bx bxl-facebook-circle"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank" class="social-link twitter">
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank" class="social-link instagram">
+              <i class="bx bxl-instagram-alt"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" target="_blank" class="social-link youtube">
+              <i class="bx bxl-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <div class="container-terms">
+      <section id="introduction">
+        <h1>Términos y Condiciones</h1>
+        <span>actualización: 2024-05-12</span>
+      </section>
+
+      <section id="contenido">
+        <h2>Introducción:</h2>
+        <p>
+          Estos Términos y Condiciones (en adelante, los "Términos") rigen el
+          uso de la plataforma de comercio electrónico (en adelante, la
+          "Plataforma") de [Nombre de la tienda online de vestimenta y
+          calzado], con domicilio en [Dirección de la tienda online de
+          vestimenta y calzado] (en adelante, la "Empresa").
+        </p>
+
+        <h2>Aceptación de los Términos:</h2>
+        <p>
+          Al acceder y usar la Plataforma, usted (en adelante, el "Usuario")
+          acepta expresamente los presentes Términos. Si no está de acuerdo
+          con estos Términos, no debe usar la Plataforma.
+        </p>
+
+        <h2>Registro:</h2>
+        <p>
+          Para acceder a ciertas funciones de la Plataforma, como realizar
+          compras, el Usuario deberá registrarse y crear una cuenta. El
+          Usuario es responsable de la veracidad y exactitud de la información
+          proporcionada durante el registro.
+        </p>
+
+        <h2>Productos y precios:</h2>
+        <p>
+          La Plataforma ofrece una variedad de productos de vestimenta y
+          calzado (en adelante, los "Productos"). Los precios de los Productos
+          están indicados en la Plataforma y son válidos hasta que sean
+          modificados. La Empresa se reserva el derecho de modificar los
+          precios de los Productos en cualquier momento.
+        </p>
+
+        <h2>Compras:</h2>
+        <p>
+          Para realizar una compra, el Usuario deberá seleccionar los
+          Productos que desea adquirir y seguir los pasos indicados en la
+          Plataforma. El Usuario deberá proporcionar información de pago
+          válida para completar la compra.
+        </p>
+
+        <h2>Envíos y devoluciones:</h2>
+        <p>
+          La Empresa se encargará del envío de los Productos a la dirección
+          indicada por el Usuario. El Usuario podrá devolver los Productos en
+          un plazo de [Número de días] días desde la recepción del pedido.
+        </p>
+
+        <h2>Política de privacidad:</h2>
+        <p>
+          La Empresa se compromete a proteger la privacidad de los Usuarios.
+          La Política de Privacidad de la Empresa se encuentra disponible en
+          la Plataforma.
+        </p>
+
+        <h2>Propiedad intelectual:</h2>
+        <p>
+          Los contenidos de la Plataforma, incluyendo textos, imágenes, marcas
+          y logotipos, son propiedad intelectual de la Empresa. El Usuario no
+          podrá copiar, reproducir o distribuir dichos contenidos sin la
+          previa autorización de la Empresa.
+        </p>
+
+        <h2>Responsabilidad:</h2>
+        <p>
+          La Empresa no se hace responsable por los daños o perjuicios que
+          puedan derivarse del uso de la Plataforma, incluyendo, pero no
+          limitándose a, errores en los Productos, retrasos en la entrega o
+          interrupciones del servicio.
+        </p>
+
+        <h2>Modificaciones:</h2>
+        <p>
+          La Empresa se reserva el derecho de modificar estos Términos en
+          cualquier momento. Las modificaciones entrarán en vigor al ser
+          publicadas en la Plataforma.
+        </p>
+
+        <h2>Jurisdicción:</h2>
+        <p>
+          Estos Términos se rigen por la legislación de [País de la tienda
+          online de vestimenta y calzado].
+        </p>
+
+        <h2>Contacto:</h2>
+        <p>
+          Si tiene cualquier pregunta o duda sobre estos Términos, puede
+          contactarse con la Empresa a través de la Plataforma o al siguiente
+          correo electrónico: [Correo electrónico de la tienda online de
+          vestimenta y calzado].
+        </p>
+
+        <h2>Recomendación:</h2>
+        <p>
+          Es importante que leas detenidamente los Términos y Condiciones
+          antes de usar la Plataforma. Si tienes cualquier duda, no dudes en
+          contactarte con la Empresa.
+        </p>
+      </section>
+      <div class="acept-terms">
+        <a href="../sections/signinup.html" class="accept-btn">Acepto</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="section-footer aboutus">
+        <h2>Sobre nosotros</h2>
+        <p>Somos La Tienda, tu destino de moda favorito.</p>
+        <p>
+          Descubre nuestras últimas tendencias y encuentra el look perfecto
+          para cada ocasión.
+        </p>
+        <ul class="social-icons-footer">
+          <li>
+            <a href="https://facebook.com" class="facebook" target="_blank">
+              <i class="bx bxl-facebook-circle"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" class="twitter" target="_blank">
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" class="instagram" target="_blank">
+              <i class="bx bxl-instagram-alt"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" class="youtube" target="_blank">
+              <i class="bx bxl-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="section-footer quicklinks">
+        <h2>Soporte</h2>
+        <ul>
+          <li>
+            <a href="./contact.html">Preguntas frecuentes</a>
+          </li>
+          <li>
+            <a href="./termsandconditions.html">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="./contact.html">Ayuda</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+      <div class="section-footer quicklinks">
+        <h2>Comprar</h2>
+        <ul>
+          <li>
+            <a href="./hombres.html">Hombre</a>
+          </li>
+          <li>
+            <a href="./mujeres.html">Mujer</a>
+          </li>
+          <li>
+            <a href="./niños.html">Niños</a>
+          </li>
+          <li>
+            <a href="./calzados.html">Calzados</a>
+          </li>
+        </ul>
+      </div>
+      <div class="section-footer contact">
+        <h2>Contacta con nosotros</h2>
+        <ul class="info">
+          <li>
+            <span>
+              <i class="bx bxs-phone-call"></i>
+            </span>
+            <p>
+              <a href="tel_+5492612458 967 ">0 261 2458 967</a>
+            </p>
+          </li>
+          <li>
+            <span>
+              <i class="bx bxl-gmail"></i>
+            </span>
+            <p>
+              <a href="mailto:tienda.lllll@gmail.com">tienda.lllll@gmail.com</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright-text">
+      <p>&copy; 2024 - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script de carga dinamica de elementos html -->
+  <script src="../static/js/header.js"></script>
+</body>
+
 </html>

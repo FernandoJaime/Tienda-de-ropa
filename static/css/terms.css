@@ -1,5 +1,4 @@
-/* Importando estilos generales desde style.css */
-@import "style.css";
+
 
 /* Estilos para el contenedor de Términos y Condiciones */
 .container-terms {
@@ -9,7 +8,7 @@
     justify-content: center;
     line-height: 1.6;
     background-color: var(--cultured);
-    margin: 50px;
+    margin: 0 50px 150px 50px;
     padding: 40px;
     border-radius: var(--border-radius-md);
     box-shadow: var(--box-shadow);
@@ -60,6 +59,41 @@
             &:hover {
                 background-color: var(--color-btn-hover);
             }
+        }
+    }
+}
+/* Tablets (Pantallas medianas) */
+@media (max-width: 1024px) {
+    .container-terms {
+        padding: 30px;
+    }
+}
+
+/* Móviles (Pantallas pequeñas) */
+@media (max-width: 767px) {
+    .container-terms {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .acept-terms {
+        margin-top: 10px;
+
+        a.accept-btn {
+            padding: 8px 30px;
         }
     }
 }

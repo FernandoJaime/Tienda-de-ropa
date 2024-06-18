@@ -22,5 +22,20 @@
     // Llamar a la función para inicializar el carrusel al cargar la página
     document.addEventListener("DOMContentLoaded", function() {
         initializeCarousel();
+
+        let swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            gradCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true,
+            coverflowEffect: {
+                depth:500,
+                mdifer: 1,
+                slideShadows: true,
+                rotate: 0,
+                stretch: 0,
+            }
+        });
     });
 })();

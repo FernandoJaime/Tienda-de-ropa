@@ -1,5 +1,4 @@
-/* Importar estilos adicionales */
-@import "style.css";
+
 
 /* Estilos para la sección principal de locales */
 .main-locals {
@@ -8,6 +7,7 @@
     justify-content: center;
     align-content: center;
     width: 100vw;
+    padding-bottom: 100px;
 }
 
 /* Estilos para el título de la sección de locales */
@@ -39,7 +39,8 @@
 /* Estilos para las imágenes de los locales */
 .cart-locals img {
     width: 100%;
-    border-radius: var(--border-radius-md);
+    border-top-left-radius: var(--border-radius-md);
+    border-top-right-radius: var(--border-radius-md);
 }
 
 /* Estilos para los títulos de los locales */
@@ -76,4 +77,30 @@ p:hover .fa-whatsapp,
 p:hover .fa-location-dot,
 p:hover a {
     color: var(--violet);
+}
+/* Tablets (Pantallas medianas) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container-locals {
+        width: 85%;
+        padding: 30px;
+    }
+    .container-locals .cart-locals {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Móviles (Pantallas pequeñas) */
+@media (max-width: 767px) {
+    .container-locals {
+        width: 95%;
+        padding: 20px;
+    }
+    .container-locals .cart-locals {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .cart-locals h3 {
+        padding: 20px;
+    }
 }

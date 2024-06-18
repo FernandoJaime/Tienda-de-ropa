@@ -1,31 +1,28 @@
-/* Importación de archivos CSS externos */
-@import "style.css";
-
-/* Estilos del contenedor del pie de página */
-.container-footer {
-    margin-top: -100px;
-    border-top: 2px solid var(--cultured);
-}
-
 /* Estilos del pie de página */
 footer {
     width: 100%;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: var(--white);
-    text-wrap: wrap;
-}
+    border-top: 2px solid var(--cultured);
+    position: relative;
+}   
 
 /* Estilos del contenedor principal */
 .container {
-    width: 100%;
+    min-width: 100%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    padding: 20px;
 }
 
 /* Estilos de las secciones del pie de página */
 .section-footer {
     padding: 20px;
+    margin-bottom: 20px;
+  
 
     h2 {
         color: var(--eerie-black);
@@ -127,10 +124,11 @@ footer {
 .copyright-text {
     width: 100%;
     background: var(--white);
-    padding: 20px 50px 20px;
+    padding: 20px;
     text-align: center;
     color: var(--onyx);
     border-top: 1px solid var(--spanish-gray);
+    margin-top: auto;
 }
 
 /* Media queries */
@@ -144,16 +142,59 @@ footer {
     }
 
     .copyright-text {
+        position: absolute;
+        bottom: 0;
         padding: 5px 40px 30px;
+        margin-top: 20%;
     }
 }
 
 @media (max-width: 768px) {
+    .container-footer{
+       margin-top: 100px;
+        
+    }
     .container {
         grid-template-columns: repeat(1, 1fr);
     }
 
     .copyright-text {
+        bottom: -15%;
         padding: 20px 40px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-footer {
+        padding: 10px;
+    }
+
+    .social-icons-footer {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .social-icons-footer li a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-icons-footer li a i {
+        font-size: 20px;
+    }
+
+    .contact .info li {
+        grid-template-columns: 20px 1fr;
+        margin-bottom: 10px;
+    }
+
+    .contact .info li span {
+        font-size: 16px;
+    }
+
+    .copyright-text {
+        width: 60%;
+        font-size: 14px;
+        margin: 0 auto;
     }
 }

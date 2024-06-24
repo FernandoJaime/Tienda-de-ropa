@@ -37,16 +37,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
- 
+
 }
 
 
 /* Estilos para el contenedor de la información */
 .cart-about {
+  color: white;
   width: 80%;
   max-width: 800px;
   position: relative;
-  box-shadow: var(--border-shadow); 
+  box-shadow: var(--border-shadow);
   transition: box-shadow 0.8s ease, top 0.3s ease, transform 0.8s ease;
   margin-top: 100px;
   background-color: var(--spanish-gray);
@@ -74,7 +75,7 @@
 
 /* Estilos para la línea divisora dentro del contenedor */
 .cart-about hr {
-  border-color: var(--bittersweet);
+  border-color: rgba(52, 114, 239, 0.2);
 }
 
 /* Estilos para el contenido dentro del contenedor */
@@ -98,7 +99,7 @@
 
 /* Ajusta el tamaño del marcador disc */
 .content-about li::marker {
-  font-size: 24px; 
+  font-size: 24px;
 }
 
 /*** media querys ***/
@@ -135,7 +136,7 @@
   }
 
   .content-about li::marker {
-    font-size: 18px; 
+    font-size: 18px;
   }
 
   /* Ajustes para el texto oculto */
@@ -151,17 +152,17 @@
 
   .section-about-container:hover .hidden-text {
     max-height: none;
-  } 
+  }
 }
 
 
 /* Tablets (Pantallas medianas) */
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
   .section-about-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+
   }
 
   .section-about {
@@ -175,5 +176,3 @@
     margin: 50px;
   }
 }
-
-

@@ -801,7 +801,7 @@ header {
 
 @media (min-width: 1200px) {
   .desktop-navigation-menu .container{
-    margin-left: 59%;
+    margin-left: 50%;
   } 
   .dropdown-panel {
     margin-left: -27rem;

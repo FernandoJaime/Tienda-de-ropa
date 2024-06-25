@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <!-- Inclusión de CSS de Bootstrap -->
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+
+     <!-- Inclusión del CSS personalizado -->
+    <link rel="stylesheet" href="../static/css/view-administrator.css">
+    
+    <!-- Inclusión de íconos de LineIcons -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- Wrapper div con clase 'wrapper' y fondo oscuro -->
+    <div class="wrapper bg-dark">
+        
+        <!-- Barra lateral (aside) con id 'sidebar' -->
+        <aside id="sidebar" class="wrapper bg-dark">
+            <div class="flex-grow-1">
+                
+                <!-- Lista no ordenada (ul) para la navegación de la barra lateral -->
+                <ul class="sidebar-nav list-unstyled">
+                    <!-- Elementos de la barra lateral -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link mb-2" data-section="productos">
+                            <span>Productos</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link mb-2" data-section="categorias">
+                            <span>Categorias</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link mb-2" data-section="usuarios">
+                            <span>Usuarios</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link mb-2" data-section="compras">
+                            <span>Compras</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link mb-2" data-section="notification">
+                            <span>Notification</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link" data-section="configuracion">
+                            <span>Configuracion</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Pie de página de la barra lateral -->
+                <div class="sidebar-footer mt-5">
+                    <a href="./login-admin.html" id="logout-button" class="sidebar-link text-info">
+                        <i class="lni lni-exit"></i>
+                        <span>Cerrar sesion</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <div class="main">
+            <!-- Barra de navegación -->
+            <nav class="navbar navbar-expand px-4 py-3 bg-dark">
+                <div class="container-fluid">
+                    <!-- Marca de la barra de navegación -->
+                    <a class="navbar-brand text-info" href="#">
+                        <h2>Tienda de Ropa</h2>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <!-- Lista de elementos de la barra de navegación -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <!-- Saludo del usuario y avatar -->
+                                <span id="greetings" class="text-info m-3"></span><img src="../static/img/account.png"
+                                    class="avatar img-fluid" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Contenido principal -->
+            <main class="content px-3 py-4 text-white">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <!-- Contenedor donde se carga el contenido dinámico -->
+                            <div id="dynamic-content">
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Pie de página -->
+            <footer class="footer text-info bg-dark mt-5">
+                <div class="container">
+                    <div class="row text-body-secondary">
+                        <div class="col-12 col-md-5 text-center text-md-start mt-4">
+                            <!-- Enlace al inicio de la página -->
+                            <a class="text-info" href="/index.html">
+                                <strong>Tienda de Ropa</strong>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 text-center mt-4">
+                            <!-- Enlaces de contacto y acerca de nosotros -->
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-inline me-2">
+                                    <a class="text-info" href="./contact.html">Contact</a>
+                                </li>
+                                <li class="d-inline">
+                                    <a class="text-info" href="./about.html">About Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/contet-dashboard.js"></script>
+    <script src="../static/js/auth-dashboar.js"></script>
+    <script src="../static/js/dashboard-user.js"></script>
+
+</body>
+
+</html>

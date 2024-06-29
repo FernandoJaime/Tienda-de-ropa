@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="row mt-3">
                             <div class="col-md-3">
                                 <label for="user_password" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" name="user_password" id="user_password">
+                                <input type="password" class="form-control" name="user_password" id="user_password" placeholder="contraseña de 8 digitos o mas">
                             </div>
                             <div class="col-md-3">
                                 <label for="user_telefono" class="form-label">Teléfono</label>
@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
+                                        <th>Id</th>
                                         <th>Nombre</th>
                                         <th>Apellido</th>
                                         <th>Fecha de Nacimiento</th>

@@ -63,7 +63,7 @@
 
                 <!-- Pie de página de la barra lateral -->
                 <div class="sidebar-footer mt-5">
-                    <a href="./login-admin.html" id="logout-button" class="sidebar-link text-info">
+                    <a href="./login-admin.html" id="btn-logout" class="sidebar-link text-info">
                         <i class="lni lni-exit"></i>
                         <span>Cerrar sesion</span>
                     </a>
@@ -85,10 +85,15 @@
                     <!-- Lista de elementos de la barra de navegación -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item dropdown">
-                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0 d-flex">
                                 <!-- Saludo del usuario y avatar -->
-                                <span id="greetings" class="text-info m-3"></span><img src="../static/img/account.png"
+                                 <div class="d-flex flex-row">
+                                     <span id="greetings" class="text-info m-3"></span>
+                                 </div>
+                                <div>
+                                    <img src="../static/img/account.png"
                                     class="avatar img-fluid" alt="">
+                                </div>
                             </a>
                         </li>
                     </ul>

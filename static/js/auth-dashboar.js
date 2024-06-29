@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Maneja el evento 'DOMContentLoaded' para configurar el botón de cierre de sesión.
  */
 document.addEventListener('DOMContentLoaded', function() {
-    const logoutButton = document.getElementById('logout-button');
+    const logoutButton = document.getElementById('btn-logout');
 
     if (logoutButton) {
         logoutButton.addEventListener('click', function(event) {
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = './login-admin.html';
         });
     } else {
-        console.error("Botón 'logout-button' no encontrado.");
+        console.error("Botón 'btn-logout' no encontrado.");
     }
 });
 

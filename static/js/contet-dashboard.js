@@ -149,12 +149,16 @@ document.addEventListener('DOMContentLoaded', function () {
                             <div class="col-md-3">
                                 <label for="cod_categoria" class="form-label">Categoría</label>
                                 <select class="form-select" name="cod_categoria" id="cod_categoria">
+                                    <option value="">Selecciona una categoría</option>
+                                    <option value="1">Niños</option>
+                                    <option value="2">Mujeres</option>
+                                    <option value="3">Hombres</option>
+                                    <option value="4">Calzado</option>                        
                                 </select>
                             </div>
                             <div class="col-md-3">
                                 <label for="cod_tipo" class="form-label">Tipo</label>
-                                <select class="form-select" name="tipo_producto" id="tipo_producto">
-                                </select>
+                                <input type="text" class="form-control" name="tipo_producto" id="tipo_producto">
                             </div>
                             <div class="col-md-3">
                                 <label for="nom_producto" class="form-label">Nombre del Producto</label>
@@ -191,16 +195,18 @@ document.addEventListener('DOMContentLoaded', function () {
                         <table id="list-table-products" class="table table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th>Imagen</th>
-                                    <th>Nombre</th>
+                                    <th>Código</th>
                                     <th>Categoría</th>
                                     <th>Tipo</th>
+                                    <th>Nombre</th>
                                     <th>Precio</th>
+                                    <th>Imagen</th>
                                     <th>Stock</th>
+                                    <th>Descripción</th>
                                     <th>Opciones</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="table-body-productos">
                                 <!-- Aquí se cargarán dinámicamente los productos -->
                             </tbody>
                         </table>

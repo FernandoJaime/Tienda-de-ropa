@@ -8,20 +8,38 @@ const BASEURL = 'http://127.0.0.1:5000';
  * @returns {Promise<Object>} - Una promesa que resuelve con la respuesta en formato JSON.
  */
 async function fetchData(url, method, data = null) {
+    const accessToken = localStorage.getItem('access_token');
+    const headers = {
+        'Content-Type': 'application/json',
+    };
+
+    if (accessToken) {
+        headers['Authorization'] = `Bearer ${accessToken}`;
+    } else {
+        Swal.fire({
+            title: 'Error',
+            text: 'No se encontró un token de autenticación. Por favor, inicia sesión nuevamente.',
+            icon: 'error',
+            confirmButtonText: 'Cerrar'
+        });
+        throw new Error('Token de autenticación no encontrado');
+    }
+
     const options = {
         method: method,
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: data ? JSON.stringify(data) : null, 
+        headers: headers,
+        body: data ? JSON.stringify(data) : null,
     };
+
     try {
-        const response = await fetch(url, options); 
+        const response = await fetch(url, options);
+
         if (!response.ok) {
             const errorData = await response.json();
             throw new Error(errorData.msg || response.statusText);
         }
-        return await response.json(); 
+
+        return await response.json();
     } catch (error) {
         console.error('Fetch error:', error);
         Swal.fire({
@@ -30,7 +48,7 @@ async function fetchData(url, method, data = null) {
             icon: 'error',
             confirmButtonText: 'Cerrar'
         });
-        throw error; 
+        throw error;
     }
 }
 
@@ -76,8 +94,8 @@ async function saveUser() {
     };
 
     try {
-        const result = await fetchData(`${BASEURL}/setup/create`, 'POST', userData);
-        
+        const result = await fetchData(`${BASEURL}/usuarios/registro`, 'POST', userData);
+
         const formUser = document.querySelector('#form-users');
         formUser.reset();
         Swal.fire({
@@ -103,15 +121,21 @@ async function saveUser() {
  */
 async function showUsers() {
     try {
-        const usersArray = await fetchData(`${BASEURL}/setup/users`, 'GET');
+        const usersArray = await fetchData(`${BASEURL}/usuarios/listar`, 'GET');
         console.log('Datos recibidos del backend:', usersArray);
 
         const tableUsers = document.querySelector('#table-body-users');
+        if (!tableUsers) {
+            console.error('Elemento #table-body-users no encontrado en el DOM');
+            return;
+        }
+
         tableUsers.innerHTML = '';
 
         usersArray.forEach(user => {
             let tr = `
                 <tr>
+                    <td>${user.id}</td> <!-- id -->
                     <td>${user.nombre}</td> <!-- Nombre -->
                     <td>${user.apellido}</td> <!-- Apellido -->
                     <td>${user.fecha_nacimiento}</td> <!-- Fecha de Nacimiento -->
@@ -135,11 +159,55 @@ async function showUsers() {
     }
 }
 
+/**
+ * Función para cerrar sesión.
+ */
+async function logout() {
+    try {
+        const response = await fetch(`${BASEURL}/auth/logout`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+            }
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.msg || response.statusText);
+        }
+
+        localStorage.removeItem('access_token'); // Eliminar el token JWT del almacenamiento local
+        window.location.href = './login-admin.html'; // Redirigir al usuario a la página de inicio de sesión
+    } catch (error) {
+        console.error('Error al cerrar sesión:', error);
+        Swal.fire({
+            title: 'Error!',
+            text: `Ocurrió un error al cerrar sesión: ${error.message}`,
+            icon: 'error',
+            confirmButtonText: 'Cerrar'
+        });
+    }
+}
+
 // Escuchar el evento 'DOMContentLoaded' que se dispara cuando el
 // contenido del DOM ha sido completamente cargado y parseado.
 document.addEventListener('DOMContentLoaded', function () {
     const btnSaveUser = document.querySelector('#btn-save-user');
-    // Asociar una función al evento click del botón
-    btnSaveUser.addEventListener('click', saveUser);
-    showUsers();
+    const btnLogout = document.querySelector('#btn-logout'); // Botón de cerrar sesión
+
+    // Verificar si los elementos están presentes antes de asignar eventos
+    if (btnSaveUser) {
+        btnSaveUser.addEventListener('click', saveUser);
+    } else {
+        console.error('Elemento #btn-save-user no encontrado en el DOM');
+    }
+
+    if (btnLogout) {
+        btnLogout.addEventListener('click', logout);
+    } else {
+        console.error('Elemento #btn-logout no encontrado en el DOM');
+    }
+
+    showUsers(); // Cargar la lista de usuarios al cargar la página
 });

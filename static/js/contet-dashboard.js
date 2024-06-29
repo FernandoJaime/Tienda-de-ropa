@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             </div>
                             <div class="col-md-3">
                                 <label for="cod_tipo" class="form-label">Tipo</label>
-                                <select class="form-select" name="cod_tipo" id="cod_tipo">
+                                <select class="form-select" name="tipo_producto" id="tipo_producto">
                                 </select>
                             </div>
                             <div class="col-md-3">

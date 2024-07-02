@@ -6,10 +6,10 @@
 
 // Evento 'DOMContentLoaded' que se dispara cuando la página HTML se ha cargado completamente
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     // Selección de todos los enlaces de la barra lateral
     const sidebarLinks = document.querySelectorAll(".sidebar-link");
-    
+
     // Elemento donde se va a cargar el contenido dinámico
     const dynamicContent = document.getElementById("dynamic-content");
 
@@ -144,52 +144,57 @@ document.addEventListener('DOMContentLoaded', function () {
             content = `
                 <div class="container-fluid mt-4 container-main">
                     <h1 class="text-center mb-5">Administración de Productos</h1>
-                    <form action="" id="form-products" class="container-fluid container-main mt-4">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label for="cod_categoria" class="form-label">Categoría</label>
-                                <select class="form-select" name="cod_categoria" id="cod_categoria">
-                                    <option value="">Selecciona una categoría</option>
-                                    <option value="1">Niños</option>
-                                    <option value="2">Mujeres</option>
-                                    <option value="3">Hombres</option>
-                                    <option value="4">Calzado</option>                        
-                                </select>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="cod_tipo" class="form-label">Tipo</label>
-                                <input type="text" class="form-control" name="tipo_producto" id="tipo_producto">
-                            </div>
-                            <div class="col-md-3">
-                                <label for="nom_producto" class="form-label">Nombre del Producto</label>
-                                <input type="text" class="form-control" name="nom_producto" id="nom_producto">
-                            </div>
-                            <div class="col-md-3">
-                                <label for="precio_unitario" class="form-label">Precio Unitario</label>
-                                <input type="number" class="form-control" name="precio_unitario" id="precio_unitario">
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-md-3">
-                                <label for="stock_pro" class="form-label">Stock</label>
-                                <input type="number" class="form-control" name="stock_pro" id="stock_pro">
-                            </div>
-                            <div class="col-md-3">
-                                <label for="img_producto" class="form-label">Imagen del Producto</label>
-                                <input type="file" class="form-control" name="img_producto" id="img_producto">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="descripcion_pro" class="form-label">Descripción</label>
-                                <textarea class="form-control" name="descripcion_pro" id="descripcion_pro"></textarea>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-md-12 text-center">
-                                <button class="btn btn-primary" type="button" id="btn-save-product">Agregar</button>
-                            </div>
-                        </div>
-                    </form>
-    
+                            <form action="" id="form-products" class="container-fluid container-main mt-4">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label for="cod_categoria" class="form-label">Categoría</label>
+                                        <select class="form-select" name="cod_categoria" id="cod_categoria">
+                                            <option value="">Selecciona una categoría</option>
+                                            <option value="1">Niños</option>
+                                            <option value="2">Mujeres</option>
+                                            <option value="3">Hombres</option>
+                                            <option value="4">Calzado</option>                        
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="tipo_producto" class="form-label">Tipo</label>
+                                        <input type="text" class="form-control" name="tipo_producto" id="tipo_producto">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="nom_producto" class="form-label">Nombre del Producto</label>
+                                        <input type="text" class="form-control" name="nom_producto" id="nom_producto">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="precio_unitario" class="form-label">Precio Unitario</label>
+                                        <input type="number" class="form-control" name="precio_unitario" id="precio_unitario">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-3">
+                                        <label for="stock_pro" class="form-label">Stock</label>
+                                        <input type="number" class="form-control" name="stock_pro" id="stock_pro">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="img_producto" class="form-label">Imagen del Producto</label>
+                                        <input type="file" class="form-control" name="img_producto" id="img_producto">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="tipo_categoria" class="form-label">Tipo de Categoría</label>
+                                        <input type="text" class="form-control" name="tipo_categoria" id="tipo_categoria">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="descripcion_pro" class="form-label">Descripción</label>
+                                        <textarea class="form-control" name="descripcion_pro" id="descripcion_pro"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-12 text-center">
+                                        <button class="btn btn-primary" type="button" id="btn-save-product">Agregar</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
                     <section id="list" class="container mt-4 mb-5">
                         <h3 class="subtitle">Listado de Productos</h3>
                         <table id="list-table-products" class="table table-striped table-hover">
@@ -223,6 +228,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Actualiza el contenido dinámico con el HTML generado
         dynamicContent.innerHTML = content;
+        // Si la sección cargada es "productos", mostrar la lista de productos
+        if (section === "productos") {
+            showProductos();
+            // Asociar el evento de guardado de producto al botón correspondiente
+            const btnGuardarProducto = document.getElementById('btn-save-product');
+            if (btnGuardarProducto) {
+                btnGuardarProducto.addEventListener('click', saveProducto);
+            }
+        } else if (section === "usuarios") {
+            // Asociar el evento de guardado de usuario al botón correspondiente
+            const btnGuardarUsuario = document.getElementById('btn-save-user');
+            if (btnGuardarUsuario) {
+                btnGuardarUsuario.addEventListener('click', saveUsuario);
+            }
+        }
     }
 
     // Cargar sección inicial de Productos al inicio

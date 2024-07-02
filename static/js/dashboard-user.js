@@ -1,4 +1,4 @@
-const BASEURL = 'http://127.0.0.1:5000';
+//se implementa BASEURL A TRAVES DE CONFIG.JS //
 
 /**
  * Función para realizar una petición fetch con JSON.
@@ -122,7 +122,7 @@ async function saveUser() {
 async function showUsers() {
     try {
         const usersArray = await fetchData(`${BASEURL}/usuarios/listar`, 'GET');
-        console.log('Datos recibidos del backend:', usersArray);
+        //console.log('Datos recibidos del backend:', usersArray);
 
         const tableUsers = document.querySelector('#table-body-users');
         if (!tableUsers) {

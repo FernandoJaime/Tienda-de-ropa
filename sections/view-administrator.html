@@ -2,30 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-   <!-- Inclusión de CSS de Bootstrap -->
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+    <!-- Inclusión de CSS de Bootstrap -->
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css" />
 
-     <!-- Inclusión del CSS personalizado -->
-    <link rel="stylesheet" href="../static/css/view-administrator.css">
-    
+    <!-- Inclusión del CSS personalizado -->
+    <link rel="stylesheet" href="../static/css/view-administrator.css" />
+
     <!-- Inclusión de íconos de LineIcons -->
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-
 </head>
 
 <body>
-
     <!-- Wrapper div con clase 'wrapper' y fondo oscuro -->
     <div class="wrapper bg-dark">
-        
         <!-- Barra lateral (aside) con id 'sidebar' -->
         <aside id="sidebar" class="wrapper bg-dark">
             <div class="flex-grow-1">
-                
                 <!-- Lista no ordenada (ul) para la navegación de la barra lateral -->
                 <ul class="sidebar-nav list-unstyled">
                     <!-- Elementos de la barra lateral -->
@@ -87,12 +83,11 @@
                         <li class="nav-item dropdown">
                             <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0 d-flex">
                                 <!-- Saludo del usuario y avatar -->
-                                 <div class="d-flex flex-row">
-                                     <span id="greetings" class="text-info m-3"></span>
-                                 </div>
+                                <div class="d-flex flex-row">
+                                    <span id="greetings" class="text-info m-3"></span>
+                                </div>
                                 <div>
-                                    <img src="../static/img/account.png"
-                                    class="avatar img-fluid" alt="">
+                                    <img src="../static/img/account.png" class="avatar img-fluid" alt="" />
                                 </div>
                             </a>
                         </li>
@@ -106,9 +101,7 @@
                     <div class="row">
                         <div class="col-md-9">
                             <!-- Contenedor donde se carga el contenido dinámico -->
-                            <div id="dynamic-content">
-                              
-                            </div>
+                            <div id="dynamic-content"></div>
                         </div>
                     </div>
                 </div>
@@ -141,14 +134,75 @@
         </div>
     </div>
 
+    <!-- Modal para editar producto -->
+    <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProductModalLabel">
+                        Editar Producto
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="edit-product-form">
+                        <div class="mb-3">
+                            <label for="edit_cod_categoria" class="form-label">Código de Categoría</label>
+                            <input type="text" class="form-control" id="edit_cod_categoria" name="edit_cod_categoria"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_tipo_producto" class="form-label">Tipo de Producto</label>
+                            <input type="text" class="form-control" id="edit_tipo_producto" name="edit_tipo_producto"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_nom_producto" class="form-label">Nombre del Producto</label>
+                            <input type="text" class="form-control" id="edit_nom_producto" name="edit_nom_producto"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_precio_unitario" class="form-label">Precio Unitario</label>
+                            <input type="text" class="form-control" id="edit_precio_unitario"
+                                name="edit_precio_unitario" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_stock_pro" class="form-label">Stock del Producto</label>
+                            <input type="text" class="form-control" id="edit_stock_pro" name="edit_stock_pro" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_img_producto" class="form-label">Imagen del producto</label>
+                            <input type="file" class="form-control" id="edit_img_producto" name="edit_img_producto" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_descripcion_pro" class="form-label">Descripción del Producto</label>
+                            <textarea class="form-control" id="edit_descripcion_pro" name="edit_descripcion_pro"
+                                rows="3" required></textarea>
+                        </div>
+                        <!-- Aquí podrías añadir más campos según sea necesario, como la imagen del producto -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="actualizarProducto()">
+                        Guardar Cambios
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
+    <script src="../static/js/config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/js/contet-dashboard.js"></script>
     <script src="../static/js/auth-dashboar.js"></script>
     <script src="../static/js/dashboard-user.js"></script>
     <script src="../static/js/dashboard-producto.js"></script>
-
 </body>
 
 </html>

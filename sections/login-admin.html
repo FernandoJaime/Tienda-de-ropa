@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Administrador</title>
+    <!-- Inclusión de CSS de Bootstrap -->
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+    <!-- Inclusión de íconos de LineIcons -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <!-- Inclusión del CSS personalizado -->
+    <link rel="stylesheet" href="../static/css/login-admin.css">
+</head>
+
+<body>
+
+    <!-- Encabezado de la página -->
+    <header>
+        <!-- Barra de navegación -->
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container">
+                <!-- Enlace de la marca -->
+                <a class="navbar-brand text-info" href="#">
+                    <h2>Tienda de Ropa</h2>
+                </a>
+                <!-- Botón para colapsar la barra de navegación en pantallas pequeñas -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Contenido colapsable de la barra de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fs-5 text-center">
+                      <li class="nav-item">
+                        <!-- Enlace a la página de inicio -->
+                        <a class="text-info text-decoration-none" href="/index.html">
+                            <i class="lni lni-exit"></i>
+                            Home
+                          </a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Título de bienvenida -->
+        <h1 class="text-center mt-5">Bienvenido al login de administrador</h1>
+        <div class="container">
+            <!-- Contenedor del formulario de login -->
+            <div class="login-container">
+                <!-- Imagen del logo -->
+                <img src="../static/img/logo-admin.png" alt="Logo de la tienda" class="login-image">
+
+                <!-- Formulario de login -->
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <!-- Campo de correo electrónico -->
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com">
+                    </div>
+                    <div class="mb-3">
+                        <!-- Campo de contraseña -->
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+                    </div>
+                    
+                    <!-- Botón para enviar el formulario -->
+                    <button type="submit" class="btn btn-primary w-100">
+                      Iniciar sesión
+                    </button>
+                  
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer text-info bg-dark mt-5 pb-3">
+        <div class="container">
+          <div class="row text-body-secondary">
+            <!-- Enlace a la página de inicio en el pie de página -->
+            <div class="col-12 col-md-5 text-center text-md-start mt-4">
+              <a class="text-info text-decoration-none" href="/index.html">
+                <strong>Tienda de Ropa</strong>
+              </a>
+            </div>
+            <!-- Enlaces adicionales en el pie de página -->
+            <div class="col-12 col-md-6 text-center mt-4">
+              <ul class="list-unstyled mb-0">
+                <li class="d-inline me-2">
+                  <a class="text-info text-decoration-none" href="./contact.html">Contact</a>
+                </li>
+                <li class="d-inline">
+                  <a class="text-info text-decoration-none" href="./about.html">About Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <!-- Inclusión de scripts de SweetAlert2 y Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Inclusión del script personalizado -->
+    <script src="../static/js/login-admin.js"></script>
+</body>
+
+</html>

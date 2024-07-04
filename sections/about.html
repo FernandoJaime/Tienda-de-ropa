@@ -1,71 +1,413 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/static/img/tendedero.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../static/img/tendedero.png" type="image/x-icon">
 
-    <!-- Estilos css -->
-    <link rel="stylesheet" href="/static/css/style.css">
+  <!-- Estilos css -->
+  <link rel="stylesheet" href="../static/css/style.css">
 
-    <!-- Box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Box icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <div include-html="../template/header.html"></div>
-
-  <main class="main-about">
-    <h2 class="title-about">¿Quiénes somos?</h2>
-    <div class="hidden-text">
-        <h3>La Empresa textil número uno de Argentina</h3>
+  <!--- HEADER-->
+  <header>
+    <!--- Apartado de promociones-->
+    <div class="marquee-container" id="marqueeContainer">
+      <div class="marquee-content" id="marqueeContent">
+        <!-- Carga dinamica de promociones -->
+      </div>
     </div>
-    <section class="section-about">
-        <div class="cart-about">
-            <h3>Nuestra empresa</h3>
-            <hr> 
-            <div class="content-about">
-                <ul>
-                    <li>Somos una empresa comprometida con la calidad y la satisfacción del cliente desde nuestros inicios.</li>
-                    <li>En Nuestra empresa, nos esforzamos por ofrecer productos y servicios que superen las expectativas de nuestros clientes.</li>
-                    <li>Nuestra misión es crear un ambiente acogedor donde nuestros clientes se sientan valorados y encuentren lo que necesitan.</li>
-                </ul>
+
+    <!-- Encabezado principal -->
+    <div class="header-main">
+      <div class="container-head">
+        <!-- Barra de busqueda -->
+        <div class="header-search-container">
+          <button class="action-btn" id="searchButton">
+            <i class="bx bx-search-alt-2"></i>
+          </button>
+          <div class="search-menu" id="searchMenu">
+            <button class="close-btn-search" onclick="closeSearchMenu()">
+              <i class="bx bx-x"></i>
+            </button>
+            <input type="text" class="search-input" placeholder="Buscar..." />
+          </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="header-logo">
+          <a href="../index.html">
+            <img src="../static/img/logo.svg" alt="Logo de la tienda" />
+          </a>
+        </div>
+
+        <!-- Acciones del ususario -->
+        <div class="header-user-actions">
+          <button class="action-btn">
+            <i class="bx bx-user"></i>
+          </button>
+
+          <button class="action-btn">
+            <i class="bx bx-heart"></i>
+            <span class="count-favorite">0</span>
+          </button>
+
+          <button class="action-btn">
+            <i class="bx bxl-shopify"></i>
+            <span class="count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegacion de escritorio -->
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <!-- Elementos del menu escritorio -->
+          <li class="menu-category">
+            <a href="../index.html" class="menu-title">Home</a>
+          </li>
+
+          <!-- Categorias -->
+          <li class="menu-category">
+            <a href="#" class="menu-title">Categorias</a>
+            <div class="dropdown-panel">
+              <!-- Categoria niños -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./niños.html">Niños</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./niños.html">
+                    <img src="../static/img/kids-banner.jpg" alt="colletctions kids" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Categoria Hombres -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./hombres.html">Hombres</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./hombres.html">
+                    <img src="../static/img/banner-hombre.jpg" alt="men's fashion" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Categoria mujeres -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./mujeres.html">Mujeres</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./mujeres.html">
+                    <img src="../static/img/banner-mujer.jpg" alt="women's fashion" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Categoria calzados -->
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="./calzados.html">Calzados</a>
+                </li>
+                <li class="panel-list-item">
+                  <a href="./calzados.html">
+                    <img src="../static/img/calzado-banner.jpg" alt="mouse collection" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
             </div>
-        </div> 
+          </li>
+
+          <!-- Enlace acerca de nosostros -->
+          <li class="menu-category">
+            <a href="#" class="menu-title">Quienes somos</a>
+          </li>
+
+          <!-- Enlace contactos -->
+          <li class="menu-category">
+            <a href="./contact.html" class="menu-title">Contacto</a>
+          </li>
+
+          <!-- Elace locales -->
+          <li class="menu-category">
+            <a href="./locals.html" class="menu-title">Locales</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Menu movil -->
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <i class="bx bx-menu"></i>
+      </button>
+      <button class="action-btn" onclick="loginRedirect()">
+        <i class="bx bx-user"></i>
+      </button>
+
+      <button class="action-btn" onclick="loginRedirect()">
+        <i class="bx bx-heart"></i>
+        <span class="count-favorite">0</span>
+      </button>
+
+      <button class="action-btn" onclick="loginRedirect()">
+        <i class="bx bxl-shopify"></i>
+        <span class="count">0</span>
+      </button>
+    </div>
+
+    <!-- Navegacion movil -->
+    <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <i class="bx bx-x"></i>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+        <!-- Enlace movil home -->
+        <li class="menu-category">
+          <a href="../index.html" class="menu-title">Home</a>
+        </li>
+
+        <!-- Categorias desplegables -->
+        <li class="menu-category">
+          <!-- Categoria hombres -->
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Categorias</p>
+            <div>
+              <i class="bx bxs-sort-alt"></i>
+            </div>
+          </button>
+
+          <!-- Sub categorias movil -->
+          <ul class="submenu-category-list" data-accordion>
+            <li class="submenu-category">
+              <a href="./niños.html" class="submenu-title">Niños</a>
+            </li>
+            <li class="submenu-category">
+              <a href="./hombres.html" class="submenu-title">Hombres</a>
+            </li>
+            <li class="submenu-category">
+              <a href="./mujeres.html" class="submenu-title">Mujeres</a>
+            </li>
+            <li class="submenu-category">
+              <a href="./calzados.html" class="submenu-title">Calzados</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Enlace movil acerca de nosotros -->
+        <li class="menu-category">
+          <a href="#" class="menu-title">Quienes somos</a>
+        </li>
+
+        <!-- Enlace movil contactos -->
+        <li class="menu-category">
+          <a href="./contact.html" class="menu-title">Contacto</a>
+        </li>
+
+        <!-- Enlace movil locales -->
+        <li class="menu-category">
+          <a href="./locals.html" class="menu-title">Locales</a>
+        </li>
+      </ul>
+
+      <!-- Redes sociales -->
+      <div class="menu-bottom">
+        <ul class="menu-social-container">
+          <li>
+            <a href="https://facebook.com" target="_blank" class="social-link facebook">
+              <i class="bx bxl-facebook-circle"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank" class="social-link twitter">
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank" class="social-link instagram">
+              <i class="bx bxl-instagram-alt"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" target="_blank" class="social-link youtube">
+              <i class="bx bxl-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-about-container">
+      <section class="section-about">
+        <h2 class="title-about">¿Quiénes somos?</h2>
+        <div class="hidden-text">
+          <h3>La Empresa textil número uno de Argentina</h3>
+        </div>
+        <div class="cart-about">
+          <h3>Nuestra empresa</h3>
+          <hr>
+          <div class="content-about">
+            <ul>
+              <li>Somos una empresa comprometida con la calidad y la satisfacción del cliente desde nuestros inicios.
+              </li>
+              <li>En Nuestra empresa, nos esforzamos por ofrecer productos y servicios que superen las expectativas de
+                nuestros clientes.</li>
+              <li>Nuestra misión es crear un ambiente acogedor donde nuestros clientes se sientan valorados y encuentren
+                lo que necesitan.</li>
+            </ul>
+          </div>
+        </div>
 
         <div class="cart-about">
-            <h3>Un Producto Pensado y Exclusivo!</h3>
-            <hr> 
-            <div class="content-about">
-                <ul>
-                    <li>En nuestra tienda, cada prenda es cuidadosamente diseñada y seleccionada para ofrecerte lo mejor en moda.</li>
-                    <li>Nos enorgullece ofrecer a nuestros clientes una selección exclusiva de prendas de alta calidad, diseñadas con atención a los detalles.</li>
-                    <li>Cada artículo en nuestra tienda ha sido elegido pensando en ti, para que te sientas único y especial al usarlo.</li>
-                </ul>
-            </div>
-        </div> 
+          <h3>Un Producto Pensado y Exclusivo!</h3>
+          <hr>
+          <div class="content-about">
+            <ul>
+              <li>En nuestra tienda, cada prenda es cuidadosamente diseñada y seleccionada para ofrecerte lo mejor en
+                moda.</li>
+              <li>Nos enorgullece ofrecer a nuestros clientes una selección exclusiva de prendas de alta calidad,
+                diseñadas con atención a los detalles.</li>
+              <li>Cada artículo en nuestra tienda ha sido elegido pensando en ti, para que te sientas único y especial
+                al
+                usarlo.</li>
+            </ul>
+          </div>
+        </div>
 
         <div class="cart-about">
-            <h3>Sucursales, Oficinas y Centro de Distribución</h3>
-            <hr> 
-            <div class="content-about">
-                <ul>
-                    <li>En La Tienda, nos esforzamos por brindarte la mejor experiencia de compra. Contamos con una red de sucursales estratégicamente ubicadas para tu conveniencia.</li>
-                    <li>Nuestras oficinas centrales son el corazón de nuestras operaciones, donde trabajamos arduamente para garantizar la calidad y la disponibilidad de nuestros productos en todas nuestras tiendas.</li>
-                    <li>Además, nuestro centro de distribución está equipado con la tecnología más avanzada para asegurar que tus compras lleguen a tiempo y en perfectas condiciones a cualquier parte del país.</li>
-                </ul>
-            </div>
-        </div> 
-    </section> 
-</main>
+          <h3>Sucursales, Oficinas y Centro de Distribución</h3>
+          <hr>
+          <div class="content-about">
+            <ul>
+              <li>En La Tienda, nos esforzamos por brindarte la mejor experiencia de compra. Contamos con una red de
+                sucursales estratégicamente ubicadas para tu conveniencia.</li>
+              <li>Nuestras oficinas centrales son el corazón de nuestras operaciones, donde trabajamos arduamente para
+                garantizar la calidad y la disponibilidad de nuestros productos en todas nuestras tiendas.</li>
+              <li>Además, nuestro centro de distribución está equipado con la tecnología más avanzada para asegurar que
+                tus compras lleguen a tiempo y en perfectas condiciones a cualquier parte del país.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
 
-<!-- Footer -->
-<div include-html="../template/footer.html"></div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="section-footer aboutus">
+        <h2>Sobre nosotros</h2>
+        <p>Somos La Tienda, tu destino de moda favorito.</p>
+        <p>
+          Descubre nuestras últimas tendencias y encuentra el look perfecto
+          para cada ocasión.
+        </p>
+        <ul class="social-icons-footer">
+          <li>
+            <a href="https://facebook.com" class="facebook" target="_blank">
+              <i class="bx bxl-facebook-circle"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" class="twitter" target="_blank">
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" class="instagram" target="_blank">
+              <i class="bx bxl-instagram-alt"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" class="youtube" target="_blank">
+              <i class="bx bxl-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="section-footer quicklinks">
+        <h2>Soporte</h2>
+        <ul>
+          <li>
+            <a href="./contact.html">Preguntas frecuentes</a>
+          </li>
+          <li>
+            <a href="./termsandconditions.html">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="./contact.html">Ayuda</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+      <div class="section-footer quicklinks">
+        <h2>Comprar</h2>
+        <ul>
+          <li>
+            <a href="./hombres.html">Hombre</a>
+          </li>
+          <li>
+            <a href="./mujeres.html">Mujer</a>
+          </li>
+          <li>
+            <a href="./niños.html">Niños</a>
+          </li>
+          <li>
+            <a href="./calzados.html">Calzados</a>
+          </li>
+        </ul>
+      </div>
+      <div class="section-footer contact">
+        <h2>Contacta con nosotros</h2>
+        <ul class="info">
+          <li>
+            <span>
+              <i class="bx bxs-phone-call"></i>
+            </span>
+            <p>
+              <a href="tel_+5492612458 967 ">0 261 2458 967</a>
+            </p>
+          </li>
+          <li>
+            <span>
+              <i class="bx bxl-gmail"></i>
+            </span>
+            <p>
+              <a href="mailto:tienda.lllll@gmail.com">tienda.lllll@gmail.com</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright-text">
+      <p>&copy; 2024 - Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-<!-- Script de carga dinamica de elementos html -->
-<script src="/static/js/loadTemplate.js"></script>
+  <!-- Script  -->
+  <script src="../static/js/header.js"></script>
+
 </body>
+
 </html>

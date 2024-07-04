@@ -1,17 +1,15 @@
-/* Importando estilos generales desde style.css */
-@import "./style.css";
-
 /* Estilos de la sección principal */
-.main-about {
+.section-about-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 50px 0;
 }
 
 /* Estilos para el título principal */
-.main-about .title-about {
-  padding-top: 2%;
-  margin-bottom: 55px;
+.section-about-container .title-about {
+  margin-bottom: 50px;
 }
 
 /* Estilos para el texto oculto */
@@ -20,31 +18,38 @@
   text-transform: uppercase;
   max-height: 0;
   transition: max-height 0.5s ease;
-  position: absolute;
+  position: relative;
   width: 100%;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 /* Mostrar texto oculto al pasar el mouse sobre la sección principal */
-.main-about:hover .hidden-text {
+.section-about-container:hover .hidden-text {
   max-height: 300px;
   transition: max-height 0.5s ease;
 }
 
 /* Estilos para la sección sobre */
 .section-about {
-  max-width: 75%;
-  text-align: center;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
+
 
 /* Estilos para el contenedor de la información */
 .cart-about {
+  color: white;
+  width: 80%;
+  max-width: 800px;
   position: relative;
-  box-shadow: var(--border-shadow); /* Sombra */
+  box-shadow: var(--border-shadow);
   transition: box-shadow 0.8s ease, top 0.3s ease, transform 0.8s ease;
   margin-top: 100px;
-  margin-bottom: 50px;
   background-color: var(--spanish-gray);
   border-radius: var(--border-radius-sm);
   padding: 20px;
@@ -70,7 +75,7 @@
 
 /* Estilos para la línea divisora dentro del contenedor */
 .cart-about hr {
-  border-color: var(--bittersweet);
+  border-color: rgba(52, 114, 239, 0.2);
 }
 
 /* Estilos para el contenido dentro del contenedor */
@@ -94,5 +99,80 @@
 
 /* Ajusta el tamaño del marcador disc */
 .content-about li::marker {
-  font-size: 24px; 
+  font-size: 24px;
+}
+
+/*** media querys ***/
+
+/* Móviles (Pantallas pequeñas) */
+@media (mix-width: 300px) {
+  .section-about-container {
+    padding: 10px;
+    position: relative;
+  }
+
+  .section-about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-about {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .section-about-container .title-about {
+    padding-top: 5%;
+    margin-bottom: 30px;
+  }
+
+  .content-about ul {
+    padding: 15px;
+  }
+
+  .content-about li {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .content-about li::marker {
+    font-size: 18px;
+  }
+
+  /* Ajustes para el texto oculto */
+  .hidden-text {
+    position: relative;
+    max-height: none;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--spanish-gray);
+    border-radius: var(--border-radius-sm);
+  }
+
+  .section-about-container:hover .hidden-text {
+    max-height: none;
+  }
+}
+
+
+/* Tablets (Pantallas medianas) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section-about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+
+  .section-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .cart-about {
+    width: 45%;
+    margin: 50px;
+  }
 }

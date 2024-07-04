@@ -9,6 +9,7 @@
 @import "shoppingcart.css";
 @import "contact.css";
 @import "locals.css";
+@import "contact-complete.css";
 
 /* Importación de fuente desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
@@ -69,40 +70,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
 }
 
-/* Ajuste para evitar desbordamiento horizontal */
-body {
-    position: relative;
+html{
     overflow-x: hidden;
 }
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+}
+
 
 
 /*** Estilos de la Sección Principal ****/
 
 main {
-    width: 100vw;
-    margin-top: 50px;
-    margin-bottom: 150px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 
 
-/* Pseudo-elementos para efecto de fondo */
+/* Pseudo-elementos para efecto de fondo*/
 main::after,
 main::before {
     content: '';
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 200%;
     border-radius: 50%;
     z-index: -1;
     filter: blur(100px);
     opacity: 0.2;
     top: -10%;
-    left: -10%;
+    left: -50%;
     background: linear-gradient(to right, rgba(52, 114, 239, 0.8) 50%, rgba(87, 7, 157, 0.8) 50%);
-    /* Gradiente que mezcla los colores a la mitad */
     transform: translateX(10%);
 }
 

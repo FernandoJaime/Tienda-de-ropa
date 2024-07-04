@@ -1,6 +1,3 @@
-/* Importar el archivo style.css */
-@import "style.css";
-
 /* Estilos para el contenedor principal de contacto */
 .container-contact {
     position: relative;
@@ -11,11 +8,11 @@
 
     max-width: 1000px;
     width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
+    margin: 130px auto;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
     text-align: center;
-    margin: 50px auto;
     background-image: url("/static/img/modal.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -31,7 +28,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color-img);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: var(--border-radius-md);
     z-index: 1;
 }
@@ -39,7 +36,7 @@
 /*** Seccion de redirect link ****/
 
 #contact-inicio {
-    max-width: 95%;
+    max-width: 96%;
     z-index: 2;
 }
 
@@ -55,7 +52,8 @@
 .redirect-contact {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    align-items: center;
+    gap: 12px;
     max-width: 100%;
     margin: 0 auto;
     color: var(--white);
@@ -76,14 +74,14 @@
     color: var(--white);
     text-decoration: none;
     padding: 15px 8px;
-    background: var(--color-btn);
-    border-radius: var(--border-radius-sm);
+    background: transparent;
+    border: 1px solid var(--white);
+    border-radius: var(--border-radius-md);
 }
 
 /* Estilos de los enlaces de redirección */
 .redirect-contact .link-local-html:hover {
-    text-decoration: underline;
-    background: var(--color-btn-hover);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /**** Estilos para el título del formulario de contacto ****/
@@ -91,7 +89,8 @@
 /* Estilos para el contenedor del formulario */
 .container-contact .form-wrapper {
     margin-top: 40px;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
+    border: 1px solid var(--white);
     z-index: 3;
     color: var(--white);
     padding: 20px;
@@ -130,12 +129,14 @@
     outline: none;
     border: none;
     color: var(--onyx);
+    background-color: var(--white);
 }
 
 
 /* Estilos para el botón de envío del formulario */
 .form-wrapper input[type="submit"] {
-    background-color: var(--color-btn);
+    background-color: transparent;
+    border: 1px solid;
     color: var(--white);
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -143,7 +144,7 @@
 
 /* Estilos para el botón de envío del formulario hover*/
 .form-wrapper input[type="submit"]:hover {
-    background-color: var(--color-btn-hover);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos para el área de texto del formulario */
@@ -160,4 +161,18 @@
     background-color: var(--white);
     padding: 20px;
     border-radius: var(--border-radius-md);
+}
+
+/* Tablets (Pantallas medianas) */
+@media (max-width: 1024px) {
+    .container-contact .form-wrapper {
+        width: 80%;
+    }
+}
+
+/* Móviles (Pantallas pequeñas) */
+@media (max-width: 767px) {
+    .container-contact .form-wrapper {
+        width: 95%;
+    }
 }
